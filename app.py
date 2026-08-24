@@ -11,9 +11,12 @@ validation failure. API clients that send ``Accept: application/json`` (or
 anything other than HTML) always get JSON.
 """
 
+import logging
 import os
 import uuid
+from datetime import datetime, timezone
 
+import requests
 from flask import (
     Flask,
     jsonify,
@@ -25,6 +28,11 @@ from flask import (
 )
 from werkzeug.exceptions import RequestEntityTooLarge
 from werkzeug.utils import secure_filename
+
+logger = logging.getLogger(__name__)
+
+NOTION_API_URL = "https://api.notion.com/v1/pages"
+NOTION_VERSION = "2022-06-28"
 
 # 2 GiB maximum upload size.
 MAX_CONTENT_LENGTH = 2 * 1024 * 1024 * 1024
@@ -108,6 +116,48 @@ def _list_files(upload_dir):
     return entries
 
 
+def log_upload_to_notion(filename, size_bytes, download_url):
+    """Log a successful upload as a row in a Notion database.
+
+    This is a no-op unless BOTH ``NOTION_API_KEY`` and ``NOTION_DATABASE_ID``
+    environment variables are set, so local runs and tests never require Notion.
+
+    Any failure talking to Notion is caught and logged as a warning — logging to
+    Notion must never break the upload response returned to the user.
+    """
+    api_key = os.environ.get("NOTION_API_KEY")
+    database_id = os.environ.get("NOTION_DATABASE_ID")
+    if not api_key or not database_id:
+        return
+
+    size_mb = round(size_bytes / (1024 * 1024), 2)
+    uploaded_at = datetime.now(timezone.utc).isoformat()
+
+    payload = {
+        "parent": {"database_id": database_id},
+        "properties": {
+            "Name": {"title": [{"text": {"content": filename}}]},
+            "Filename": {"rich_text": [{"text": {"content": filename}}]},
+            "Size (MB)": {"number": size_mb},
+            "Uploaded At": {"date": {"start": uploaded_at}},
+            "Download URL": {"url": download_url},
+        },
+    }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Notion-Version": NOTION_VERSION,
+        "Content-Type": "application/json",
+    }
+
+    try:
+        response = requests.post(
+            NOTION_API_URL, headers=headers, json=payload, timeout=10
+        )
+        response.raise_for_status()
+    except Exception as exc:  # noqa: BLE001 - never let Notion break uploads
+        logger.warning("Failed to log upload to Notion: %s", exc)
+
+
 def create_app(config=None):
     """Application factory.
 
@@ -176,6 +226,9 @@ def create_app(config=None):
         final_name, dest = _unique_path(app.config["UPLOAD_DIR"], safe_name)
         file.save(dest)
         size = os.path.getsize(dest)
+
+        download_url = url_for("download", filename=final_name, _external=True)
+        log_upload_to_notion(final_name, size, download_url)
 
         if not _wants_json():
             return redirect(url_for("index"))

@@ -1,9 +1,11 @@
 """Tests for the Flask upload/download service."""
 
 import io
+from unittest import mock
 
 import pytest
 
+import app as app_module
 from app import create_app
 
 
@@ -137,3 +139,72 @@ def test_html_form_upload_redirects(client):
     )
     assert resp.status_code == 302
     assert resp.headers["Location"].endswith("/")
+
+
+def test_notion_logging_called_on_upload(client, monkeypatch):
+    monkeypatch.setenv("NOTION_API_KEY", "secret-token")
+    monkeypatch.setenv("NOTION_DATABASE_ID", "db-123")
+
+    fake_response = mock.Mock()
+    fake_response.raise_for_status.return_value = None
+    fake_post = mock.Mock(return_value=fake_response)
+    monkeypatch.setattr(app_module.requests, "post", fake_post)
+
+    resp = client.post(
+        "/upload",
+        data=_fake_video(name="notion.mp4"),
+        content_type="multipart/form-data",
+        headers={"Accept": "application/json"},
+    )
+
+    assert resp.status_code == 201
+    assert fake_post.call_count == 1
+    args, kwargs = fake_post.call_args
+    # First positional arg is the Notion pages endpoint.
+    assert args[0] == "https://api.notion.com/v1/pages"
+    payload = kwargs["json"]
+    assert payload["parent"]["database_id"] == "db-123"
+    title = payload["properties"]["Name"]["title"][0]["text"]["content"]
+    assert title == "notion.mp4"
+    assert (
+        payload["properties"]["Filename"]["rich_text"][0]["text"]["content"]
+        == "notion.mp4"
+    )
+
+
+def test_notion_logging_failure_does_not_break_upload(client, monkeypatch):
+    monkeypatch.setenv("NOTION_API_KEY", "secret-token")
+    monkeypatch.setenv("NOTION_DATABASE_ID", "db-123")
+
+    def boom(*args, **kwargs):
+        raise RuntimeError("network down")
+
+    monkeypatch.setattr(app_module.requests, "post", boom)
+
+    resp = client.post(
+        "/upload",
+        data=_fake_video(name="resilient.mp4"),
+        content_type="multipart/form-data",
+        headers={"Accept": "application/json"},
+    )
+
+    assert resp.status_code == 201
+    assert resp.get_json()["filename"] == "resilient.mp4"
+
+
+def test_notion_logging_skipped_without_env(client, monkeypatch):
+    monkeypatch.delenv("NOTION_API_KEY", raising=False)
+    monkeypatch.delenv("NOTION_DATABASE_ID", raising=False)
+
+    fake_post = mock.Mock()
+    monkeypatch.setattr(app_module.requests, "post", fake_post)
+
+    resp = client.post(
+        "/upload",
+        data=_fake_video(name="noenv.mp4"),
+        content_type="multipart/form-data",
+        headers={"Accept": "application/json"},
+    )
+
+    assert resp.status_code == 201
+    fake_post.assert_not_called()

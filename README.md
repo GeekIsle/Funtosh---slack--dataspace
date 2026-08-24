@@ -76,6 +76,38 @@ variables (defaults `0.0.0.0` and `5000`). Then open http://localhost:5000/.
 - `GET /files` — JSON list of `{"filename", "size", "download_url"}` for every
   stored file.
 
+## Notion logging (optional)
+
+When configured, each successful upload is logged as a row in a Notion
+database ("Dataspace Uploads") with the filename, size, upload time, and
+download URL. This is controlled by two environment variables:
+
+- `NOTION_API_KEY` — a Notion internal integration token.
+- `NOTION_DATABASE_ID` — the id of the target Notion database.
+
+If either variable is unset, uploads work exactly as normal and Notion
+logging is simply skipped. A Notion API failure is caught and logged as a
+warning — it never breaks the upload response.
+
+The database lives here:
+https://app.notion.com/p/c454311973244ed19c6fb262fc764cf4
+
+### One-time setup
+
+1. Create a Notion internal integration at
+   https://www.notion.so/my-integrations and copy its token into
+   `NOTION_API_KEY`.
+2. Share the "Dataspace Uploads" database with that integration: open the
+   database, click the `⋯` menu → **Connections**, and add your integration.
+3. Set `NOTION_DATABASE_ID` to the database id (the id from the database URL,
+   e.g. `c454311973244ed19c6fb262fc764cf4`).
+
+```bash
+export NOTION_API_KEY="secret_..."
+export NOTION_DATABASE_ID="c454311973244ed19c6fb262fc764cf4"
+python app.py
+```
+
 ## Tests
 
 ```bash
