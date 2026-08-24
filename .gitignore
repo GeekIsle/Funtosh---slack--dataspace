@@ -1,0 +1,12 @@
+# Uploaded files (never commit these)
+uploads/
+
+# Python cruft
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
