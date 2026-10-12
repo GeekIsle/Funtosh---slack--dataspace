@@ -1,0 +1,19 @@
+api_version = "2026-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "Mimro Eco Points balance"
+handle = "eco-points-balance"
+
+# Orders page (the default account landing page)
+[[extensions.targeting]]
+target = "customer-account.order-index.block.render"
+module = "./src/EcoPointsBalance.jsx"
+
+# Profile page
+[[extensions.targeting]]
+target = "customer-account.profile.block.render"
+module = "./src/EcoPointsBalance.jsx"
+
+[extensions.capabilities]
+api_access = true

@@ -1,0 +1,16 @@
+# Run `shopify app config link` once to fill in client_id for your app.
+client_id = ""
+name = "Mimro Eco Points"
+application_url = "https://www.mimro.com"
+embedded = false
+
+[build]
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2026-07"
+
+[access_scopes]
+# customer_read_customers lets the extension read the signed-in customer's
+# eco_quest metafields through the Customer Account API.
+scopes = "customer_read_customers"
