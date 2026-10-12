@@ -1,0 +1,13 @@
+.offers-drawer__heading{display:flex;align-items:center;gap:10px}.offers-drawer__offer{display:flex}.offers-drawer__offer--above{flex-direction:column;gap:10px}.offers-drawer__offer:not(:last-of-type){padding-bottom:20px;border-bottom:1px solid #ccc;margin-bottom:20px}.offers-drawer__text-content{display:flex;flex-direction:column;gap:10px;flex-grow:1}
+offers-drawer{--mx-grad:linear-gradient(100deg,#3c78dd 0%,#29ce70 100%);--mx-ink:#020624;--mx-mut:#5a5f73;--mx-line:#e4ebe6}
+offers-drawer .global-drawer__content{background:radial-gradient(circle at 115% 18%,#e3f4d8 0 220px,transparent 221px),radial-gradient(circle at -25% 78%,#e4edfb 0 190px,transparent 191px),#fff;background-attachment:local}
+offers-drawer .global-drawer__sticky-header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:0!important;box-shadow:0 1px 0 var(--mx-line)}
+offers-drawer .global-drawer__sticky-header:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--mx-grad)}
+offers-drawer .offers-drawer__heading{font-weight:800;letter-spacing:-.01em;color:var(--mx-ink)}
+offers-drawer .offers-drawer__heading .text-link-animated{background:var(--mx-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+offers-drawer .offers-drawer__offer{background:#fff;border:1.5px solid var(--mx-line)!important;border-radius:20px;padding:12px 12px 16px!important;margin-bottom:18px!important;box-shadow:0 18px 40px -28px rgba(20,60,50,.45)}
+offers-drawer .offers-drawer__offer-image{border-radius:14px;overflow:hidden}
+offers-drawer .offers-drawer__text-content{padding:4px 4px 0;gap:12px}
+offers-drawer .offers-drawer__offer-description{color:var(--mx-mut);font-size:.92rem;line-height:1.5}
+offers-drawer .offers-drawer__offer-description strong{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#2b7a4b;background:#e6f6dc;border:1px solid #cdebbb;border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;vertical-align:middle}
+offers-drawer .offers-drawer__text-content .btn{background:var(--mx-grad)!important;color:#fff!important;border:0!important;border-radius:999px!important;padding:13px 30px!important;font-weight:700;letter-spacing:.02em;box-shadow:0 14px 28px -16px rgba(41,150,140,.75)}
