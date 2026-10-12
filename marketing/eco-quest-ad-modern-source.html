@@ -1,0 +1,205 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#05081c;--blue:#1f6bff;--green:#1ee36a;--teal:#14c8b4;--grad:linear-gradient(100deg,#2a8bff 0%,#1ad0b0 55%,#2ee87a 100%)}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);font-family:'Inter Display',Inter,'Noto Color Emoji',sans-serif;color:#fff}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+.mesh{position:absolute;border-radius:50%;filter:blur(120px);opacity:.75;will-change:transform}
+#m1{width:900px;height:900px;background:#1f5bff;left:-350px;top:-200px}
+#m2{width:800px;height:800px;background:#16d39a;right:-300px;top:600px}
+#m3{width:700px;height:700px;background:#2b2fe0;left:-150px;bottom:-250px;opacity:.6}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:90px 90px;mask-image:radial-gradient(ellipse at 50% 45%,#000 30%,transparent 75%)}
+#grain{position:absolute;inset:-50px;opacity:.13;mix-blend-mode:overlay;pointer-events:none}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(0,0,0,.55) 100%)}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 80px;text-align:center;opacity:0;will-change:transform,filter,opacity}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.outline{color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.92);letter-spacing:-.01em!important}
+.eyebrow{display:inline-flex;align-items:center;gap:16px;font:700 30px Inter;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.85);padding:16px 28px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(20px)}
+.live{width:14px;height:14px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(30,227,106,.25),0 0 24px var(--green)}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:inline-block;will-change:transform}
+.hero{font-weight:900;font-size:118px;line-height:.98;letter-spacing:-.045em}
+.glass{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1.5px solid rgba(255,255,255,.16);backdrop-filter:blur(28px);border-radius:36px;box-shadow:0 30px 80px -30px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18)}
+.opt{width:900px;display:flex;align-items:center;gap:30px;font:700 50px Inter;padding:34px 38px;margin-top:22px;text-align:left;position:relative;overflow:hidden}
+.opt b{flex:none;width:78px;height:78px;border-radius:22px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font:800 36px Inter}
+.opt .fill{position:absolute;inset:0;background:var(--grad);opacity:0;z-index:-1}
+.opt.ok{border-color:transparent;box-shadow:0 0 0 2px rgba(46,232,122,.5),0 30px 90px -20px rgba(30,227,106,.65)}
+.opt.ok b{background:#fff;color:#05081c}
+.chipP{position:absolute;right:110px;font:900 60px Inter;padding:18px 34px;border-radius:999px;background:#fff;color:#05081c;box-shadow:0 20px 60px -10px rgba(46,232,122,.8)}
+.dot{position:absolute;border-radius:50%}
+.tile{padding:40px 34px;text-align:left;flex:1}
+.tile .n{font-weight:900;font-size:120px;line-height:.9;letter-spacing:-.05em}
+.tile .l{font:600 34px Inter;color:rgba(255,255,255,.7);margin-top:14px}
+.ring{width:620px;height:620px;position:relative}
+.ring svg{position:absolute;inset:0;transform:rotate(-90deg);filter:drop-shadow(0 0 30px rgba(30,227,106,.45))}
+.ring .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pill{display:flex;align-items:center;gap:22px;font:700 40px Inter;padding:26px 36px;width:880px;margin-top:18px;text-align:left}
+.pill .v{font-weight:900;font-size:46px;min-width:150px}
+.ticket{width:900px;border-radius:44px;padding:4px;background:var(--grad);box-shadow:0 40px 120px -30px rgba(30,227,106,.6)}
+.ticket .inner{border-radius:40px;background:#071233;padding:56px 40px;position:relative;overflow:hidden}
+.ticket .inner:after{content:"";position:absolute;top:0;left:-50%;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:skew(-20deg) translateX(var(--shine,0px))}
+.kin{font-weight:900;font-size:168px;line-height:.92;letter-spacing:-.055em}
+.btn{display:inline-flex;align-items:center;gap:22px;font:800 56px Inter;color:#05081c;padding:42px 96px;border-radius:999px;background:#fff;box-shadow:0 0 0 10px rgba(255,255,255,.08),0 30px 90px -10px rgba(46,232,122,.7)}
+.btn i{font-style:normal;display:inline-grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--grad);color:#fff;font-size:40px}
+#top{position:absolute;top:56px;left:60px;right:60px;display:flex;gap:10px}
+#top div{flex:1;height:8px;border-radius:8px;background:rgba(255,255,255,.18);overflow:hidden}
+#top div span{display:block;height:100%;background:#fff;width:0}
+#hdr{position:absolute;top:96px;left:60px;right:60px;display:flex;align-items:center;justify-content:space-between}
+#tag{font:700 28px Inter;letter-spacing:.2em;padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9)}
+</style></head>
+<body><div id="stage">
+<div class="mesh" id="m1"></div><div class="mesh" id="m2"></div><div class="mesh" id="m3"></div>
+<div id="grid"></div>
+<svg id="grain" width="1180" height="2020"><filter id="n"><feTurbulence id="turb" type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="1"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+<div id="vig"></div>
+<div id="top"><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div></div>
+<div id="hdr"><img src="logo_white.png" style="height:60px"><div id="tag">ECO-QUEST</div></div>
+
+<!-- S1 -->
+<div class="scene" id="s1">
+  <div class="eyebrow" id="e1"><span class="live"></span>Quick question</div>
+  <div class="hero" style="margin:56px 0 46px">
+    <span class="line"><span id="h1a">How many</span></span>
+    <span class="line"><span id="h1b">paper towel rolls</span></span>
+    <span class="line"><span id="h1c">can <span class="g">one cloth</span></span></span>
+    <span class="line"><span id="h1d">replace?</span></span>
+  </div>
+  <div class="opt glass" id="o1"><div class="fill"></div><b>A</b>5 rolls</div>
+  <div class="opt glass" id="o2"><div class="fill" id="f2"></div><b>B</b>Up to 17 rolls</div>
+  <div class="opt glass" id="o3"><div class="fill"></div><b>C</b>50 rolls</div>
+  <div class="chipP" id="plus" style="top:1420px">+100 pts</div>
+</div>
+
+<!-- S2 -->
+<div class="scene" id="s2">
+  <div class="eyebrow" id="e2">Little swaps · Big impact</div>
+  <div style="margin:50px 0 10px">
+    <span class="line"><span class="kin g" id="k1" style="font-size:230px">ECO</span></span>
+    <span class="line"><span class="kin outline" id="k2" style="font-size:200px">QUEST</span></span>
+  </div>
+  <div id="by" style="display:flex;align-items:center;gap:22px;font:600 44px Inter;color:rgba(255,255,255,.8);margin-bottom:70px">by <img src="logo_white.png" style="height:84px"></div>
+  <div style="display:flex;gap:22px;width:920px">
+    <div class="glass tile" id="t1"><div class="n g">3</div><div class="l">questions</div></div>
+    <div class="glass tile" id="t2"><div class="n g">1</div><div class="l">minute</div></div>
+    <div class="glass tile" id="t3"><div class="n g">52</div><div class="l">quests a year</div></div>
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="scene" id="s3">
+  <div class="eyebrow" id="e3">Mimro Eco Points</div>
+  <div class="ring" id="ring" style="margin:50px 0 40px">
+    <svg width="620" height="620"><defs><linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a8bff"/><stop offset=".55" stop-color="#1ad0b0"/><stop offset="1" stop-color="#2ee87a"/></linearGradient></defs>
+      <circle cx="310" cy="310" r="270" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="40"/>
+      <circle id="arc" cx="310" cy="310" r="270" fill="none" stroke="url(#gr)" stroke-width="40" stroke-linecap="round" stroke-dasharray="1696" stroke-dashoffset="1696"/></svg>
+    <div class="in"><div class="hero" id="cnt" style="font-size:230px;letter-spacing:-.06em">0</div><div style="font:600 40px Inter;color:rgba(255,255,255,.7)">points this week</div></div>
+  </div>
+  <div class="glass pill" id="p1"><span class="v g">+100</span>every right answer</div>
+  <div class="glass pill" id="p2"><span class="v g">+100</span>perfect 3 / 3 bonus</div>
+  <div class="glass pill" id="p3"><span class="v g">+250</span>streak bonuses 🔥</div>
+</div>
+
+<!-- S4 -->
+<div class="scene" id="s4">
+  <div class="eyebrow" id="e4">Shop &amp; earn</div>
+  <div class="glass" id="s4c" style="width:900px;padding:56px 50px;margin:50px 0 46px;display:flex;align-items:center;justify-content:space-between;text-align:left">
+    <div><div class="hero g" style="font-size:240px;letter-spacing:-.07em">2×</div></div>
+    <div style="font:700 50px Inter;line-height:1.2">points<br><span style="color:rgba(255,255,255,.65);font-weight:600">for every $1<br>you spend</span></div>
+  </div>
+  <div class="ticket" id="cp"><div class="inner">
+    <div style="font:600 40px Inter;color:rgba(255,255,255,.75);letter-spacing:.06em">500 POINTS =</div>
+    <div class="hero g" style="font-size:230px;letter-spacing:-.06em;margin:6px 0">$5 OFF</div>
+    <div style="font:600 36px Inter;color:rgba(255,255,255,.75)">your next Mimro order</div>
+  </div></div>
+</div>
+
+<!-- S5 -->
+<div class="scene" id="s5" style="align-items:flex-start;text-align:left;padding:0 90px">
+  <span class="line"><span class="kin" id="w1">Less</span></span>
+  <span class="line"><span class="kin" id="w1b">waste.</span></span>
+  <span class="line" style="margin-top:20px"><span class="kin g" id="w2">Less</span></span>
+  <span class="line"><span class="kin g" id="w2b">plastic.</span></span>
+  <span class="line" style="margin-top:20px"><span class="kin outline" id="w3" style="font-size:136px">Everyday</span></span>
+  <span class="line"><span class="kin outline" id="w3b" style="font-size:136px">essentials.</span></span>
+</div>
+
+<!-- S6 -->
+<div class="scene" id="s6">
+  <img id="lg" src="logo_white.png" style="width:760px">
+  <div class="hero" style="margin:80px 0 26px;font-size:112px">
+    <span class="line"><span id="c1">Play this week's</span></span>
+    <span class="line"><span id="c2" class="g">Eco-Quest</span></span>
+  </div>
+  <div id="cs" style="font:500 40px Inter;color:rgba(255,255,255,.72);margin-bottom:70px">Learn a swap · Earn points · Save</div>
+  <div class="btn" id="cta">Play now <i>→</i></div>
+  <div class="glass" id="url" style="margin-top:60px;padding:22px 40px;border-radius:999px;font:700 42px Inter">mimro.com/pages/eco-quest</div>
+  <div id="nq" style="margin-top:26px;font:600 34px Inter;color:rgba(255,255,255,.65)">New quest every Monday</div>
+</div>
+<div id="fx"></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const eo=x=>1-Math.pow(1-clamp(x),4);
+const eio=x=>{x=clamp(x);return x<.5?8*x*x*x*x:1-Math.pow(-2*x+2,4)/2};
+const back=x=>{x=clamp(x);const c=1.4;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+window.S={s1:[-1,7.45],s2:[7.45,15.8],s3:[15.8,22.8],s4:[22.8,29.8],s5:[29.8,33.7],s6:[33.7,40.5],total:39.5,reveal:5.75};
+const keys=['s1','s2','s3','s4','s5','s6'];
+function trans(t,[a,b],el){ // zoom-blur transitions
+ const i=clamp((t-a)/.45), o=clamp((b-t)/.4);
+ const ei=eo(i), eoo=eo(o);
+ el.style.opacity=Math.min(ei,eoo);
+ const sc=i<1?(.92+.08*ei):(o<1?1+.12*(1-eoo):1);
+ const bl=i<1?(1-ei)*18:(o<1?(1-eoo)*22:0);
+ el.style.transform=`scale(${sc})`;el.style.filter=bl>.2?`blur(${bl}px)`:'none';
+}
+function rise(el,t,t0,d=.6){const p=eo((t-t0)/d);el.style.transform=`translateY(${(1-p)*115}%)`;}
+function pop(el,t,t0,dy=70,d=.6){const p=back((t-t0)/d);el.style.opacity=clamp((t-t0)/.2);el.style.transform=`translateY(${(1-p)*dy}px) scale(${.94+.06*p})`}
+// burst particles
+const fx=$('fx'),P=[];const rnd=i=>{const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)};
+for(let i=0;i<46;i++){const d=document.createElement('div');d.className='dot';const s=10+rnd(i)*22;d.style.width=d.style.height=s+'px';
+ d.style.background=['#2a8bff','#1ad0b0','#2ee87a','#ffffff'][i%4];d.style.boxShadow='0 0 18px '+['#2a8bff','#1ad0b0','#2ee87a','#ffffff'][i%4];fx.appendChild(d);
+ const ang=rnd(i+9)*Math.PI*2,sp=380+rnd(i+3)*620;P.push({d,vx:Math.cos(ang)*sp,vy:Math.sin(ang)*sp});}
+window.render=function(t){
+ const S=window.S;
+ // background motion
+ $('m1').style.transform=`translate(${Math.sin(t*.35)*140}px,${Math.cos(t*.3)*120}px)`;
+ $('m2').style.transform=`translate(${Math.cos(t*.32)*160}px,${Math.sin(t*.27)*200}px)`;
+ $('m3').style.transform=`translate(${Math.sin(t*.25+1)*150}px,${Math.cos(t*.4)*90}px)`;
+ $('turb').setAttribute('seed',Math.floor(t*15)%60);
+ $('grain').style.transform=`translate(${(Math.floor(t*15)*37)%50-25}px,${(Math.floor(t*15)*53)%50-25}px)`;
+ // story progress segments
+ const segs=document.querySelectorAll('#top span');
+ keys.forEach((k,i)=>{const [a,b]=S[k];const aa=Math.max(a,0),bb=Math.min(b,S.total);segs[i].style.width=(clamp((t-aa)/(bb-aa))*100)+'%'});
+ $('hdr').style.opacity=t<S.s6[0]?1:clamp(1-(t-S.s6[0])/.3);
+ keys.forEach(k=>trans(t,S[k],$(k)));
+ // S1
+ pop($('e1'),t,0,40);rise($('h1a'),t,.85);rise($('h1b'),t,1.0);rise($('h1c'),t,1.15);rise($('h1d'),t,1.3);
+ pop($('o1'),t,2.4);pop($('o2'),t,2.75);pop($('o3'),t,3.1);
+ const rv=S.reveal,on=t>=rv;
+ $('o2').classList.toggle('ok',on);$('f2').style.opacity=on?eo((t-rv)/.35):0;
+ if(on){$('o2').style.color='#05081c';const k=Math.sin(clamp((t-rv)/.45)*Math.PI);$('o2').style.transform=`scale(${1+.05*k})`;
+  ['o1','o3'].forEach(id=>{$(id).style.opacity=Math.max(.28,1-(t-rv)*2.5);$(id).style.filter=`blur(${clamp((t-rv)*3)*3}px)`});}
+ else{$('o2').style.color='#fff';['o1','o3'].forEach(id=>$(id).style.filter='none')}
+ const pp=(t-rv);$('plus').style.opacity=pp<0?0:clamp(pp/.15)*clamp((1.6-pp)/.3);$('plus').style.transform=`translateY(${-eo(pp/1.2)*150}px) scale(${back(pp/.4)})`;
+ P.forEach(p=>{const c=t-rv;if(c<0||c>1.4||t>S.s1[1]){p.d.style.opacity=0;return}
+  const e=eo(c/1.2);p.d.style.opacity=1-c/1.4;p.d.style.transform=`translate(${540+p.vx*e}px,${1110+p.vy*e+c*c*120}px) scale(${1-c/2})`});
+ // S2
+ let a=S.s2[0];pop($('e2'),t,a+.15,40);rise($('k1'),t,a+1.5,.7);rise($('k2'),t,a+1.75,.7);pop($('by'),t,a+2.3,40);
+ pop($('t1'),t,a+4.4);pop($('t2'),t,a+5.2);pop($('t3'),t,a+6.4);
+ // S3
+ a=S.s3[0];pop($('e3'),t,a+.15,40);pop($('ring'),t,a+.3,0,.8);
+ const cp=eio((t-a-1.4)/2.4);$('cnt').textContent=Math.round(cp*400);$('arc').style.strokeDashoffset=1696*(1-cp);
+ pop($('p1'),t,a+1.6);pop($('p2'),t,a+2.6);pop($('p3'),t,a+4.6);
+ // S4
+ a=S.s4[0];pop($('e4'),t,a+.15,40);pop($('s4c'),t,a+.5,90);pop($('cp'),t,a+3.6,140,.7);
+ $('cp').querySelector('.inner').style.setProperty('--shine',(clamp((t-a-4.4)/.9)*2600)+'px');
+ // S5
+ a=S.s5[0];rise($('w1'),t,a+.15);rise($('w1b'),t,a+.3);rise($('w2'),t,a+1.05);rise($('w2b'),t,a+1.2);rise($('w3'),t,a+2.45);rise($('w3b'),t,a+2.6);
+ // S6
+ a=S.s6[0];pop($('lg'),t,a+.15,50,.8);rise($('c1'),t,a+.6);rise($('c2'),t,a+.8);pop($('cs'),t,a+1.2,40);pop($('cta'),t,a+1.5,80);pop($('url'),t,a+1.9,40);pop($('nq'),t,a+2.2,30);
+ if(t>a+2.1){const k=(t-a-2.1);$('cta').style.transform=`scale(${1+.04*Math.sin(k*5)})`;$('cta').style.boxShadow=`0 0 0 ${10+8*(.5+.5*Math.sin(k*5))}px rgba(255,255,255,.08),0 30px 90px -10px rgba(46,232,122,.7)`}
+};
+render(0);
+</script></body></html>
