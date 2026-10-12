@@ -33,13 +33,13 @@ h2{font-size:72px;line-height:1.08;font-weight:900;letter-spacing:-.02em;color:#
 .logo{font-size:150px;font-weight:900;letter-spacing:-.05em;color:#020624;display:flex;align-items:center;gap:22px}
 .leaf{width:120px;height:120px;border-radius:0 60% 0 60%;background:linear-gradient(135deg,#007ae7,#2ad265);transform:rotate(-8deg)}
 #bar{position:absolute;left:0;top:0;height:14px;background:linear-gradient(to right,#007ae7,#2ad265)}
-#brand{position:absolute;top:70px;left:0;right:0;text-align:center;font-weight:900;font-size:56px;letter-spacing:-.04em}
+#brand{position:absolute;top:66px;left:0;right:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:54px;letter-spacing:-.03em}
 .conf{position:absolute;width:22px;height:34px;border-radius:4px}
 </style></head>
 <body><div id="stage">
 <div class="blob" id="b1"></div><div class="blob" id="b2"></div>
 <div id="bar"></div>
-<div id="brand">mimro <span class="grad">Eco-Quest</span></div>
+<div id="brand"><img src="logo.png" style="height:64px;mix-blend-mode:multiply"><span style="width:3px;height:52px;background:#E6E5E7;margin:0 26px"></span><span class="grad">Eco-Quest</span></div>
 
 <!-- S1 hook + quiz -->
 <div class="scene" id="s1">
@@ -55,7 +55,7 @@ h2{font-size:72px;line-height:1.08;font-weight:900;letter-spacing:-.02em;color:#
 <div class="scene" id="s2">
   <div class="sub" id="s2a" style="font-size:46px">Little swaps. Big impact. 🌿</div>
   <h1 id="s2h" style="font-size:140px;margin:30px 0 10px"><span class="grad">Eco-Quest</span></h1>
-  <div class="sub" id="s2b" style="font-size:56px;color:#020624;font-weight:800;margin-bottom:60px">by mimro</div>
+  <div class="sub" id="s2b" style="font-size:50px;color:#020624;font-weight:700;margin-bottom:60px;display:flex;align-items:center;gap:22px">by <img src="logo.png" style="height:96px;mix-blend-mode:multiply"></div>
   <div class="chip" id="c1">❓ <span class="grad">3</span> questions</div>
   <div class="chip" id="c2">⏱ <span class="grad">1</span> minute</div>
   <div class="chip" id="c3">📅 New quest <span class="grad">every week</span></div>
@@ -101,7 +101,7 @@ h2{font-size:72px;line-height:1.08;font-weight:900;letter-spacing:-.02em;color:#
 
 <!-- S6 CTA -->
 <div class="scene" id="s6">
-  <div class="logo" id="lg"><div class="leaf"></div>mimro</div>
+  <img id="lg" src="logo.png" style="width:820px;mix-blend-mode:multiply">
   <h1 id="s6h" style="margin:60px 0 20px;font-size:96px">Play this week's <span class="grad">Eco-Quest</span></h1>
   <div class="sub" id="s6s" style="margin-bottom:70px">Learn a swap. Earn points. Save on your next order.</div>
   <div class="btn" id="cta">Play now →</div>
