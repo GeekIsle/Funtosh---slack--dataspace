@@ -1,0 +1,160 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#fff;font-family:Inter,'Noto Color Emoji',sans-serif;color:#020624}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#fff}
+.blob{position:absolute;border-radius:50%;filter:blur(10px)}
+#b1{width:900px;height:900px;left:-300px;top:-250px;background:radial-gradient(circle,rgba(0,122,231,.22),rgba(0,122,231,0) 65%)}
+#b2{width:1000px;height:1000px;right:-380px;bottom:-300px;background:radial-gradient(circle,rgba(42,210,101,.25),rgba(42,210,101,0) 65%)}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 90px;text-align:center;opacity:0}
+.grad{background:linear-gradient(to right,#007ae7,#2ad265);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pill{display:inline-flex;align-items:center;gap:14px;font-weight:800;font-size:34px;letter-spacing:.14em;text-transform:uppercase;background:#eef6fd;color:#3278b3;padding:16px 30px;border-radius:999px}
+.dot{width:16px;height:16px;border-radius:50%;background:#2ad265;box-shadow:0 0 0 8px rgba(42,210,101,.25)}
+h1{font-size:92px;line-height:1.05;font-weight:900;letter-spacing:-.02em}
+h2{font-size:72px;line-height:1.08;font-weight:900;letter-spacing:-.02em;color:#3278b3}
+.sub{font-size:40px;color:#5a5f73;font-weight:600;line-height:1.3}
+.opt{width:860px;display:flex;align-items:center;gap:28px;font-size:48px;font-weight:700;background:#f9f9fb;border:4px solid #E6E5E7;border-radius:28px;padding:30px 36px;margin-top:26px;text-align:left}
+.opt b{flex:none;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:#fff;border:3px solid #E6E5E7;font-size:36px}
+.opt.ok{background:#eafaf0;border-color:#2ad265}
+.opt.ok b{background:linear-gradient(135deg,#007ae7,#2ad265);color:#fff;border-color:transparent}
+.plus{position:absolute;font-size:64px;font-weight:900;color:#1fae52}
+.chip{display:inline-block;font-size:46px;font-weight:800;padding:26px 44px;border-radius:24px;background:#f9f9fb;border:3px solid #E6E5E7;margin:14px 0}
+.chip .grad{font-weight:900}
+.card{background:#fff;border:3px solid #E6E5E7;border-radius:36px;box-shadow:0 40px 80px -50px rgba(2,6,36,.45);padding:56px 60px}
+.big{font-size:230px;font-weight:900;line-height:1;letter-spacing:-.04em}
+.ring{width:560px;height:560px;position:relative}
+.ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.ring .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.coupon{width:840px;border-radius:40px;padding:60px 40px;background:linear-gradient(120deg,#007ae7,#2ad265);color:#fff;box-shadow:0 40px 80px -40px rgba(0,122,231,.7);position:relative;overflow:hidden}
+.coupon:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skew(-20deg) translateX(var(--shine,0px))}
+.word{font-size:120px;font-weight:900;line-height:1.08;letter-spacing:-.03em}
+.btn{display:inline-flex;align-items:center;gap:20px;font-size:54px;font-weight:800;color:#fff;padding:40px 90px;border-radius:999px;background:linear-gradient(to right,#007ae7,#2ad265);box-shadow:0 30px 60px -30px rgba(0,122,231,.8)}
+.logo{font-size:150px;font-weight:900;letter-spacing:-.05em;color:#020624;display:flex;align-items:center;gap:22px}
+.leaf{width:120px;height:120px;border-radius:0 60% 0 60%;background:linear-gradient(135deg,#007ae7,#2ad265);transform:rotate(-8deg)}
+#bar{position:absolute;left:0;top:0;height:14px;background:linear-gradient(to right,#007ae7,#2ad265)}
+#brand{position:absolute;top:70px;left:0;right:0;text-align:center;font-weight:900;font-size:56px;letter-spacing:-.04em}
+.conf{position:absolute;width:22px;height:34px;border-radius:4px}
+</style></head>
+<body><div id="stage">
+<div class="blob" id="b1"></div><div class="blob" id="b2"></div>
+<div id="bar"></div>
+<div id="brand">mimro <span class="grad">Eco-Quest</span></div>
+
+<!-- S1 hook + quiz -->
+<div class="scene" id="s1">
+  <div class="pill" id="s1p"><span class="dot"></span>Quick question</div>
+  <h1 id="s1h" style="margin:50px 0 30px">How many paper towel rolls can <span class="grad">ONE</span> dishcloth replace?</h1>
+  <div class="opt" id="o1"><b>A</b>5 rolls</div>
+  <div class="opt" id="o2"><b>B</b>Up to 17 rolls</div>
+  <div class="opt" id="o3"><b>C</b>50 rolls</div>
+  <div class="plus" id="plus" style="right:120px;top:1290px">+100 pts</div>
+</div>
+
+<!-- S2 what is eco-quest -->
+<div class="scene" id="s2">
+  <div class="sub" id="s2a" style="font-size:46px">Little swaps. Big impact. 🌿</div>
+  <h1 id="s2h" style="font-size:140px;margin:30px 0 10px"><span class="grad">Eco-Quest</span></h1>
+  <div class="sub" id="s2b" style="font-size:56px;color:#020624;font-weight:800;margin-bottom:60px">by mimro</div>
+  <div class="chip" id="c1">❓ <span class="grad">3</span> questions</div>
+  <div class="chip" id="c2">⏱ <span class="grad">1</span> minute</div>
+  <div class="chip" id="c3">📅 New quest <span class="grad">every week</span></div>
+</div>
+
+<!-- S3 points -->
+<div class="scene" id="s3">
+  <h2 id="s3h" style="margin-bottom:50px">Earn Mimro Eco Points</h2>
+  <div class="ring" id="ring">
+    <svg width="560" height="560"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#007ae7"/><stop offset="1" stop-color="#2ad265"/></linearGradient></defs>
+      <circle cx="280" cy="280" r="245" fill="none" stroke="#E6E5E7" stroke-width="34"/>
+      <circle id="arc" cx="280" cy="280" r="245" fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round" stroke-dasharray="1539" stroke-dashoffset="1539"/></svg>
+    <div class="in"><div class="big grad" id="cnt" style="font-size:190px">0</div><div class="sub" style="font-size:44px">pts this week</div></div>
+  </div>
+  <div style="margin-top:50px">
+    <div class="chip" id="p1">✅ <span class="grad">+100</span> per right answer</div>
+    <div class="chip" id="p2">🏆 <span class="grad">+100</span> perfect score</div>
+    <div class="chip" id="p3">🔥 Streak bonuses</div>
+  </div>
+</div>
+
+<!-- S4 shop + coupon -->
+<div class="scene" id="s4">
+  <div class="card" id="s4c" style="width:860px">
+    <div style="font-size:120px">🛒</div>
+    <h2 style="margin-top:10px">Shop &amp; earn</h2>
+    <div class="big grad" style="font-size:200px;margin:10px 0">2 pts</div>
+    <div class="sub" style="font-size:52px;color:#020624;font-weight:800">for every $1</div>
+  </div>
+  <div class="coupon" id="cp" style="margin-top:70px">
+    <div style="font-size:48px;font-weight:700;opacity:.95">500 points =</div>
+    <div style="font-size:190px;font-weight:900;line-height:1">$5 OFF</div>
+    <div style="font-size:40px;font-weight:600;opacity:.95">your next order</div>
+  </div>
+</div>
+
+<!-- S5 tagline -->
+<div class="scene" id="s5">
+  <div class="word" id="w1">Less waste.</div>
+  <div class="word grad" id="w2">Less plastic.</div>
+  <div class="word" id="w3" style="color:#3278b3">Everyday essentials.</div>
+</div>
+
+<!-- S6 CTA -->
+<div class="scene" id="s6">
+  <div class="logo" id="lg"><div class="leaf"></div>mimro</div>
+  <h1 id="s6h" style="margin:60px 0 20px;font-size:96px">Play this week's <span class="grad">Eco-Quest</span></h1>
+  <div class="sub" id="s6s" style="margin-bottom:70px">Learn a swap. Earn points. Save on your next order.</div>
+  <div class="btn" id="cta">Play now →</div>
+  <div class="sub" id="url" style="margin-top:60px;font-size:50px;color:#020624;font-weight:800">mimro.com/pages/eco-quest</div>
+  <div class="sub" id="nq" style="margin-top:20px;font-size:38px">🌎 New quest every Monday</div>
+</div>
+<div id="cf"></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const eo=x=>1-Math.pow(1-clamp(x),3);
+const back=x=>{x=clamp(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+// scene windows [start,end] — overwritten by renderer
+window.S={s1:[-1,7.45],s2:[7.45,15.8],s3:[15.8,22.8],s4:[22.8,29.8],s5:[29.8,33.7],s6:[33.7,40.5],total:39.5,reveal:5.75};
+function sceneAlpha(t,[a,b]){return clamp((t-a)/.35)*clamp((b-t)/.35)}
+function pop(el,t,t0,dy=60){const p=back((t-t0)/.5);el.style.opacity=clamp((t-t0)/.25);el.style.transform=`translateY(${(1-p)*dy}px) scale(${.9+.1*p})`}
+// confetti
+const cols=['#007ae7','#2ad265','#3278b3','#8fe3ae','#0284dc'],P=[];
+for(let i=0;i<70;i++){const d=document.createElement('div');d.className='conf';d.style.background=cols[i%5];$('cf').appendChild(d);
+ P.push({d,x:540,y:1250,vx:(Math.sin(i*12.9898)*43758.5453%1)*40-20,vy:-(18+((Math.sin(i*78.233)*12345.678%1+1)%1)*26),r:i*37});}
+window.render=function(t){
+ const S=window.S;
+ $('bar').style.width=(clamp(t/S.total)*1080)+'px';
+ $('b1').style.transform=`translate(${Math.sin(t*.5)*60}px,${Math.cos(t*.4)*50}px)`;
+ $('b2').style.transform=`translate(${Math.cos(t*.45)*70}px,${Math.sin(t*.35)*60}px)`;
+ $('brand').style.opacity=t<S.s6[0]?1:clamp(1-(t-S.s6[0])/.3);
+ for(const k of['s1','s2','s3','s4','s5','s6'])$(k).style.opacity=sceneAlpha(t,S[k]);
+ // S1
+ let a=0;pop($('s1p'),t,0);pop($('s1h'),t,.9);pop($('o1'),t,2.4);pop($('o2'),t,2.8);pop($('o3'),t,3.2);
+ const rv=S.reveal, on=t>=rv;
+ $('o2').classList.toggle('ok',on);
+ $('o1').style.opacity=on?Math.max(.35,1-(t-rv)*2):$('o1').style.opacity;
+ $('o3').style.opacity=on?Math.max(.35,1-(t-rv)*2):$('o3').style.opacity;
+ if(on)$('o2').style.transform=`scale(${1+.06*Math.sin(clamp((t-rv)/.4)*Math.PI)})`;
+ const pp=clamp((t-rv)/1.2);$('plus').style.opacity=t>rv?(pp<.8?1:1-(pp-.8)*5):0;$('plus').style.transform=`translateY(${-pp*160}px)`;
+ // confetti
+ const ct=t-rv;P.forEach(p=>{if(ct<0||ct>2.2||t>S.s1[1]){p.d.style.opacity=0;return}
+  p.d.style.opacity=1-ct/2.2;const x=p.x+p.vx*ct*30,y=p.y+(p.vy*ct+30*ct*ct)*30;p.d.style.transform=`translate(${x}px,${y}px) rotate(${p.r+ct*500}deg)`});
+ // S2
+ a=S.s2[0];pop($('s2a'),t,a+.1);pop($('s2h'),t,a+1.6,90);pop($('s2b'),t,a+2.2);pop($('c1'),t,a+4.4);pop($('c2'),t,a+5.2);pop($('c3'),t,a+6.4);
+ // S3
+ a=S.s3[0];pop($('s3h'),t,a+.1);pop($('ring'),t,a+.3,0);
+ const cp=eo((t-a-1.4)/2.6);$('cnt').textContent=Math.round(cp*400);$('arc').style.strokeDashoffset=1539*(1-cp);
+ pop($('p1'),t,a+1.6);pop($('p2'),t,a+2.6);pop($('p3'),t,a+4.6);
+ // S4
+ a=S.s4[0];pop($('s4c'),t,a+.1);pop($('cp'),t,a+3.6,120);
+ $('cp').style.setProperty('--shine',(clamp((t-a-4.3)/1)*2200)+'px');
+ // S5
+ a=S.s5[0];pop($('w1'),t,a+.2,80);pop($('w2'),t,a+1.1,80);pop($('w3'),t,a+2.5,80);
+ // S6
+ a=S.s6[0];pop($('lg'),t,a+.1);pop($('s6h'),t,a+.5);pop($('s6s'),t,a+.9);pop($('cta'),t,a+1.3);pop($('url'),t,a+1.7);pop($('nq'),t,a+2.1);
+ if(t>a+1.8)$('cta').style.transform=`scale(${1+.05*Math.sin((t-a-1.8)*6)})`;
+};
+render(0);
+</script></body></html>
