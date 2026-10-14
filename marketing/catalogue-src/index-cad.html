@@ -33,9 +33,11 @@ p{color:var(--mute)}
 .pp-grid{display:grid;grid-template-columns:2.85in 1fr;gap:.32in;margin-top:.28in}
 .pack{height:2.05in;border-radius:16px;border:1px solid var(--line);background:#fff;overflow:hidden}
 .pack img{width:100%;height:100%;object-fit:cover}
-.price{display:flex;align-items:baseline;gap:8px;margin-top:10px}
+.price{display:flex;align-items:baseline;gap:8px;margin-top:10px;white-space:nowrap}
 .price b{font-weight:900;font-size:22pt;letter-spacing:-.03em}
 .price s{color:#9aa0b2;font-size:10pt}
+.price .lb{font-size:7.5pt;font-weight:700;letter-spacing:.14em;color:#8a90a2;text-transform:uppercase}
+.price .ms{font-size:11pt;font-weight:700;color:var(--mute)}
 .spec{margin-top:12px;border-top:1px solid var(--line)}
 .spec div{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:8.5pt}
 .spec div span:first-child{color:#8a90a2;font-weight:600}
@@ -66,7 +68,7 @@ td.r,th.r{text-align:right}
     <h1 style="font-size:60pt;margin-top:16px">Less waste.<br>Less plastic.<br><span class="g">Everyday essentials.</span></h1>
     <p style="font-size:12pt;margin-top:18px;max-width:5.4in">Plant-based swaps for the kitchen and bath — featuring the <b style="color:var(--ink)">Mimro Originals</b> collection.</p>
   </div>
-  <div class="ftr"><span>mimro.com</span><span>Prices in CAD</span></div>
+  <div class="ftr"><span>mimro.com</span><span>Wholesale &amp; MSRP in CAD</span></div>
 </section>
 
 <!-- 2 STORY -->
@@ -103,10 +105,10 @@ td.r,th.r{text-align:right}
     <h2 style="margin-top:14px">Meet <span class="g">Mimro Originals</span></h2>
     <p style="margin-top:8px;max-width:5.6in">Four plant-based essentials, designed by Mimro for the kitchen and bath.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:.3in">
-      <div><div class="card" style="height:2.3in;position:relative"><img src="u_coco.jpg"><span class="num">01 · KITCHEN</span></div><h3 style="margin-top:10px">Coconut Cellulose Kitchen Sponge</h3><p style="font-size:9pt">6 or 12 pack · from <b style="color:var(--ink)">$14.24</b></p></div>
-      <div><div class="card" style="height:2.3in;position:relative"><img src="u_loof.jpg"><span class="num">02 · KITCHEN</span></div><h3 style="margin-top:10px">Natural Loofah Cellulose Sponge</h3><p style="font-size:9pt"><b style="color:var(--ink)">$14.24</b></p></div>
-      <div><div class="card" style="height:2.3in;position:relative"><img src="u_swe.jpg"><span class="num">03 · KITCHEN</span></div><h3 style="margin-top:10px">Swedish Dishcloth</h3><p style="font-size:9pt"><b style="color:var(--ink)">$14.24</b></p></div>
-      <div><div class="card" style="height:2.3in;position:relative"><img src="u_bath.jpg"><span class="num">04 · BATH</span></div><h3 style="margin-top:10px">Natural Loofah Bath Set</h3><p style="font-size:9pt"><b style="color:var(--ink)">$23.74</b></p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_coco.jpg"><span class="num">01 · KITCHEN</span></div><h3 style="margin-top:10px">Coconut Cellulose Kitchen Sponge</h3><p style="font-size:9pt">6 or 12 pack · Wholesale from <b style="color:var(--ink)">CA$7.50</b> · MSRP CA$14.99</p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_loof.jpg"><span class="num">02 · KITCHEN</span></div><h3 style="margin-top:10px">Natural Loofah Cellulose Sponge</h3><p style="font-size:9pt">3 pack · Wholesale <b style="color:var(--ink)">CA$7.50</b> · MSRP CA$14.99</p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_swe.jpg"><span class="num">03 · KITCHEN</span></div><h3 style="margin-top:10px">Swedish Dishcloth</h3><p style="font-size:9pt">Wholesale <b style="color:var(--ink)">CA$7.50</b> · MSRP CA$14.99</p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_bath.jpg"><span class="num">04 · BATH</span></div><h3 style="margin-top:10px">Natural Loofah Bath Set</h3><p style="font-size:9pt">Wholesale <b style="color:var(--ink)">CA$12.50</b> · MSRP CA$24.99</p></div>
     </div>
   </div>
   <div class="ftr"><span>Mimro Brand Catalogue 2026</span><span>03</span></div>
@@ -125,13 +127,14 @@ td.r,th.r{text-align:right}
           <div><span>Materials</span><span>Wood pulp cellulose,<br>natural coconut fibre</span></div>
           <div><span>For</span><span>Dishes, cookware, glass,<br>countertops</span></div>
           <div><span>SKU</span><span>10400-06 · 10401-12</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
         </div>
       </div>
       <div>
         <span class="eyebrow">Mimro Originals</span>
         <h2 style="margin-top:10px;font-size:25pt">Coconut <span class="g">Cellulose</span><br>Kitchen Sponge</h2>
-        <div class="price"><b>$14.24</b><s>$14.99</s><span style="font-size:9pt;color:var(--mute)">6 pack</span></div>
-        <div class="price" style="margin-top:2px"><b style="font-size:16pt">$23.74</b><s>$24.99</s><span style="font-size:9pt;color:var(--mute)">12 pack</span></div>
+        <div class="price"><span class="lb">Wholesale</span><b>CA$7.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">CA$14.99</span><span style="font-size:9pt;color:var(--mute);margin-left:8px">6 pack</span></div>
+        <div class="price"><span class="lb">Wholesale</span><b>CA$12.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">CA$24.99</span><span style="font-size:9pt;color:var(--mute);margin-left:8px">12 pack</span></div>
         <p style="margin-top:10px;font-size:9.5pt">Dual-sided kitchen sponges made from biodegradable wood pulp cellulose and natural coconut fibre — for grease, dirt, food residue and grime.</p>
         <div class="feat">
           <div><b>Natural coconut fibre</b>Effective everyday scrubbing.</div>
@@ -155,16 +158,18 @@ td.r,th.r{text-align:right}
       <div>
         <div class="pack"><img src="p_loof.jpg"></div>
         <div class="spec">
+          <div><span>Pack size</span><span>3 sponges</span></div>
           <div><span>Materials</span><span>Loofah, cellulose, cotton</span></div>
           <div><span>Free from</span><span>Plastic, glue,<br>synthetic fillers</span></div>
           <div><span>For</span><span>Dishes, cookware,<br>non-stick pans</span></div>
           <div><span>SKU</span><span>10403-03</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
         </div>
       </div>
       <div>
         <span class="eyebrow">Mimro Originals</span>
         <h2 style="margin-top:10px;font-size:25pt">Natural <span class="g">Loofah</span><br>Cellulose Sponge</h2>
-        <div class="price"><b>$14.24</b><s>$14.99</s></div>
+        <div class="price"><span class="lb">Wholesale</span><b>CA$7.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">CA$14.99</span></div>
         <p style="margin-top:10px;font-size:9.5pt">A natural, compostable kitchen sponge made from 100% plant-based loofah, cellulose and cotton — plastic-free and made without glue or synthetic fillers.</p>
         <div class="feat">
           <div><b>100% plant-based</b>Loofah, cellulose and cotton.</div>
@@ -192,12 +197,13 @@ td.r,th.r{text-align:right}
           <div><span>Absorbency</span><span>Up to 20× standard cloths</span></div>
           <div><span>Reuse</span><span>100+ washes</span></div>
           <div><span>SKU</span><span>10402-03</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
         </div>
       </div>
       <div>
         <span class="eyebrow">Mimro Originals</span>
         <h2 style="margin-top:10px;font-size:25pt">Swedish <span class="g">Dishcloth</span></h2>
-        <div class="price"><b>$14.24</b><s>$14.99</s></div>
+        <div class="price"><span class="lb">Wholesale</span><b>CA$7.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">CA$14.99</span></div>
         <p style="margin-top:10px;font-size:9.5pt">Reusable, highly absorbent kitchen cloths for spills, grease and fine particles on countertops, dishes, glass and everyday surfaces. Soft when wet, fast-drying and machine washable.</p>
         <div class="feat">
           <div><b>Highly absorbent</b>Up to 20× more than standard cloths.</div>
@@ -225,12 +231,13 @@ td.r,th.r{text-align:right}
           <div><span>Loofah size</span><span>13 × 18 cm</span></div>
           <div><span>Package</span><span>148 × 32 × 210 mm</span></div>
           <div><span>SKU</span><span>10404-03</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
         </div>
       </div>
       <div>
         <span class="eyebrow">Mimro Originals</span>
         <h2 style="margin-top:10px;font-size:25pt">Natural <span class="g">Loofah</span><br>Bath Set</h2>
-        <div class="price"><b>$23.74</b><s>$24.99</s></div>
+        <div class="price"><span class="lb">Wholesale</span><b>CA$12.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">CA$24.99</span></div>
         <p style="margin-top:10px;font-size:9.5pt">A natural Egyptian loofah with soft terry cloth backing — exfoliation on one side, gentle cleansing on the other — for bathing, showering and everyday skin care.</p>
         <div class="feat">
           <div><b>Egyptian loofah</b>Natural cleansing and exfoliation.</div>
@@ -251,32 +258,31 @@ td.r,th.r{text-align:right}
   <div class="hdr"><img src="logo_dark.png"><span>AT A GLANCE</span></div>
   <div class="in" style="padding-top:1.05in">
     <span class="eyebrow">Range at a glance</span>
-    <h2 style="margin-top:14px;font-size:26pt">Mimro Originals price list</h2>
+    <h2 style="margin-top:14px;font-size:26pt">Mimro Originals wholesale price list</h2>
     <table style="margin-top:16px">
-      <tr><th>SKU</th><th>Product</th><th>Option</th><th>Category</th><th class="r">Price (CAD)</th></tr>
-      <tr><td>10400-06</td><td><b>Coconut Cellulose Kitchen Sponge</b></td><td>6 pack</td><td>Kitchen</td><td class="r"><b>$14.24</b> <s style="color:#9aa0b2">$14.99</s></td></tr>
-      <tr><td>10401-12</td><td><b>Coconut Cellulose Kitchen Sponge</b></td><td>12 pack</td><td>Kitchen</td><td class="r"><b>$23.74</b> <s style="color:#9aa0b2">$24.99</s></td></tr>
-      <tr><td>10403-03</td><td><b>Natural Loofah Cellulose Sponge</b></td><td>—</td><td>Kitchen</td><td class="r"><b>$14.24</b> <s style="color:#9aa0b2">$14.99</s></td></tr>
-      <tr><td>10402-03</td><td><b>Swedish Dishcloth</b></td><td>—</td><td>Kitchen</td><td class="r"><b>$14.24</b> <s style="color:#9aa0b2">$14.99</s></td></tr>
-      <tr><td>10404-03</td><td><b>Natural Loofah Bath Set</b></td><td>3-piece set</td><td>Bath</td><td class="r"><b>$23.74</b> <s style="color:#9aa0b2">$24.99</s></td></tr>
+      <tr><th>SKU</th><th>Product</th><th>Option</th><th>Case</th><th class="r">Wholesale</th><th class="r">MSRP</th></tr>
+      <tr><td>10400-06</td><td><b>Coconut Cellulose Kitchen Sponge</b></td><td>6 pack</td><td>1</td><td class="r"><b>CA$7.50</b></td><td class="r">CA$14.99</td></tr>
+      <tr><td>10401-12</td><td><b>Coconut Cellulose Kitchen Sponge</b></td><td>12 pack</td><td>1</td><td class="r"><b>CA$12.50</b></td><td class="r">CA$24.99</td></tr>
+      <tr><td>10403-03</td><td><b>Natural Loofah Cellulose Sponge</b></td><td>3 pack</td><td>1</td><td class="r"><b>CA$7.50</b></td><td class="r">CA$14.99</td></tr>
+      <tr><td>10402-03</td><td><b>Swedish Dishcloth</b></td><td>—</td><td>1</td><td class="r"><b>CA$7.50</b></td><td class="r">CA$14.99</td></tr>
+      <tr><td>10404-03</td><td><b>Natural Loofah Bath Set</b></td><td>3-piece set</td><td>1</td><td class="r"><b>CA$12.50</b></td><td class="r">CA$24.99</td></tr>
     </table>
 
     <div style="margin-top:.45in;border-radius:22px;padding:3px;background:var(--grad)">
       <div style="border-radius:20px;background:#f6fbf3;padding:22px 24px">
-        <span class="eyebrow">Eco Rewards</span>
-        <h2 style="margin-top:10px;font-size:22pt">Earn Eco Points. <span class="g">Unlock Rewards.</span></h2>
-        <p style="margin-top:6px">Shop and play Eco-Quest to earn Eco Points, then redeem them for savings on your next order.</p>
+        <span class="eyebrow">For retailers</span>
+        <h2 style="margin-top:10px;font-size:22pt">Stock Mimro Originals. <span class="g">Earn healthy margins.</span></h2>
+        <p style="margin-top:6px">Plant-based kitchen and bath essentials with ready-to-shelf, bilingual (EN/FR) packaging.</p>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px">
-          <div class="stat"><div class="n g">2 pts</div><div class="l">per $1 spent on orders</div></div>
-          <div class="stat"><div class="n g">+100</div><div class="l">per correct answer in the weekly Eco-Quest</div></div>
-          <div class="stat"><div class="n g">+100</div><div class="l">welcome bonus on your first credit</div></div>
-          <div class="stat"><div class="n g">$5 off</div><div class="l">for every 500 points (100 pts = $1)</div></div>
+          <div class="stat"><div class="n g">~50%</div><div class="l">retailer margin at MSRP</div></div>
+          <div class="stat"><div class="n g">1</div><div class="l">unit per case — easy to try every SKU</div></div>
+          <div class="stat"><div class="n g">5</div><div class="l">SKUs across kitchen and bath</div></div>
+          <div class="stat"><div class="n g">CA$7.50</div><div class="l">wholesale entry price point</div></div>
         </div>
-        <p style="margin-top:10px;font-size:8.5pt">Points are added every Monday. Play at mimro.com/pages/eco-quest.</p>
-      </div>
+        <p style="margin-top:10px;font-size:8.5pt">Wholesale and MSRP in CAD. Contact us through mimro.com for wholesale enquiries.</p></div>
     </div>
   </div>
-  <div class="ftr"><span>Prices in CAD as listed on mimro.com, October 2026. Subject to change.</span><span>08</span></div>
+  <div class="ftr"><span>Wholesale &amp; MSRP in CAD, October 2026. Subject to change.</span><span>08</span></div>
 </section>
 
 <!-- 9 BACK -->

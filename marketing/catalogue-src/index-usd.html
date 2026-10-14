@@ -1,0 +1,310 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Mimro Brand Catalogue 2026</title>
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0b1030;--mute:#555b72;--line:#e4ebe6;--mint:#e6f6dc;--mintb:#cdebbb;--green:#2b7a4b;--grad:linear-gradient(100deg,#3c78dd 0%,#29ce70 100%)}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Inter,'Noto Color Emoji',sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.5}
+.page{width:8.5in;height:11in;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+.page:last-child{page-break-after:auto}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;z-index:0}
+.b1{background:#d9e7fb}.b2{background:#d3f0c4}.b3{background:#e4edfb}
+.in{position:relative;z-index:1;padding:.6in .65in}
+.g{color:#2f9a6a}
+.eyebrow{display:inline-block;font-weight:700;font-size:7.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--green);padding:5px 11px;border-radius:999px;background:var(--mint);border:1px solid var(--mintb)}
+h1{font-weight:900;font-size:44pt;line-height:1;letter-spacing:-.04em}
+h2{font-weight:900;font-size:30pt;line-height:1.05;letter-spacing:-.035em}
+h3{font-weight:800;font-size:12pt;letter-spacing:-.01em}
+p{color:var(--mute)}
+.hdr{position:absolute;top:.35in;left:.65in;right:.65in;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.hdr img{height:20px}
+.hdr span{font-weight:700;font-size:7pt;letter-spacing:.2em;color:#fff;background:var(--grad);padding:4px 9px;border-radius:999px}
+.ftr{position:absolute;bottom:.32in;left:.65in;right:.65in;display:flex;justify-content:space-between;font-size:7.5pt;color:#8a90a2;z-index:2}
+.card{border-radius:18px;overflow:hidden;box-shadow:0 14px 30px -18px rgba(20,60,50,.5)}
+.card img{display:block;width:100%;height:100%;object-fit:cover}
+.tg{display:inline-block;font-weight:700;font-size:7.5pt;padding:4px 9px;border-radius:999px;background:var(--mint);color:var(--green);border:1px solid var(--mintb);margin:0 4px 4px 0}
+/* cover */
+.cover-img{position:absolute;inset:0}
+.cover-img img{width:100%;height:100%;object-fit:cover}
+.cover-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.0) 30%,rgba(255,255,255,.9) 58%,#fff 72%)}
+/* product page */
+.pp-photo{height:3.55in}
+.pp-grid{display:grid;grid-template-columns:2.85in 1fr;gap:.32in;margin-top:.28in}
+.pack{height:2.05in;border-radius:16px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.pack img{width:100%;height:100%;object-fit:cover}
+.price{display:flex;align-items:baseline;gap:8px;margin-top:10px;white-space:nowrap}
+.price b{font-weight:900;font-size:22pt;letter-spacing:-.03em}
+.price s{color:#9aa0b2;font-size:10pt}
+.price .lb{font-size:7.5pt;font-weight:700;letter-spacing:.14em;color:#8a90a2;text-transform:uppercase}
+.price .ms{font-size:11pt;font-weight:700;color:var(--mute)}
+.spec{margin-top:12px;border-top:1px solid var(--line)}
+.spec div{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:8.5pt}
+.spec div span:first-child{color:#8a90a2;font-weight:600}
+.spec div span:last-child{text-align:right;font-weight:600}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:12px}
+.feat div{font-size:8.8pt;color:var(--mute);line-height:1.4}
+.feat b{display:block;color:var(--ink);font-size:9.5pt;margin-bottom:2px}
+.feat b:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--grad);margin-right:6px;vertical-align:1px}
+.how{margin-top:14px;padding:12px 14px;border-radius:14px;background:#f5faf2;border:1px solid #e1f0d6}
+.how ol{margin:6px 0 0 16px;font-size:8.6pt;color:var(--mute)}
+.num{font-weight:800;font-size:7.5pt;letter-spacing:.14em;color:#fff;background:var(--grad);padding:4px 10px;border-radius:999px;position:absolute;left:12px;top:12px}
+table{width:100%;border-collapse:collapse;font-size:9pt}
+th{text-align:left;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:#8a90a2;padding:8px 6px;border-bottom:2px solid var(--ink)}
+td{padding:11px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.r,th.r{text-align:right}
+.stat{border-radius:16px;padding:16px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 26px -20px rgba(20,60,50,.5)}
+.stat .n{font-weight:900;font-size:26pt;line-height:1;letter-spacing:-.04em}
+.stat .l{font-size:8.5pt;color:var(--mute);margin-top:6px}
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="page">
+  <div class="cover-img"><img src="r_coco.jpg" style="object-position:50% 30%"></div>
+  <div class="cover-shade"></div>
+  <div class="hdr"><img src="logo_dark.png"><span>BRAND CATALOGUE</span></div>
+  <div style="position:absolute;left:.65in;right:.65in;bottom:.9in;z-index:2">
+    <span class="eyebrow">2026 Edition</span>
+    <h1 style="font-size:60pt;margin-top:16px">Less waste.<br>Less plastic.<br><span class="g">Everyday essentials.</span></h1>
+    <p style="font-size:12pt;margin-top:18px;max-width:5.4in">Plant-based swaps for the kitchen and bath — featuring the <b style="color:var(--ink)">Mimro Originals</b> collection.</p>
+  </div>
+  <div class="ftr"><span>mimro.com</span><span>Wholesale &amp; MSRP in USD</span></div>
+</section>
+
+<!-- 2 STORY -->
+<section class="page">
+  <div class="blob b1" style="width:4in;height:4in;left:-1.5in;top:-1in"></div>
+  <div class="blob b2" style="width:4in;height:4in;right:-1.6in;bottom:1in"></div>
+  <div class="hdr"><img src="logo_dark.png"><span>OUR STORY</span></div>
+  <div class="in" style="padding-top:1.05in">
+    <span class="eyebrow">The Mimro story</span>
+    <h2 style="margin-top:14px;font-size:34pt">Everyday essentials<br>can do <span class="g">better</span>.</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.35in;margin-top:.3in">
+      <div>
+        <p style="font-size:11pt;color:var(--ink)">Every day, sponges, paper towels and plastic scrubbers end up in the trash. At Mimro, we knew the things we reach for most could be made better.</p>
+        <p style="margin-top:12px">So we made our own. <b style="color:var(--ink)">Mimro Originals</b> are plant-based kitchen and bath essentials made from materials like coconut fibre, cellulose, cotton and natural loofah — designed to work hard every day and leave less behind.</p>
+        <p style="margin-top:12px">Alongside our Originals, Mimro curates low-waste swaps from trusted brands, so building a lower-plastic home is simple.</p>
+      </div>
+      <div class="card" style="height:3.2in"><img src="u_swe.jpg" style="object-position:80% 50%"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:.45in">
+      <div class="stat"><div class="n g">🌱</div><h3 style="margin-top:8px">Plant-based materials</h3><div class="l">Coconut fibre, cellulose, cotton and natural loofah.</div></div>
+      <div class="stat"><div class="n g">♻️</div><h3 style="margin-top:8px">Less plastic</h3><div class="l">Swaps for the plastic sponges and scrubbers we throw away.</div></div>
+      <div class="stat"><div class="n g">🏠</div><h3 style="margin-top:8px">Made for every day</h3><div class="l">Practical, durable essentials for the kitchen and bath.</div></div>
+    </div>
+  </div>
+  <div class="ftr"><span>Mimro Brand Catalogue 2026</span><span>02</span></div>
+</section>
+
+<!-- 3 COLLECTION -->
+<section class="page">
+  <div class="blob b3" style="width:4in;height:4in;right:-1.4in;top:-1.2in"></div>
+  <div class="hdr"><img src="logo_dark.png"><span>MIMRO ORIGINALS</span></div>
+  <div class="in" style="padding-top:1.05in">
+    <span class="eyebrow">The collection</span>
+    <h2 style="margin-top:14px">Meet <span class="g">Mimro Originals</span></h2>
+    <p style="margin-top:8px;max-width:5.6in">Four plant-based essentials, designed by Mimro for the kitchen and bath.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:.3in">
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_coco.jpg"><span class="num">01 · KITCHEN</span></div><h3 style="margin-top:10px">Coconut Cellulose Kitchen Sponge</h3><p style="font-size:9pt">6 or 12 pack · Wholesale from <b style="color:var(--ink)">US$7.50</b> · MSRP US$14.99</p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_loof.jpg"><span class="num">02 · KITCHEN</span></div><h3 style="margin-top:10px">Natural Loofah Cellulose Sponge</h3><p style="font-size:9pt">3 pack · Wholesale <b style="color:var(--ink)">US$7.50</b> · MSRP US$14.99</p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_swe.jpg"><span class="num">03 · KITCHEN</span></div><h3 style="margin-top:10px">Swedish Dishcloth</h3><p style="font-size:9pt">Wholesale <b style="color:var(--ink)">US$7.50</b> · MSRP US$14.99</p></div>
+      <div><div class="card" style="height:2.3in;position:relative"><img src="u_bath.jpg"><span class="num">04 · BATH</span></div><h3 style="margin-top:10px">Natural Loofah Bath Set</h3><p style="font-size:9pt">Wholesale <b style="color:var(--ink)">US$12.50</b> · MSRP US$24.99</p></div>
+    </div>
+  </div>
+  <div class="ftr"><span>Mimro Brand Catalogue 2026</span><span>03</span></div>
+</section>
+
+<!-- 4 COCONUT -->
+<section class="page">
+  <div class="hdr"><img src="logo_dark.png"><span>01 · KITCHEN</span></div>
+  <div class="in" style="padding-top:.85in">
+    <div class="card pp-photo"><img src="u_coco.jpg" style="object-position:60% 50%"></div>
+    <div class="pp-grid">
+      <div>
+        <div class="pack"><img src="p_coco.jpg"></div>
+        <div class="spec">
+          <div><span>Pack size</span><span>6 or 12 sponges</span></div>
+          <div><span>Materials</span><span>Wood pulp cellulose,<br>natural coconut fibre</span></div>
+          <div><span>For</span><span>Dishes, cookware, glass,<br>countertops</span></div>
+          <div><span>SKU</span><span>10400-06 · 10401-12</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Mimro Originals</span>
+        <h2 style="margin-top:10px;font-size:25pt">Coconut <span class="g">Cellulose</span><br>Kitchen Sponge</h2>
+        <div class="price"><span class="lb">Wholesale</span><b>US$7.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">US$14.99</span><span style="font-size:9pt;color:var(--mute);margin-left:8px">6 pack</span></div>
+        <div class="price"><span class="lb">Wholesale</span><b>US$12.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">US$24.99</span><span style="font-size:9pt;color:var(--mute);margin-left:8px">12 pack</span></div>
+        <p style="margin-top:10px;font-size:9.5pt">Dual-sided kitchen sponges made from biodegradable wood pulp cellulose and natural coconut fibre — for grease, dirt, food residue and grime.</p>
+        <div class="feat">
+          <div><b>Natural coconut fibre</b>Effective everyday scrubbing.</div>
+          <div><b>Biodegradable cellulose</b>An alternative to synthetic sponges.</div>
+          <div><b>Dual-sided</b>Two surfaces for wiping and scrubbing.</div>
+          <div><b>Quick-drying</b>Helps resist unwanted odours.</div>
+        </div>
+        <div class="how"><h3 style="font-size:9.5pt">How to use</h3><ol><li>Wet the sponge and add dish soap.</li><li>Wipe or scrub as needed.</li><li>Rinse, squeeze out and air dry.</li></ol></div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr"><span>mimro.com/products/mimro-coconut-cellulose-kitchen-sponge</span><span>04</span></div>
+</section>
+
+<!-- 5 LOOFAH SPONGE -->
+<section class="page">
+  <div class="hdr"><img src="logo_dark.png"><span>02 · KITCHEN</span></div>
+  <div class="in" style="padding-top:.85in">
+    <div class="card pp-photo"><img src="u_loof.jpg" style="object-position:60% 50%"></div>
+    <div class="pp-grid">
+      <div>
+        <div class="pack"><img src="p_loof.jpg"></div>
+        <div class="spec">
+          <div><span>Pack size</span><span>3 sponges</span></div>
+          <div><span>Materials</span><span>Loofah, cellulose, cotton</span></div>
+          <div><span>Free from</span><span>Plastic, glue,<br>synthetic fillers</span></div>
+          <div><span>For</span><span>Dishes, cookware,<br>non-stick pans</span></div>
+          <div><span>SKU</span><span>10403-03</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Mimro Originals</span>
+        <h2 style="margin-top:10px;font-size:25pt">Natural <span class="g">Loofah</span><br>Cellulose Sponge</h2>
+        <div class="price"><span class="lb">Wholesale</span><b>US$7.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">US$14.99</span></div>
+        <p style="margin-top:10px;font-size:9.5pt">A natural, compostable kitchen sponge made from 100% plant-based loofah, cellulose and cotton — plastic-free and made without glue or synthetic fillers.</p>
+        <div class="feat">
+          <div><b>100% plant-based</b>Loofah, cellulose and cotton.</div>
+          <div><b>Non-scratch</b>Gentle enough for non-stick cookware.</div>
+          <div><b>Fast-drying</b>Open loofah structure lets air flow.</div>
+          <div><b>Compostable</b>Plastic-free, compostable after use.</div>
+        </div>
+        <div class="how"><h3 style="font-size:9.5pt">How to use</h3><ol><li>Wet the sponge and apply dish soap.</li><li>Gently wipe or scrub dishes and surfaces.</li><li>Rinse and hang on the cotton rope to dry.</li></ol></div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr"><span>mimro.com/products/mimro-natural-loofah-cellulose-sponge</span><span>05</span></div>
+</section>
+
+<!-- 6 SWEDISH -->
+<section class="page">
+  <div class="hdr"><img src="logo_dark.png"><span>03 · KITCHEN</span></div>
+  <div class="in" style="padding-top:.85in">
+    <div class="card pp-photo"><img src="u_swe.jpg" style="object-position:70% 50%"></div>
+    <div class="pp-grid">
+      <div>
+        <div class="pack"><img src="p_swe.jpg"></div>
+        <div class="spec">
+          <div><span>Materials</span><span>30% cotton,<br>70% cellulose wood pulp</span></div>
+          <div><span>Absorbency</span><span>Up to 20× standard cloths</span></div>
+          <div><span>Reuse</span><span>100+ washes</span></div>
+          <div><span>SKU</span><span>10402-03</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Mimro Originals</span>
+        <h2 style="margin-top:10px;font-size:25pt">Swedish <span class="g">Dishcloth</span></h2>
+        <div class="price"><span class="lb">Wholesale</span><b>US$7.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">US$14.99</span></div>
+        <p style="margin-top:10px;font-size:9.5pt">Reusable, highly absorbent kitchen cloths for spills, grease and fine particles on countertops, dishes, glass and everyday surfaces. Soft when wet, fast-drying and machine washable.</p>
+        <div class="feat">
+          <div><b>Highly absorbent</b>Up to 20× more than standard cloths.</div>
+          <div><b>Reusable</b>Machine washable, 100+ washes.</div>
+          <div><b>Fast-drying</b>Built-in hanging hole.</div>
+          <div><b>Compostable</b>In ~6–8 weeks in suitable conditions.</div>
+        </div>
+        <div class="how"><h3 style="font-size:9.5pt">How to use</h3><ol><li>Wet the cloth and squeeze out excess water.</li><li>Wipe spills, grease and surfaces.</li><li>Rinse, hang to dry, machine wash as needed.</li></ol></div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr"><span>mimro.com/products/mimro-swedish-dishcloth</span><span>06</span></div>
+</section>
+
+<!-- 7 BATH -->
+<section class="page">
+  <div class="hdr"><img src="logo_dark.png"><span>04 · BATH</span></div>
+  <div class="in" style="padding-top:.85in">
+    <div class="card pp-photo"><img src="u_bath.jpg" style="object-position:70% 50%"></div>
+    <div class="pp-grid">
+      <div>
+        <div class="pack"><img src="p_bath.jpg"></div>
+        <div class="spec">
+          <div><span>Set includes</span><span>Loofah sponge, soap bag,<br>cotton storage bag</span></div>
+          <div><span>Loofah size</span><span>13 × 18 cm</span></div>
+          <div><span>Package</span><span>148 × 32 × 210 mm</span></div>
+          <div><span>SKU</span><span>10404-03</span></div>
+          <div><span>Case pack</span><span>Case of 1</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Mimro Originals</span>
+        <h2 style="margin-top:10px;font-size:25pt">Natural <span class="g">Loofah</span><br>Bath Set</h2>
+        <div class="price"><span class="lb">Wholesale</span><b>US$12.50</b><span class="lb" style="margin-left:10px">MSRP</span><span class="ms">US$24.99</span></div>
+        <p style="margin-top:10px;font-size:9.5pt">A natural Egyptian loofah with soft terry cloth backing — exfoliation on one side, gentle cleansing on the other — for bathing, showering and everyday skin care.</p>
+        <div class="feat">
+          <div><b>Egyptian loofah</b>Natural cleansing and exfoliation.</div>
+          <div><b>Dual-action</b>Loofah side plus soft terry cloth side.</div>
+          <div><b>Easy grip</b>Elastic hand band and long hanging rope.</div>
+          <div><b>Complete set</b>Soap bag and cotton storage bag included.</div>
+        </div>
+        <div class="how"><h3 style="font-size:9.5pt">How to use</h3><ol><li>Wet with warm water and add soap or body wash.</li><li>Massage the loofah side in circles; use the terry side for gentle cleansing.</li><li>Rinse and hang to dry completely.</li></ol></div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr"><span>mimro.com/products/mimro-natural-loofah-bath-set</span><span>07</span></div>
+</section>
+
+<!-- 8 RANGE + REWARDS -->
+<section class="page">
+  <div class="blob b2" style="width:4in;height:4in;left:-1.6in;bottom:-1in"></div>
+  <div class="hdr"><img src="logo_dark.png"><span>AT A GLANCE</span></div>
+  <div class="in" style="padding-top:1.05in">
+    <span class="eyebrow">Range at a glance</span>
+    <h2 style="margin-top:14px;font-size:26pt">Mimro Originals wholesale price list</h2>
+    <table style="margin-top:16px">
+      <tr><th>SKU</th><th>Product</th><th>Option</th><th>Case</th><th class="r">Wholesale</th><th class="r">MSRP</th></tr>
+      <tr><td>10400-06</td><td><b>Coconut Cellulose Kitchen Sponge</b></td><td>6 pack</td><td>1</td><td class="r"><b>US$7.50</b></td><td class="r">US$14.99</td></tr>
+      <tr><td>10401-12</td><td><b>Coconut Cellulose Kitchen Sponge</b></td><td>12 pack</td><td>1</td><td class="r"><b>US$12.50</b></td><td class="r">US$24.99</td></tr>
+      <tr><td>10403-03</td><td><b>Natural Loofah Cellulose Sponge</b></td><td>3 pack</td><td>1</td><td class="r"><b>US$7.50</b></td><td class="r">US$14.99</td></tr>
+      <tr><td>10402-03</td><td><b>Swedish Dishcloth</b></td><td>—</td><td>1</td><td class="r"><b>US$7.50</b></td><td class="r">US$14.99</td></tr>
+      <tr><td>10404-03</td><td><b>Natural Loofah Bath Set</b></td><td>3-piece set</td><td>1</td><td class="r"><b>US$12.50</b></td><td class="r">US$24.99</td></tr>
+    </table>
+
+    <div style="margin-top:.45in;border-radius:22px;padding:3px;background:var(--grad)">
+      <div style="border-radius:20px;background:#f6fbf3;padding:22px 24px">
+        <span class="eyebrow">For retailers</span>
+        <h2 style="margin-top:10px;font-size:22pt">Stock Mimro Originals. <span class="g">Earn healthy margins.</span></h2>
+        <p style="margin-top:6px">Plant-based kitchen and bath essentials with ready-to-shelf, bilingual (EN/FR) packaging.</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px">
+          <div class="stat"><div class="n g">~50%</div><div class="l">retailer margin at MSRP</div></div>
+          <div class="stat"><div class="n g">1</div><div class="l">unit per case — easy to try every SKU</div></div>
+          <div class="stat"><div class="n g">5</div><div class="l">SKUs across kitchen and bath</div></div>
+          <div class="stat"><div class="n g">US$7.50</div><div class="l">wholesale entry price point</div></div>
+        </div>
+        <p style="margin-top:10px;font-size:8.5pt">Wholesale and MSRP in USD. Contact us through mimro.com for wholesale enquiries.</p></div>
+    </div>
+  </div>
+  <div class="ftr"><span>Wholesale &amp; MSRP in USD, October 2026. Subject to change.</span><span>08</span></div>
+</section>
+
+<!-- 9 BACK -->
+<section class="page">
+  <div class="blob b1" style="width:5in;height:5in;left:-1.5in;top:-1.5in"></div>
+  <div class="blob b2" style="width:5in;height:5in;right:-1.8in;bottom:-1.2in"></div>
+  <div class="in" style="padding-top:1.1in">
+    <span class="eyebrow">Also on Mimro</span>
+    <h2 style="margin-top:14px;font-size:24pt">Low-waste swaps from brands we trust</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px">
+      <span class="tg" style="font-size:9pt;padding:7px 13px">Tru Earth</span><span class="tg" style="font-size:9pt;padding:7px 13px">TANIT</span><span class="tg" style="font-size:9pt;padding:7px 13px">Plantish</span><span class="tg" style="font-size:9pt;padding:7px 13px">MYNI</span><span class="tg" style="font-size:9pt;padding:7px 13px">Nature Bee</span><span class="tg" style="font-size:9pt;padding:7px 13px">Zero Waste MVMT</span><span class="tg" style="font-size:9pt;padding:7px 13px">The Future is Bamboo</span><span class="tg" style="font-size:9pt;padding:7px 13px">Essence of Life Organics</span><span class="tg" style="font-size:9pt;padding:7px 13px">HIBAR</span><span class="tg" style="font-size:9pt;padding:7px 13px">OM</span><span class="tg" style="font-size:9pt;padding:7px 13px">DALCINI</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:.45in">
+      <div class="card" style="height:1.6in"><img src="u_coco.jpg"></div><div class="card" style="height:1.6in"><img src="u_loof.jpg"></div>
+      <div class="card" style="height:1.6in"><img src="u_swe.jpg"></div><div class="card" style="height:1.6in"><img src="u_bath.jpg"></div>
+    </div>
+    <div style="text-align:center;margin-top:.8in">
+      <img src="logo_dark.png" style="height:56px">
+      <h2 style="margin-top:14px;font-size:28pt">Less waste. Less plastic.<br><span class="g">Everyday essentials.</span></h2>
+      <div style="display:inline-block;margin-top:22px;font-weight:800;font-size:14pt;color:#fff;background:var(--grad);padding:13px 34px;border-radius:999px">Shop at mimro.com</div>
+    </div>
+  </div>
+  <div class="ftr"><span>© 2026 Mimro Inc.</span><span>mimro.com</span></div>
+</section>
+</body></html>
