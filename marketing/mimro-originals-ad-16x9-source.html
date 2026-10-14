@@ -1,0 +1,195 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--grad:linear-gradient(100deg,#3c78dd 0%,#29ce70 100%)}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#fff;font-family:Inter,'Noto Color Emoji',sans-serif;color:#020624}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:#fff}
+.mesh{position:absolute;border-radius:50%;filter:blur(90px);opacity:.85}
+#m1{width:900px;height:900px;background:#d9e7fb;left:-300px;top:-350px}
+#m2{width:800px;height:800px;background:#d3f0c4;right:-200px;top:300px}
+#m3{width:700px;height:700px;background:#c6ebd2;left:500px;bottom:-450px;opacity:.7}
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(2,6,36,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(2,6,36,.045) 1px,transparent 1px);background-size:90px 90px;mask-image:radial-gradient(ellipse at 50% 50%,#000 30%,transparent 75%)}
+#grain{position:absolute;inset:-50px;opacity:.05;mix-blend-mode:multiply;pointer-events:none}
+.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:110px 110px 40px;opacity:0}
+.col{display:flex;flex-direction:column;align-items:center;text-align:center}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font:700 24px Inter;letter-spacing:.24em;text-transform:uppercase;color:#2b7a4b;padding:13px 24px;border-radius:999px;background:#e6f6dc;border:1px solid #cdebbb}
+.live{width:12px;height:12px;border-radius:50%;background:#29ce70;box-shadow:0 0 0 6px rgba(41,206,112,.22)}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:inline-block}
+.hero{font-weight:900;font-size:96px;line-height:1;letter-spacing:-.045em}
+.glass{background:rgba(255,255,255,.95);border:1.5px solid #e4ebe6;border-radius:30px;box-shadow:0 30px 70px -38px rgba(20,60,50,.45)}
+.chip{display:flex;align-items:center;gap:22px;width:640px;font:700 42px Inter;padding:26px 32px;margin-top:20px;text-align:left;position:relative}
+.chip .ic{font-size:52px}
+.chip .strike{position:absolute;left:26px;right:26px;top:50%;height:6px;border-radius:6px;background:#e0564f;transform-origin:left;transform:scaleX(0)}
+.bin{font-size:96px;margin-top:26px}
+.kin{font-weight:900;font-size:130px;line-height:.95;letter-spacing:-.05em}
+/* product scenes */
+.prow{display:flex;align-items:center;gap:60px}
+.left{width:640px;display:flex;flex-direction:column}
+.pcard{position:relative;width:1000px;height:780px;border-radius:40px;overflow:hidden;box-shadow:0 40px 90px -45px rgba(20,60,50,.6)}
+.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.num{position:absolute;left:30px;top:30px;z-index:2;font:800 24px Inter;color:#fff;padding:11px 20px;border-radius:999px;background:var(--grad);letter-spacing:.12em}
+.pack{position:relative;width:640px;height:453px;border-radius:32px;background:#fff;border:1.5px solid #e4ebe6;box-shadow:0 30px 70px -40px rgba(20,60,50,.5);overflow:hidden;margin-top:34px}
+.pack img{width:100%;height:100%;object-fit:cover}
+.pname{font:900 70px/1 Inter;letter-spacing:-.04em}
+.psub{font:600 32px Inter;color:#4a5068;margin-top:16px}
+.tagrow{display:flex;gap:12px;margin-top:20px}
+.tg{font:700 23px Inter;padding:10px 18px;border-radius:999px;background:#e6f6dc;color:#2b7a4b;border:1px solid #cdebbb}
+/* reveal */
+#s3{padding:0}
+#s3 .full{position:absolute;inset:0;overflow:hidden}
+#s3 .full img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#s3 .shade{position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.93) 32%,rgba(255,255,255,0) 62%)}
+#s3 .ttl{position:absolute;left:130px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:860px}
+.grid4 div{height:300px;border-radius:26px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(20,60,50,.5)}
+.grid4 img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-flex;align-items:center;gap:20px;font:800 46px Inter;color:#fff;padding:32px 76px;border-radius:999px;background:var(--grad);box-shadow:0 0 0 10px rgba(60,120,221,.1),0 30px 80px -20px rgba(41,150,140,.75)}
+.btn i{font-style:normal;display:inline-grid;place-items:center;width:60px;height:60px;border-radius:50%;background:#fff;color:#3c78dd;font-size:34px}
+#top{position:absolute;top:36px;left:60px;right:60px;display:flex;gap:10px;z-index:9}
+#top div{flex:1;height:6px;border-radius:6px;background:rgba(2,6,36,.1);overflow:hidden}
+#top div span{display:block;height:100%;background:var(--grad);width:0}
+#hdr{position:absolute;top:62px;left:60px;right:60px;display:flex;align-items:center;justify-content:space-between;z-index:9}
+#tag{font:700 22px Inter;letter-spacing:.2em;padding:10px 18px;border-radius:999px;background:var(--grad);color:#fff}
+</style></head>
+<body><div id="stage">
+<div class="mesh" id="m1"></div><div class="mesh" id="m2"></div><div class="mesh" id="m3"></div>
+<div id="arcA" style="position:absolute;width:1100px;height:1100px;border-radius:50%;background:#e3f4d8;right:-500px;top:-300px"></div><div id="arcB" style="position:absolute;width:760px;height:760px;border-radius:50%;background:#e4edfb;left:-380px;bottom:-300px"></div><div id="grid"></div>
+<svg id="grain" width="2020" height="1180"><filter id="n"><feTurbulence id="turb" type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="1"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+<div id="top"><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div><div><span></span></div></div>
+<div id="hdr"><img src="logo_dark.png" style="height:48px"><div id="tag">ORIGINALS</div></div>
+
+<!-- S1 -->
+<div class="scene" id="s1"><div class="prow" style="gap:100px">
+  <div class="left" style="width:860px;align-items:flex-start">
+    <div class="eyebrow" id="e1"><span class="live"></span>Every single day</div>
+    <div class="hero" style="margin-top:40px">
+      <span class="line"><span id="h1a">Our everyday</span></span>
+      <span class="line"><span id="h1b">essentials end up</span></span>
+      <span class="line"><span id="h1c">in the <span class="g">trash</span>.</span></span>
+    </div>
+  </div>
+  <div class="col">
+    <div class="chip glass" id="c1"><span class="ic">🧽</span>Plastic sponges<div class="strike"></div></div>
+    <div class="chip glass" id="c2"><span class="ic">🧻</span>Paper towels<div class="strike"></div></div>
+    <div class="chip glass" id="c3"><span class="ic">🪥</span>Plastic scrubbers<div class="strike"></div></div>
+    <div class="bin" id="bin">🗑️</div>
+  </div>
+</div></div>
+
+<!-- S2 -->
+<div class="scene" id="s2"><div class="col">
+  <div class="eyebrow" id="e2">The Mimro story</div>
+  <div class="hero" style="margin:40px 0 50px">
+    <span class="line"><span id="h2a">Everyday essentials</span></span>
+    <span class="line"><span id="h2b">can do <span class="g">better</span>.</span></span>
+  </div>
+  <div id="made" style="display:flex;align-items:center;gap:40px">
+    <img src="mark.png" style="height:150px">
+    <div class="kin" style="font-size:104px;text-align:left">So we made<br><span class="g">our own.</span></div>
+  </div>
+</div></div>
+
+<!-- S3 -->
+<div class="scene" id="s3">
+  <div class="full"><img id="rimg" src="r_coco169.jpg"></div>
+  <div class="shade"></div>
+  <div class="ttl">
+    <div class="eyebrow" id="e3" style="margin-bottom:30px">Introducing</div>
+    <span class="line"><span class="kin" id="r1" style="font-size:160px">Mimro</span></span>
+    <span class="line"><span class="kin g" id="r2" style="font-size:180px">Originals</span></span>
+  </div>
+</div>
+
+<div class="scene" id="s4"><div class="prow">
+  <div class="left" id="pt4"><div class="pname">Coconut <span class="g">Cellulose</span> Sponge</div><div class="psub">Made from plants — coconut fibre &amp; cellulose.</div>
+   <div class="tagrow"><span class="tg">Plant-based</span><span class="tg">Plastic-free scrub</span></div>
+   <div class="pack" id="pk4"><img src="p_coco.jpg"></div></div>
+  <div class="pcard" id="pc4"><div class="num">01 · KITCHEN</div><img id="pi4" src="u_coco.jpg" style="object-position:100% 50%"></div>
+</div></div>
+<div class="scene" id="s5"><div class="prow">
+  <div class="left" id="pt5"><div class="pname">Natural <span class="g">Loofah</span> Sponge</div><div class="psub">Scrubs tough on dishes, naturally.</div>
+   <div class="tagrow"><span class="tg">Natural loofah</span><span class="tg">Tough on grime</span></div>
+   <div class="pack" id="pk5"><img src="p_loof.jpg"></div></div>
+  <div class="pcard" id="pc5"><div class="num">02 · KITCHEN</div><img id="pi5" src="u_loof.jpg" style="object-position:100% 50%"></div>
+</div></div>
+<div class="scene" id="s6"><div class="prow">
+  <div class="left" id="pt6"><div class="pname">Swedish <span class="g">Kitchen</span> Cloth</div><div class="psub">Soaks up spills. Replaces paper towels.</div>
+   <div class="tagrow"><span class="tg">Reusable</span><span class="tg">Washable</span></div>
+   <div class="pack" id="pk6"><img src="p_swe.jpg"></div></div>
+  <div class="pcard" id="pc6"><div class="num">03 · KITCHEN</div><img id="pi6" src="u_swe.jpg" style="object-position:100% 50%"></div>
+</div></div>
+<div class="scene" id="s7"><div class="prow">
+  <div class="left" id="pt7"><div class="pname">Loofah <span class="g">Bath</span> Set</div><div class="psub">For a gentler, greener routine.</div>
+   <div class="tagrow"><span class="tg">Natural loofah</span><span class="tg">Gentle exfoliation</span></div>
+   <div class="pack" id="pk7"><img src="p_bath.jpg"></div></div>
+  <div class="pcard" id="pc7"><div class="num">04 · BATH</div><img id="pi7" src="u_bath.jpg" style="object-position:100% 50%"></div>
+</div></div>
+
+<!-- S8 -->
+<div class="scene" id="s8"><div class="prow" style="gap:90px">
+  <div class="left" style="width:760px">
+    <span class="line"><span class="kin" id="w1">Less waste.</span></span>
+    <span class="line"><span class="kin" id="w2">Less plastic.</span></span>
+    <span class="line"><span class="kin g" id="w3" style="font-size:104px">Everyday essentials.</span></span>
+  </div>
+  <div class="grid4" id="g4">
+    <div><img src="u_coco.jpg"></div><div><img src="u_loof.jpg"></div>
+    <div><img src="u_swe.jpg"></div><div><img src="u_bath.jpg"></div>
+  </div>
+</div></div>
+
+<!-- S9 -->
+<div class="scene" id="s9"><div class="col">
+  <img id="lg" src="logo_dark.png" style="width:560px">
+  <span class="line" style="margin-top:26px"><span class="kin g" id="o1" style="font-size:130px">Originals</span></span>
+  <div id="cs" style="font:600 38px Inter;color:#4a5068;margin:16px 0 50px">Plant-based swaps for every day.</div>
+  <div style="display:flex;align-items:center;gap:50px">
+    <div class="btn" id="cta">Shop now <i>→</i></div>
+    <div id="url" style="font:800 52px Inter;letter-spacing:-.01em">mimro.com</div>
+  </div>
+</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const eo=x=>1-Math.pow(1-clamp(x),4);
+const back=x=>{x=clamp(x);const c=1.4;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const S={s1:[-1,5.7],s2:[5.7,11.35],s3:[11.35,13.55],s4:[13.55,16.75],s5:[16.75,20.45],s6:[20.45,24.85],s7:[24.85,28.9],s8:[28.9,32.75],s9:[32.75,40]};
+const total=37.6,keys=Object.keys(S);
+function trans(t,[a,b],el){const i=clamp((t-a)/.45),o=clamp((b-t)/.4);const ei=eo(i),eoo=eo(o);
+ el.style.opacity=Math.min(ei,eoo);const sc=i<1?(.92+.08*ei):(o<1?1+.12*(1-eoo):1);
+ const bl=i<1?(1-ei)*18:(o<1?(1-eoo)*22:0);el.style.transform=`scale(${sc})`;el.style.filter=bl>.2?`blur(${bl}px)`:'none';}
+function rise(el,t,t0,d=.6){const p=eo((t-t0)/d);el.style.transform=`translateY(${(1-p)*115}%)`;}
+function pop(el,t,t0,dy=70,d=.6){const p=back((t-t0)/d);el.style.opacity=clamp((t-t0)/.2);el.style.transform=`translateY(${(1-p)*dy}px) scale(${.94+.06*p})`}
+function slide(el,t,t0,dx=120,d=.7){const p=back((t-t0)/d);el.style.opacity=clamp((t-t0)/.2);el.style.transform=`translateX(${(1-p)*dx}px)`}
+function kb(el,t,a,b,z0=1.0,z1=1.12,dx=-30){const p=clamp((t-a)/(b-a));el.style.transform=`scale(${z0+(z1-z0)*p}) translateX(${dx*p}px)`}
+window.render=function(t){
+ $('m1').style.transform=`translate(${Math.sin(t*.35)*160}px,${Math.cos(t*.3)*100}px)`;
+ $('m2').style.transform=`translate(${Math.cos(t*.32)*180}px,${Math.sin(t*.27)*120}px)`;
+ $('m3').style.transform=`translate(${Math.sin(t*.25+1)*170}px,${Math.cos(t*.4)*80}px)`;
+ $('arcA').style.transform=`translate(${Math.sin(t*.2)*40}px,${Math.cos(t*.25)*60}px)`;$('arcB').style.transform=`translate(${Math.cos(t*.22)*50}px,${Math.sin(t*.18)*40}px)`;
+ $('turb').setAttribute('seed',Math.floor(t*15)%60);
+ $('grain').style.transform=`translate(${(Math.floor(t*15)*37)%50-25}px,${(Math.floor(t*15)*53)%50-25}px)`;
+ const segs=document.querySelectorAll('#top span');
+ keys.forEach((k,i)=>{const [a,b]=S[k];const aa=Math.max(a,0),bb=Math.min(b,total);segs[i].style.width=(clamp((t-aa)/(bb-aa))*100)+'%'});
+ const hv=t<S.s9[0]?1:clamp(1-(t-S.s9[0])/.3);$('hdr').style.opacity=hv;$('top').style.opacity=hv;
+ keys.forEach(k=>trans(t,S[k],$(k)));
+ pop($('e1'),t,0,40);rise($('h1a'),t,.3);rise($('h1b'),t,.45);rise($('h1c'),t,.6);
+ [['c1',1.2],['c2',1.6],['c3',2.0]].forEach(([id,s])=>{pop($(id),t,s);const st=clamp((t-3.5-(s-1.2)*.5)/.35);
+  $(id).querySelector('.strike').style.transform=`scaleX(${eo(st)})`;if(t>3.5)$(id).style.opacity=Math.min(+$(id).style.opacity,1-.55*eo((t-4.2)/.5));});
+ pop($('bin'),t,3.9,60);
+ let a=S.s2[0];pop($('e2'),t,a+.15,40);rise($('h2a'),t,a+.3);rise($('h2b'),t,a+.5);pop($('made'),t,a+3.9,80,.7);
+ a=S.s3[0];kb($('rimg'),t,a,S.s3[1]+.4,1.12,1.0,0);pop($('e3'),t,a+.1,30);rise($('r1'),t,a+.2);rise($('r2'),t,a+.4);
+ ['4','5','6','7'].forEach(n=>{const [a,b]=S['s'+n];slide($('pc'+n),t,a+.05,160,.7);kb($('pi'+n),t,a,b+.4,1.0,1.06,-15);
+  pop($('pt'+n),t,a+.3,60,.6);pop($('pk'+n),t,a+.5,70,.6);kb($('pk'+n).firstChild,t,a,b+.4,1.0,1.05,0);
+  $('pt'+n).querySelectorAll('.tg').forEach((e,i)=>pop(e,t,a+1.0+i*.2,30,.5));});
+ a=S.s8[0];rise($('w1'),t,a+.05);rise($('w2'),t,a+1.0);rise($('w3'),t,a+2.3);
+ $('g4').querySelectorAll('div').forEach((d,i)=>pop(d,t,a+.4+i*.25,80,.6));
+ a=S.s9[0];pop($('lg'),t,a+.15,50,.8);rise($('o1'),t,a+.5);pop($('cs'),t,a+.9,40);pop($('cta'),t,a+1.4,80);pop($('url'),t,a+1.8,40);
+ if(t>a+2.0){const k=t-a-2.0;$('cta').style.transform=`scale(${1+.04*Math.sin(k*5)})`;}
+};
+render(0);
+</script></body></html>
