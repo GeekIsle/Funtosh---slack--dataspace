@@ -1,0 +1,146 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--grad:linear-gradient(100deg,#3c78dd 0%,#29ce70 100%)}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#fff;font-family:Inter,'Noto Color Emoji',sans-serif;color:#020624}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#fff}
+#bgwrap{position:absolute;inset:0;overflow:hidden}
+#bg{position:absolute;left:50%;top:50%;width:1080px;height:1934px;object-fit:cover;transform-origin:50% 55%}
+#shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 18%,rgba(255,255,255,0) 62%,rgba(255,255,255,.75) 100%)}
+#fx{position:absolute;inset:0;pointer-events:none}
+.p{position:absolute;will-change:transform}
+.bub{border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 12%,rgba(255,255,255,.25) 30%,rgba(160,215,255,.18) 60%,rgba(255,255,255,.55) 100%);box-shadow:inset 0 0 12px rgba(255,255,255,.8),0 0 0 1.5px rgba(255,255,255,.65)}
+.emo{font-size:60px;line-height:1}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:rgba(255,255,255,.92);border:1.5px solid rgba(255,255,255,.9);border-radius:999px;box-shadow:0 24px 60px -28px rgba(10,40,40,.55);backdrop-filter:blur(8px)}
+#hdr{position:absolute;top:70px;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+#hdr .logo{padding:16px 26px}
+#hdr .logo img{height:44px;display:block}
+#tag{font:800 24px Inter;letter-spacing:.18em;color:#fff;padding:14px 22px;border-radius:999px;background:var(--grad);box-shadow:0 14px 30px -14px rgba(41,150,140,.8)}
+#title{position:absolute;left:56px;right:56px;top:190px;z-index:5;text-align:left}
+#title .t{display:inline-block;font:900 76px/1 Inter;letter-spacing:-.04em;padding:22px 34px;border-radius:30px;background:rgba(255,255,255,.93);box-shadow:0 30px 70px -34px rgba(10,40,40,.55)}
+#hook{position:absolute;left:56px;right:56px;bottom:250px;z-index:5;text-align:center}
+#hook span{display:inline-block;font:900 70px/1.05 Inter;letter-spacing:-.035em;color:#fff;padding:24px 36px;border-radius:30px;background:var(--grad);box-shadow:0 30px 70px -26px rgba(41,150,140,.9)}
+#feats{position:absolute;right:56px;bottom:430px;z-index:5;display:flex;flex-direction:column;align-items:flex-end;gap:18px}
+.f{display:flex;align-items:center;gap:16px;font:800 36px Inter;padding:18px 30px 18px 18px;border-radius:999px}
+.f i{font-style:normal;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--grad);color:#fff;font-size:28px}
+/* spotlight */
+#spot{position:absolute;inset:0;background:#fff;z-index:6;opacity:0;overflow:hidden}
+#spot .c1{position:absolute;width:1100px;height:1100px;border-radius:50%;background:#e3f4d8;right:-420px;top:120px}
+#spot .c2{position:absolute;width:760px;height:760px;border-radius:50%;background:#e4edfb;left:-360px;bottom:-120px}
+#spot .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(2,6,36,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(2,6,36,.045) 1px,transparent 1px);background-size:90px 90px;mask-image:radial-gradient(ellipse at 50% 45%,#000 30%,transparent 75%)}
+#pcard{position:absolute;left:90px;right:90px;top:300px;height:700px;border-radius:44px;overflow:hidden;background:#fff;box-shadow:0 50px 100px -50px rgba(20,60,50,.6)}
+#pcard img{width:100%;height:100%;object-fit:cover}
+#buddy{position:absolute;right:60px;top:860px;width:300px;height:300px;border-radius:50%;overflow:hidden;border:8px solid #fff;box-shadow:0 30px 60px -25px rgba(20,60,50,.6)}
+#buddy img{position:absolute;max-width:none}
+#ptxt{position:absolute;left:90px;right:90px;top:1070px;display:flex;flex-direction:column;gap:26px}
+#pname{font:900 88px/1 Inter;letter-spacing:-.045em;padding-right:200px}
+#psub{font:600 40px/1.35 Inter;color:#4a5068}
+#ptags{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+.tg{font:700 30px Inter;padding:14px 24px;border-radius:999px;background:#e6f6dc;color:#2b7a4b;border:1px solid #cdebbb}
+/* end */
+#end{position:absolute;inset:0;background:#fff;z-index:7;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+#end .c1{position:absolute;width:900px;height:900px;border-radius:50%;background:#d9e7fb;left:-350px;top:-200px;filter:blur(60px)}
+#end .c2{position:absolute;width:800px;height:800px;border-radius:50%;background:#d3f0c4;right:-300px;bottom:100px;filter:blur(60px)}
+#ebuddy{width:360px;height:360px;border-radius:50%;overflow:hidden;border:10px solid #fff;box-shadow:0 30px 70px -30px rgba(20,60,50,.6);position:relative;z-index:1}
+#ebuddy img{position:absolute;max-width:none}
+#elogo{height:110px;margin-top:60px;position:relative;z-index:1}
+#eline{font:900 84px/1.02 Inter;letter-spacing:-.045em;margin-top:40px;position:relative;z-index:1}
+#ecta{margin-top:56px;display:inline-flex;align-items:center;gap:20px;font:800 50px Inter;color:#fff;padding:36px 80px;border-radius:999px;background:var(--grad);box-shadow:0 0 0 10px rgba(60,120,221,.1),0 30px 80px -20px rgba(41,150,140,.75);position:relative;z-index:1}
+#eurl{font:800 50px Inter;margin-top:40px;position:relative;z-index:1}
+#elegal{font:600 30px Inter;color:#6a7086;margin-top:18px;position:relative;z-index:1}
+</style></head><body><div id="stage">
+<div id="bgwrap"><img id="bg"></div><div id="shade"></div><div id="fx"></div>
+<div id="hdr"><div class="glass logo"><img src="logo_dark.png"></div><div id="tag"></div></div>
+<div id="title"><span class="t"></span></div>
+<div id="feats"></div>
+<div id="hook"><span></span></div>
+<div id="spot"><div class="c1"></div><div class="c2"></div><div class="grid"></div>
+  <div id="pcard"><img id="pimg"></div><div id="buddy"><img id="bimg"></div>
+  <div id="ptxt"><div id="pname"></div><div id="psub"></div><div id="ptags"></div></div></div>
+<div id="end"><div class="c1"></div><div class="c2"></div><div id="ebuddy"><img id="eimg"></div><img id="elogo" src="logo_dark.png">
+  <div id="eline">Less waste.<br><span class="g">Less plastic.</span></div>
+  <div id="ecta">Shop now →</div><div id="eurl">mimro.com</div><div id="elegal"></div></div>
+</div>
+<script>
+const P={
+1:{face:[712,780],kf:'kf1.png',tag:'MIMRO ORIGINALS',title:'Coconut Sponge',bpm:116,fx:'bub',hook:'Wave the plastic<br>sponge goodbye 👋',
+   feats:['Natural coconut fibre','Dual-sided scrubbing','Quick-drying'],pimg:'p_coco.jpg',pname:'Coconut <span class="g">Cellulose</span> Sponge',psub:'Biodegradable wood-pulp cellulose + natural coconut fibre. Tough on grease, kind to the planet.',tags:['6 or 12 pack','Plant-based','Odour-resistant'],legal:'Mimro Originals',kb:[1.04,1.16,-20,30]},
+2:{face:[724,780],kf:'kf2.png',tag:'MIMRO ORIGINALS',title:'Loofah Sponge',bpm:104,fx:'leaf',hook:'From the garden<br>straight to you 🌱',
+   feats:['100% plant-based','Non-scratch','Compostable'],pimg:'p_loof.jpg',pname:'Natural <span class="g">Loofah</span> Cellulose Sponge',psub:'Loofah, cellulose & cotton — no plastic, glue or synthetic fillers. Safe for non-stick pans.',tags:['3 pack','Fast-drying','Plastic-free'],legal:'Mimro Originals',kb:[1.03,1.15,25,10]},
+3:{face:[400,800],kf:'kf3.png',tag:'MIMRO ORIGINALS',title:'Swedish Dishcloth',bpm:122,fx:'spark',hook:'Paper towels?<br>Switch them off! ✨',
+   feats:['Absorbs up to 20×','100+ washes','Machine washable'],pimg:'p_swe.jpg',pname:'Swedish <span class="g">Dishcloth</span>',psub:'30% cotton + 70% cellulose. Soft when wet, fast-drying and compostable at end of life.',tags:['Reusable','Washable','Compostable'],legal:'Mimro Originals',kb:[1.03,1.14,0,20],video:15},
+4:{face:[548,740],kf:'kf4.png',tag:'MIMRO ORIGINALS',title:'Loofah Bath Set',bpm:88,fx:'bubslow',hook:'Ooh, bath time glow<br>let the stress go 🫧',
+   feats:['Natural Egyptian loofah','Exfoliate + soothe','Bag set included'],pimg:'p_bath.jpg',pname:'Natural <span class="g">Loofah</span> Bath Set',psub:'Loofah on one side, soft terry cloth on the other. Includes a soap bag and cotton storage bag.',tags:['Dual-action','Gentle exfoliation','Easy to dry'],legal:'Mimro Originals',kb:[1.02,1.12,0,-10]},
+5:{face:[484,720],kf:'kf5.png',tag:'NATURE BEE',title:'Beeswax Wraps',bpm:98,fx:'bee',hook:'Bee wrap, bee wrap,<br>plastic\'s gone! 🐝',
+   feats:['Reusable','Washable','Compostable'],pimg:'p_bee_kf.jpg',pname:'Nature Bee <span class="g">Beeswax</span> Wraps',psub:'Organic cotton, beeswax, tree resin & jojoba oil — a plastic-free way to keep food fresh.',tags:['3-piece set','Plastic-free','Food safe'],legal:'Nature Bee · available on Mimro',kb:[1.03,1.15,-15,0]},
+6:{face:[380,720],kf:'kf6.png',tag:'DALCINI',title:'Lunch Combo',bpm:96,fx:'spark',hook:'Clink, clink,<br>lunch time! 🥪',
+   feats:['Stainless steel','Built to last','No single-use bags'],pimg:'p_dal_kf.jpg',pname:'DALCINI <span class="g">Little Lunch</span> Combo',psub:'Stainless-steel food storage set — pack it, snap it shut, wash it and use it again.',tags:['Stainless steel','Reusable','Lunch-to-go'],legal:'DALCINI · available on Mimro',kb:[1.03,1.14,20,10]}
+};
+const id=+(new URLSearchParams(location.search).get('p')||1),D=P[id];
+const $=s=>document.querySelector(s);
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const eo=x=>1-Math.pow(1-clamp(x),4);
+const back=x=>{x=clamp(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const rnd=i=>{const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)};
+$('#bg').src=D.kf;$('#tag').textContent=D.tag;$('#title .t').textContent=D.title;$('#hook span').innerHTML=D.hook;
+$('#pimg').src=D.pimg;$('#bimg').src=D.kf;$('#eimg').src=D.kf;$('#pname').innerHTML=D.pname;$('#psub').textContent=D.psub;$('#elegal').textContent=D.legal;
+function placeFace(img,box,s){img.style.width=(1024*s)+'px';img.style.left=(box/2-D.face[0]*s)+'px';img.style.top=(box/2-D.face[1]*s)+'px';}
+placeFace($('#bimg'),284,0.95);placeFace($('#eimg'),340,1.15);
+D.tags.forEach(t=>{const e=document.createElement('span');e.className='tg';e.textContent=t;$('#ptags').appendChild(e)});
+D.feats.forEach(t=>{const e=document.createElement('div');e.className='f glass';e.innerHTML='<i>✓</i>'+t;$('#feats').appendChild(e)});
+// particles
+const fx=$('#fx'),PT=[];
+const N={bub:26,bubslow:22,leaf:18,spark:30,bee:6}[D.fx];
+for(let i=0;i<N;i++){const e=document.createElement('div');e.className='p';let s;
+ if(D.fx.startsWith('bub')){e.classList.add('bub');s=26+rnd(i)*70;e.style.width=e.style.height=s+'px'}
+ else if(D.fx==='leaf'){e.classList.add('emo');e.textContent=['🍃','🌿','🍂'][i%3];e.style.fontSize=(40+rnd(i)*40)+'px'}
+ else if(D.fx==='bee'){e.classList.add('emo');e.textContent=i%2?'🐝':'🌼';e.style.fontSize=(50+rnd(i)*30)+'px'}
+ else {e.classList.add('emo');e.textContent=i%3?'✨':'💧';e.style.fontSize=(26+rnd(i)*34)+'px'}
+ fx.appendChild(e);PT.push({e,x:rnd(i+1)*1080,y:rnd(i+2)*1920,sp:(D.fx==='bubslow'?40:90)+rnd(i+3)*120,ph:rnd(i+4)*6.28,amp:20+rnd(i+5)*60})}
+let frames=null;
+window.setFrames=n=>{frames=n};
+window.render=async function(t){
+ const T1=D.video?15:17, T2=24;
+ // background
+ const bt=Math.min(t,T1);
+ const beat=60/D.bpm, ph=(t%beat)/beat, pulse=Math.exp(-ph*6);
+ if(D.video&&t<D.video&&frames){const i=Math.min(frames-1,Math.floor(t*30));const src='clip/f'+String(i+1).padStart(4,'0')+'.jpg';
+   if($('#bg').getAttribute('src')!==src){$('#bg').src=src;await $('#bg').decode().catch(()=>{})}
+   $('#bg').style.transform=`translate(-50%,-50%) scale(${1.0+0.008*pulse})`;}
+ else{ if(D.video&&$('#bg').getAttribute('src')!==D.kf){$('#bg').src=D.kf;await $('#bg').decode().catch(()=>{})}
+   const [z0,z1,dx,dy]=D.kb,p=bt/T1,z=z0+(z1-z0)*eo(p*0.9+0.1*p);
+   $('#bg').style.transform=`translate(calc(-50% + ${dx*p}px),calc(-50% + ${dy*p}px)) scale(${z+0.012*pulse}) rotate(${Math.sin(t*0.6)*0.35}deg)`;}
+ // particles
+ const fxa=t<T1?1:0;fx.style.opacity=fxa;
+ PT.forEach((q,i)=>{let y,x;
+  if(D.fx==='bee'){x=q.x+Math.sin(t*1.7+q.ph)*140;y=q.y+Math.cos(t*1.3+q.ph)*110;}
+  else{y=((q.y-t*q.sp)%2100+2100)%2100-100; if(D.fx==='leaf')y=((q.y+t*q.sp*0.8)%2100+2100)%2100-100; x=q.x+Math.sin(t*1.2+q.ph)*q.amp;}
+  const sc=D.fx==='spark'?(0.6+0.6*Math.abs(Math.sin(t*3+q.ph))):1;
+  q.e.style.transform=`translate(${x}px,${y}px) scale(${sc}) rotate(${D.fx==='leaf'?t*60+q.ph*50:0}deg)`;
+  q.e.style.opacity=D.fx==='spark'?Math.abs(Math.sin(t*2+q.ph)):0.95;});
+ // header/title
+ const hp=back((t-0.2)/0.6);$('#hdr').style.opacity=clamp(t/0.3)*(t<T1?1:clamp(1-(t-T1)/0.3));$('#hdr').style.transform=`translateY(${(1-hp)*-80}px)`;
+ const tp=back((t-0.6)/0.7);$('#title').style.opacity=clamp((t-0.6)/0.25)*(t<T1-0.3?1:clamp(1-(t-T1+0.3)/0.3));
+ $('#title .t').style.transform=`translateX(${(1-tp)*-700}px) rotate(${(1-tp)*-6}deg) scale(${1+0.015*pulse})`;
+ // features
+ const fs=document.querySelectorAll('.f'),st=D.video?[3.5,6.5,9.5]:[4,8,12];
+ fs.forEach((e,i)=>{const p=back((t-st[i])/0.6);e.style.opacity=clamp((t-st[i])/0.2)*(t<T1-0.3?1:clamp(1-(t-T1+0.3)/0.3));e.style.transform=`translateX(${(1-p)*600}px)`;});
+ // hook
+ const hs=D.video?11.5:13.5,hk=back((t-hs)/0.6);$('#hook').style.opacity=clamp((t-hs)/0.2)*(t<T1-0.2?1:clamp(1-(t-T1+0.2)/0.3));
+ $('#hook span').style.transform=`scale(${(0.5+0.5*hk)*(1+0.03*pulse)}) rotate(${(1-hk)*8}deg)`;
+ // spotlight
+ const sp=t-T1,so=clamp(sp/0.45)*clamp((T2-t)/0.4);$('#spot').style.opacity=so;
+ $('#spot').style.transform=`translateY(${(1-eo(sp/0.6))*200}px)`;
+ const pc=back((sp-0.3)/0.7);$('#pcard').style.transform=`translateY(${(1-pc)*300}px) scale(${0.9+0.1*pc}) rotate(${(1-pc)*-4}deg)`;$('#pcard').style.opacity=clamp((sp-0.3)/0.3);
+ $('#pimg').style.transform=`scale(${1+0.06*clamp(sp/7)})`;
+ const bd=back((sp-1.0)/0.6);$('#buddy').style.transform=`scale(${bd}) rotate(${Math.sin(t*3)*4}deg)`;
+ [['#pname',1.2],['#psub',1.6],['#ptags',2.0]].forEach(([s,d])=>{const p=back((sp-d)/0.6);$(s).style.opacity=clamp((sp-d)/0.2);$(s).style.transform=`translateY(${(1-p)*60}px)`});
+ // end
+ const ep=t-T2;$('#end').style.opacity=clamp(ep/0.4);
+ const eb=back((ep-0.2)/0.7);$('#ebuddy').style.transform=`scale(${eb}) rotate(${Math.sin(t*2.5)*5}deg) translateY(${Math.sin(t*5)*6}px)`;
+ [['#elogo',0.5],['#eline',0.8],['#ecta',1.2],['#eurl',1.5],['#elegal',1.7]].forEach(([s,d])=>{const p=back((ep-d)/0.6);$(s).style.opacity=clamp((ep-d)/0.2);$(s).style.transform=`translateY(${(1-p)*60}px)`+(s==='#ecta'&&ep>2?` scale(${1+0.04*Math.sin((ep-2)*5)})`:'')});
+};
+render(0);
+</script></body></html>
