@@ -173,7 +173,8 @@
         "background_color": "#ffffff",
         "overlay_color": "#ffffff",
         "overlay_opacity": 0
-      }
+      },
+      "disabled": true
     },
     "scrolling_banner_gUcYKw": {
       "type": "scrolling-banner",
@@ -931,12 +932,35 @@
         "rotate": "0",
         "color_scheme": "dark"
       }
+    },
+    "fall_sale_banner": {
+      "type": "image-with-text-overlay",
+      "name": "Fall Sale Banner (BB-Q4W1)",
+      "settings": {
+        "image_desktop": "shopify://shop_images/BB-Q4W1-Banner-FallSale-1920x1080.jpg",
+        "height_desktop": "original",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "shopify://collections/sale",
+        "animation_style": "none",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
     }
   },
   "order": [
     "custom_liquid_qbDnwB",
     "countdown_WryWGq",
     "countdown_rrtCQn",
+    "fall_sale_banner",
     "scrolling_banner_gUcYKw",
     "3643d38b-24f2-4040-ab67-4b4b44a63aab",
     "featured_collection_8cMcWD",
