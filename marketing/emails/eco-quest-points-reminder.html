@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mimro</title></head>
+<body style="margin:0;padding:0;background:#f3f6fa;font-family:Inter,Helvetica,Arial,sans-serif;color:#020624">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">You have Mimro Eco Points waiting. Here's how to earn more.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f6fa"><tr><td align="center" style="padding:28px 12px">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:22px;overflow:hidden;border:1px solid #e6eef8">
+<tr><td style="padding:26px 32px 18px;border-bottom:3px solid #2ad265"><a href="https://www.mimro.com"><img src="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-email-logo.png?v=1792101479" width="140" alt="Mimro" style="display:block;border:0;height:auto"></a></td></tr>
+
+<tr><td style="padding:30px 32px 6px">
+<div style="display:inline-block;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#2b7a4b;background:#e6f6dc;border-radius:999px;padding:6px 14px">Your Mimro Eco Points</div>
+<h1 style="font-size:30px;line-height:1.15;margin:16px 0 8px;font-weight:900">Hi {{ customer.first_name | default: "there" }}, your points are waiting 🌱</h1>
+<p style="font-size:16px;line-height:1.55;color:#5a5f73;margin:0">Every Eco-Quest you play and every order you place adds to your balance. Here's where you stand.</p>
+</td></tr>
+<tr><td style="padding:22px 32px 8px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1.5px solid #e4ebe6;border-radius:20px"><tr><td style="padding:22px 24px">
+<div style="font-size:13px;color:#5a5f73;font-weight:700;text-transform:uppercase;letter-spacing:1.5px">Current balance</div>
+<div style="font-size:44px;font-weight:900;color:#007ae7;line-height:1.1;margin:4px 0">{{ customer.metafields.eco_quest.points | default: 0 }} pts</div>
+<div style="font-size:15px;color:#5a5f73">Every 500 points = <b style="color:#020624">$5 off</b>. Keep saving, or turn them into a code from your points card.</div>
+</td></tr></table>
+</td></tr>
+<tr><td style="padding:22px 32px 4px"><h2 style="font-size:20px;margin:0 0 6px;font-weight:900">More ways to earn</h2>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td width="76" style="padding:8px 0;font-size:22px;font-weight:900;color:#007ae7;vertical-align:top">+100</td><td style="padding:8px 0;font-size:15px;line-height:1.45"><b>Each correct answer</b><br><span style="color:#5a5f73">3 quick questions in every weekly Eco-Quest</span></td></tr>
+<tr><td width="76" style="padding:8px 0;font-size:22px;font-weight:900;color:#007ae7;vertical-align:top">+100</td><td style="padding:8px 0;font-size:15px;line-height:1.45"><b>Perfect score bonus</b><br><span style="color:#5a5f73">Get all 3 right</span></td></tr>
+<tr><td width="76" style="padding:8px 0;font-size:22px;font-weight:900;color:#007ae7;vertical-align:top">+50</td><td style="padding:8px 0;font-size:15px;line-height:1.45"><b>Weekly streak</b><br><span style="color:#5a5f73">Every week in a row with a perfect score, up to +250</span></td></tr>
+<tr><td width="76" style="padding:8px 0;font-size:22px;font-weight:900;color:#007ae7;vertical-align:top">+2</td><td style="padding:8px 0;font-size:15px;line-height:1.45"><b>Points for every $1 spent</b><br><span style="color:#5a5f73">On eligible Mimro purchases</span></td></tr>
+</table></td></tr>
+<tr><td style="padding:18px 32px 32px"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#007ae7;background-image:linear-gradient(100deg,#007ae7,#2ad265);border-radius:999px"><a href="https://www.mimro.com/pages/eco-rewards" style="display:inline-block;padding:15px 34px;color:#ffffff;font-weight:800;font-size:15px;text-decoration:none;letter-spacing:.5px">PLAY THIS WEEK'S ECO-QUEST →</a></td></tr></table>
+<p style="font-size:13px;color:#7a8196;margin:14px 0 0">Sign in with this email to see your balance, history and codes on your <a href="https://www.mimro.com/pages/eco-rewards#eco-points" style="color:#007ae7">points card</a>.</p></td></tr>
+
+<tr><td style="padding:22px 32px 28px;background:#f8fafc;font-size:12px;line-height:1.6;color:#7a8196">
+You're receiving this because you played Mimro Eco-Quest or subscribed to Mimro emails. 100 Mimro Eco Points = $1. Redeem in steps of 500 points ($5) from your points card. Points and codes have no cash value.<br>
+Mimro · Canada · <a href="https://www.mimro.com/pages/eco-rewards" style="color:#007ae7">mimro.com/pages/eco-rewards</a><br>
+{{ unsubscribe_link }}</td></tr>
+</table></td></tr></table></body></html>
