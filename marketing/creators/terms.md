@@ -18,9 +18,8 @@ The campaign is complete, and the gift card is issued, when all of the following
 - Approved content has been published
 - The creator has shared the published content links with Mimro
 ## Required Deliverables
-Each creator is required to complete the following:
+Each creator is required to complete one (1) deliverable:
 - One (1) Reel (video) promoting either Mimro products (showing them in the creator's real routine and where to find them on mimro.com) or Mimro's weekly Eco-Quest (mimro.com/pages/eco-rewards): play that week's Eco-Quest on camera, share the week's eco swap (or one from the creator's own routine), and invite viewers to play and earn Mimro Eco Points
-- One (1) Story supporting the Reel, with a link sticker to the featured product page or mimro.com/pages/eco-rewards
 The campaign brief states whether to promote Mimro products or Eco-Quest. Eco-Quest content must only use facts shown on the Eco-Quest page and must not promise prizes or amounts that aren't listed there.
 Campaign-specific instructions may provide additional requirements.
 All social media content must be submitted to Mimro for approval before publication.
@@ -74,10 +73,10 @@ Creators may be asked to complete up to two (2) reasonable rounds of revisions t
 Mimro will not require a creator to change a genuine opinion simply because it is unfavorable.
 ## Content Timeline
 Unless otherwise specified in the campaign brief:
-- The first content drafts (Reel and Story) should be submitted within ten (10) days of selection.
+- The Reel draft should be submitted within ten (10) days of selection.
 - Requested revisions should generally be completed within three to five (3–5) business days.
 - Approved content should be published within three (3) days of final approval.
-- The Mimro Gift Card is emailed after Mimro confirms the published Reel and Story.
+- The Mimro Gift Card is emailed after Mimro confirms the published Reel.
 Creators should contact Mimro as soon as reasonably possible if circumstances may prevent them from meeting a deadline.
 ## Technical Content Requirements
 Unless otherwise specified, short-form video should:
@@ -134,7 +133,6 @@ If AI-generated or synthetic imagery, voices, avatars, or other material is used
 ## Performance Reporting
 Mimro may request reasonable campaign performance information, including:
 - Published content URLs.
-- Story screenshots.
 - Views or reach.
 - Engagement.
 - Relevant platform insights.
@@ -156,7 +154,6 @@ Our goal is to help individuals and families discover practical products that ca
 ## Creator Program Summary
 - Selected creators only (apply to be considered)
 - One Reel promoting Mimro products or Eco-Quest
-- One Story
 - **$100 CAD Mimro Gift Card** after the published content is approved (no Creator Fee)
 - Content approval before social publication
 - Appropriate advertising disclosures
