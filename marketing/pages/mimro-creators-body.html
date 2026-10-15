@@ -61,7 +61,19 @@
 .mc-part>.mc-eyebrow{margin-bottom:6px}
 .mc-part>h2{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:900;letter-spacing:-.02em;margin:10px 0 6px}
 .mc-part>p{color:var(--mut);margin:0 0 6px;max-width:640px}
-@media (max-width:600px){.mc-progs{grid-template-columns:1fr}}
+.mc-pick{border:0;margin:0 0 16px;padding:0}
+.mc-pick legend{font-size:.8rem;font-weight:700;color:var(--mut);margin-bottom:8px;padding:0}
+.mc-picks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mc-opt{position:relative;display:block;cursor:pointer;margin:0}
+.mc-opt input{position:absolute;opacity:0;width:1px;height:1px}
+.mc-opt span{display:block;height:100%;border:2px solid var(--line);border-radius:16px;padding:14px 16px 14px 44px;background:#fff;font-size:.92rem;line-height:1.3;transition:border-color .15s,background .15s,box-shadow .15s}
+.mc-opt span b{display:block;font-size:1rem;color:var(--ink)}
+.mc-opt span small{color:var(--mut)}
+.mc-opt span:before{content:"";box-sizing:border-box;position:absolute;left:16px;top:17px;width:18px;height:18px;border-radius:50%;border:2px solid #c9c8cc;background:#fff}
+.mc-opt input:checked+span{border-color:#007ae7;background:#f3f9ff;box-shadow:0 10px 24px -18px rgba(0,122,231,.8)}
+.mc-opt input:checked+span:before{border:6px solid #007ae7}
+.mc-opt input:focus-visible+span{outline:3px solid rgba(0,122,231,.35);outline-offset:2px}
+@media (max-width:600px){.mc-progs,.mc-picks{grid-template-columns:1fr}}
 @media (max-width:600px){.mc-hero{padding:28px 20px}.mc-two,.mc-fg{grid-template-columns:1fr}.mc-form{padding:20px}}
 </style>
 <div class="mc">
@@ -108,6 +120,7 @@
 <div class="mc-step"><div><b>Get your $100 gift card</b><span>Once we confirm your published Reel, we email your $100 CAD Mimro Gift Card. Great collaborations may be invited to future campaigns.</span></div></div>
 </div>
 <p class="mc-note">The gift card can only be used on Mimro, isn't refundable or transferable, and can't be redeemed for cash. The gift card is only issued after the Reel is published and approved; incomplete campaigns don't receive one. Selection isn't guaranteed, and there's no cash payment for this program.</p>
+<div class="mc-row" style="margin-top:16px"><a class="mc-btn" href="#mc-apply" data-prog="0">Apply for Creator Showcase →</a></div>
 </div>
 </div>
 
@@ -115,7 +128,7 @@
 <span class="mc-eyebrow">Program 2</span>
 <h2>Eco Partner Program: 15% Commission</h2>
 <p>Create authentic content around Mimro, sustainable living and the products available on Mimro. Introduce your audience to better everyday choices, and earn 15% on the eligible sales you generate. Enrollment is free.</p>
-<div class="mc-row" style="margin-top:12px"><a class="mc-btn alt" href="/pages/mimro-eco-partner-program-terms-requirements">Read the Eco Partner terms</a></div>
+<div class="mc-row" style="margin-top:12px"><a class="mc-btn" href="#mc-apply" data-prog="1">Apply for Eco Partner →</a><a class="mc-btn alt" href="/pages/mimro-eco-partner-program-terms-requirements">Read the Eco Partner terms</a></div>
 
 <div class="mc-sec">
 <h3>Partner with Mimro</h3>
@@ -181,7 +194,13 @@
 <input type="hidden" name="form_type" value="contact">
 <input type="hidden" name="utf8" value="✓">
 <input type="hidden" name="contact[Form]" value="Mimro Creators application">
-<label class="mc-f"><span>Which program?</span><select name="contact[Program]" required><option value="">Choose one</option><option>Creator Showcase ($100 Gift Card)</option><option>Eco Partner Program (15% Commission)</option><option>Both</option></select></label>
+<fieldset class="mc-pick"><legend>Which program are you applying for?</legend>
+<div class="mc-picks">
+<label class="mc-opt"><input type="radio" name="contact[Program]" value="Creator Showcase ($100 Gift Card)" required><span><b>Creator Showcase</b><small>$100 Gift Card · selected creators</small></span></label>
+<label class="mc-opt"><input type="radio" name="contact[Program]" value="Eco Partner Program (15% Commission)"><span><b>Eco Partner Program</b><small>15% Commission · free to join</small></span></label>
+<label class="mc-opt"><input type="radio" name="contact[Program]" value="Both programs"><span><b>Both</b><small>Apply for both programs</small></span></label>
+</div>
+</fieldset>
 <div class="mc-fg">
 <label class="mc-f"><span>Full name</span><input type="text" name="contact[name]" autocomplete="name" required></label>
 <label class="mc-f"><span>Email</span><input type="email" name="contact[email]" autocomplete="email" required></label>
@@ -201,5 +220,6 @@
 <div class="mc-tag">🌱 Create with Mimro. Inspire better choices. Get rewarded.</div>
 </div>
 <script>
+(function(){var r=document.querySelectorAll('#mc-form input[name="contact[Program]"]');[].forEach.call(document.querySelectorAll('[data-prog]'),function(a){a.addEventListener('click',function(){var i=r[+a.getAttribute('data-prog')];if(i)i.checked=true})})})();
 (function(){if(/contact_posted=true/.test(location.search)||/contact_posted=true/.test(location.hash)){var f=document.getElementById('mc-form'),o=document.getElementById('mc-ok');if(f&&o){f.style.display='none';o.style.display='block';document.getElementById('mc-apply').scrollIntoView()}}})();
 </script>
