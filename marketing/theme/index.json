@@ -937,7 +937,7 @@
       "type": "image-with-text-overlay",
       "name": "Fall Sale Banner (BB-Q4W1)",
       "settings": {
-        "image_desktop": "shopify://shop_images/BB-Q4W1-Banner-FallSale-v2-1920x1080.jpg",
+        "image_desktop": "shopify://shop_images/BB-Q4W1-Banner-FallSale-v3-1920x1080.jpg",
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",

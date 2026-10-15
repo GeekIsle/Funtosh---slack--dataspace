@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{font-family:"Inter Display","Inter",sans-serif;background:#ffffff;color:#020624;position:relative}
+.glow{position:absolute;border-radius:50%;filter:blur(140px)}
+.g1{width:760px;height:760px;left:-300px;top:-340px;background:#2ad265;opacity:.16}
+.g2{width:760px;height:760px;left:420px;bottom:-520px;background:#007ae7;opacity:.14}
+.g3{width:640px;height:640px;right:-260px;bottom:-300px;background:#3a5cf0;opacity:.10}
+.grain{display:none}
+.left{position:absolute;left:110px;top:0;bottom:0;width:640px;display:flex;flex-direction:column;justify-content:center}
+.logo{margin-bottom:60px}.logo img{height:68px;display:block}
+.kicker{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;font-size:21px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#fff;background:linear-gradient(90deg,#007ae7,#2ad265);padding:12px 24px;border-radius:999px;margin-bottom:34px}
+h1{font-size:176px;line-height:.86;font-weight:900;letter-spacing:-8px;color:#020624}
+h1 span{display:block;background:linear-gradient(90deg,#007ae7,#2ad265);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:10px}
+.sub{margin-top:30px;font-size:40px;font-weight:500;letter-spacing:-.5px;color:#3a4160}
+.sub b{font-weight:800;color:#020624}
+.cta{margin-top:50px;align-self:flex-start;display:inline-flex;align-items:center;gap:18px;background:linear-gradient(90deg,#007ae7,#2ad265);color:#fff;font-size:28px;font-weight:700;padding:22px 26px 22px 40px;border-radius:999px;box-shadow:0 20px 40px -18px rgba(0,122,231,.55)}
+.cta em{font-style:normal;width:46px;height:46px;border-radius:50%;background:#fff;color:#007ae7;display:grid;place-items:center;font-size:24px}
+.note{margin-top:30px;font-size:19px;color:#6b7290;letter-spacing:.3px}
+.grid{position:absolute;right:90px;top:90px;width:1040px;height:900px;display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:22px}
+.t{position:relative;border-radius:36px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(2,6,36,.06);box-shadow:0 30px 60px -36px rgba(2,6,36,.35)}
+.t img{max-width:76%;max-height:64%;object-fit:contain;filter:drop-shadow(0 24px 22px rgba(2,6,36,.18));position:relative;top:-6px}
+.t.big{grid-row:span 2}
+.t.big img{max-height:62%;max-width:82%}
+.chip{position:absolute;top:22px;left:22px;font-weight:800;font-size:26px;letter-spacing:-.5px;padding:9px 16px;border-radius:14px;background:linear-gradient(90deg,#007ae7,#2ad265);color:#fff}
+.lbl{position:absolute;left:24px;bottom:20px;right:20px;font-size:15px;font-weight:600;letter-spacing:1.1px;white-space:nowrap;text-transform:uppercase;color:rgba(2,6,36,.62)}
+.c1{background:#eaf4ff}.c2{background:#e8f9ef}.c3{background:#eef1ff}.c4{background:#f2f8ff}.c6{background:#eafaf4}
+</style></head><body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div><div class="grain"></div>
+<div class="left">
+  <div class="logo"><img src="src/logo.png"></div>
+  <div class="kicker">🍂 Limited time</div>
+  <h1>Fall<span>Sale.</span></h1>
+  <div class="sub">Up to <b>25% off</b> sustainable home &amp; body essentials</div>
+  <div class="cta">Shop the Sale <em>→</em></div>
+  <div class="note">Low-waste swaps from LOUI, Nature Bee, Essence of Life &amp; more</div>
+</div>
+<div class="grid">
+  <div class="t big c1"><span class="chip">−20%</span><img src="src/beeswax.png"><span class="lbl">Nature Bee · Beeswax Wraps</span></div>
+  <div class="t c2"><span class="chip">−25%</span><img src="src/loui.png"><span class="lbl">LOUI · Toilet Drops</span></div>
+  <div class="t c4"><span class="chip">−25%</span><img src="src/lotionbar.png"><span class="lbl">Essence of Life · Lotion</span></div>
+  <div class="t c3"><span class="chip">−20%</span><img src="src/dishtabs.png"><span class="lbl">Nature Bee · Dish Tablets</span></div>
+  <div class="t c6"><span class="chip">−25%</span><img src="src/hairbrush.png" style="max-height:74%;transform:rotate(-18deg)"><span class="lbl">Essence of Life · Brush</span></div>
+</div>
+</body></html>
