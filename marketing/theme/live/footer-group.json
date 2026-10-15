@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "collage_mKaALP": {
+      "type": "collage",
+      "blocks": {
+        "image_nRABew": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/BB-Q4W1-PromoF1-MimroOriginals-1100x540.jpg",
+            "desktop_position": "md-min-align-top md-min-justify-left",
+            "heading_size": 30,
+            "mobile_image": "shopify://shop_images/BB-Q4W1-PromoF1-MimroOriginals-1100x540.jpg",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "heading": "",
+            "url": "shopify://collections/mimro-originals",
+            "button_label": "",
+            "buttons_style": "outlined",
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_color": "#ffffff",
+            "text_color": "#ffffff",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        },
+        "image_7BAtVK": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/BB-Q4W1-PromoF2-Dalcini-1100x540.jpg",
+            "desktop_position": "md-min-align-top md-min-justify-left",
+            "heading_size": 30,
+            "mobile_image": "shopify://shop_images/BB-Q4W1-PromoF2-Dalcini-1100x540.jpg",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "heading": "",
+            "url": "shopify://collections/dalcini",
+            "button_label": "",
+            "buttons_style": "outlined",
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_color": "#ffffff",
+            "text_color": "#ffffff",
+            "overlay_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "image_nRABew",
+        "image_7BAtVK"
+      ],
+      "name": "t:sections.collage-builder.presets.name",
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_width": "content",
+        "remove_spacing": false,
+        "block_alignment": "center",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "width_1": "2",
+        "height_1": "4",
+        "width_2": "2",
+        "height_2": "4",
+        "width_3": "2",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "4",
+        "color_scheme": "white"
+      }
+    },
+    "image_with_text_overlay_af4WGw": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image_desktop": "shopify://shop_images/Desktop_Banner_2.png",
+        "height_desktop": "original",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "scrolling_banner_adxCcn": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "text_zCg4Ut": {
+          "type": "text",
+          "settings": {
+            "text": "Join mimro earth community",
+            "font": "heading",
+            "style": "fill",
+            "font_size_desktop": 16,
+            "font_size_mobile": 12
+          }
+        },
+        "text_UnqkYX": {
+          "type": "text",
+          "settings": {
+            "text": "FREE Shipping on orders over $75",
+            "font": "heading",
+            "style": "fill",
+            "font_size_desktop": 16,
+            "font_size_mobile": 12
+          }
+        }
+      },
+      "block_order": [
+        "text_zCg4Ut",
+        "text_UnqkYX"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "show_fade": false,
+        "borders": false,
+        "animation_direction": "normal",
+        "animation_speed": 60,
+        "section_padding_top": 10,
+        "section_padding_bottom": 10,
+        "space_between_blocks_desktop": 80,
+        "space_between_blocks_mobile": 20,
+        "rotate": "0",
+        "color_scheme": "dark"
+      }
+    },
+    "footer-bottom": {
+      "type": "footer-bottom",
+      "disabled": true,
+      "settings": {
+        "show_methods_of_payment": true,
+        "center_content_on_desktop": true,
+        "footer_text": "",
+        "show_currency_selector": true,
+        "show_locale_selector": true,
+        "color_scheme": "accent"
+      }
+    },
+    "footer-main": {
+      "type": "footer-main",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Quick links",
+            "footer_linklist": "footer"
+          }
+        },
+        "5c637888-418b-4cc8-baea-a83083df2e8c": {
+          "type": "menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Quick links",
+            "footer_linklist": "footer"
+          }
+        },
+        "social": {
+          "type": "social",
+          "settings": {
+            "social_title": "Follow us"
+          }
+        },
+        "text_DHwxH4": {
+          "type": "text",
+          "settings": {
+            "title": "HQ address",
+            "richtext": "<p>18 King St E Suite #1400,<br/>Toronto, ON <br/>M5C 1C4<br/><br/><strong>Warehouse address</strong><br/>30 Driver Rd Unit 2, <br/>Brampton, ON <br/>L6T 5V2</p>"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_title": "Newsletter",
+            "footer_newsletter_description": "<p>Be the first to know about our biggest and best sales.</p>",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "menu",
+        "5c637888-418b-4cc8-baea-a83083df2e8c",
+        "social",
+        "text_DHwxH4",
+        "newsletter"
+      ],
+      "settings": {
+        "alignment": "left",
+        "heading_font_size": 16,
+        "color_scheme": "accent"
+      }
+    }
+  },
+  "order": [
+    "collage_mKaALP",
+    "image_with_text_overlay_af4WGw",
+    "scrolling_banner_adxCcn",
+    "footer-bottom",
+    "footer-main"
+  ]
+}
