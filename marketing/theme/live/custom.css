@@ -218,6 +218,8 @@ button[name="checkout"],
 input[name="checkout"],
 .cart__checkout,
 .eqp-btn,
+.xq-btn,
+.mc-btn,
 .countdown__button{
   text-transform:uppercase !important;
   letter-spacing:.6px !important;
