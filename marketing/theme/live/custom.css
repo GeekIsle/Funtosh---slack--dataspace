@@ -207,3 +207,18 @@ input[name="checkout"]:hover,
 }
 .mega-menu-dropdown .mega-menu--links .menu-link:empty,
 .mega-menu-dropdown .mega-menu--links .menu-link:not(:has(li)){ display:none !important; margin:0 !important; }
+
+/* ---------- Button text: all capitals ---------- */
+.btn,
+.btn--secondary,
+.btn--underlined,
+.product--add-to-cart-button,
+.shopify-payment-button__button--unbranded,
+button[name="checkout"],
+input[name="checkout"],
+.cart__checkout,
+.eqp-btn,
+.countdown__button{
+  text-transform:uppercase !important;
+  letter-spacing:.6px !important;
+}
