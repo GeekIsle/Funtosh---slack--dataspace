@@ -131,3 +131,79 @@ input[name="checkout"]:hover,
 .footer-wrapper input[type="email"]{
   border-radius:999px !important;
 }
+
+/* ---------- Mega menu (Shop by Brand): modern tile list ---------- */
+.mega-menu-dropdown .mega-menu--links{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:10px !important;
+  padding:6px 0 !important;
+  margin:0 !important;
+}
+@media (max-width:1279px){
+  .mega-menu-dropdown .mega-menu--links{ grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+}
+.mega-menu-dropdown .mega-menu--links > li.dropdown-submenu{
+  list-style:none;
+  margin:0 !important;
+  padding:0 !important;
+}
+.mega-menu-dropdown .mega-menu--links > li > .inner{ height:100%; padding:0 !important; }
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title{
+  margin:0 !important;
+  font-size:15px !important;
+  line-height:1.25 !important;
+  font-weight:600 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+}
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a{
+  position:relative;
+  display:flex !important;
+  align-items:center;
+  gap:10px;
+  box-sizing:border-box;
+  height:100%;
+  min-height:48px;
+  padding:11px 32px 11px 14px;
+  border-radius:14px;
+  background:#f6f9fd;
+  border:1px solid #e6eef8;
+  color:var(--mimro-navy) !important;
+  text-decoration:none !important;
+  background-image:none !important;
+  transition:background-color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a::before{
+  content:"";
+  flex:0 0 8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--mimro-grad);
+}
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a::after{
+  content:"\2192";
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translate(-4px,-50%);
+  opacity:0;
+  color:var(--mimro-blue);
+  font-weight:700;
+  transition:opacity .15s ease, transform .15s ease;
+}
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a:hover,
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a:focus-visible{
+  background:#fff;
+  border-color:#bcd9f7;
+  color:var(--mimro-blue) !important;
+  box-shadow:0 12px 24px -16px rgba(0,122,231,.6);
+  transform:translateY(-1px);
+}
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a:hover::after,
+.mega-menu-dropdown .mega-menu--links .mega-menu-link--title > a:focus-visible::after{
+  opacity:1;
+  transform:translate(0,-50%);
+}
+.mega-menu-dropdown .mega-menu--links .menu-link:empty,
+.mega-menu-dropdown .mega-menu--links .menu-link:not(:has(li)){ display:none !important; margin:0 !important; }
