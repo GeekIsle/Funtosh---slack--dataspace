@@ -30,7 +30,8 @@
           "type": "timer_complete_message",
           "settings": {
             "text": "You've just missed this offer"
-          }
+          },
+          "disabled": true
         },
         "heading_9Wt4YH": {
           "type": "heading",
@@ -46,7 +47,8 @@
             "end_date": "09-15-2026",
             "end_time": "",
             "time_labels": true
-          }
+          },
+          "disabled": true
         },
         "text_R6UB8E": {
           "type": "text",
@@ -97,7 +99,9 @@
       "custom_css": [
         ".countdown__content-box-inner {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; column-gap: 16px;}",
         ".countdown__content-box-inner > * {flex-basis: 100%;}",
-        ".countdown__content-box-inner > div:has(> .countdown__button) {flex-basis: auto;}"
+        ".countdown__content-box-inner > div:has(> .countdown__button) {flex-basis: auto;}",
+        ".countdown__content-box-inner {padding-top: 24px !important; padding-bottom: 24px !important;}",
+        ".countdown__content-box-inner > div:has(> .countdown__button) {margin-top: 0 !important;}"
       ],
       "name": "Countdown - MimroOrginals",
       "settings": {
