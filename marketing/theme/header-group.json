@@ -1,0 +1,154 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_eRawhy": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "",
+            "announcement_bg_color": "#f9f9fb",
+            "announcement_text_color": "#262428"
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "🚚 <strong>FREE Shipping</strong> on orders over <strong>$75</strong>",
+            "announcement_bg_color": "#0777ad",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_U6QiRH": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "Promo code : mimro10",
+            "announcement_bg_color": "#0777ad",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "aebe68ef-8489-4ee8-86e6-12dc826943f1": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "<div class=\"text-with-icon--content\">\n    <span class=\"text-with-icon--icon inline-icon--wrapper\" style=\"display: inline-block; width: 40px; height: 20px;\">\n       <img src=\"https://cdn.shopify.com/s/files/1/0734/9187/4030/files/Flag_of_Canada__Pantone__svg.webp\">\n    </span>\n    <span class=\"text-with-icon--text\">\n        Proudly Canadian\n    </span>\n</div>",
+            "announcement_bg_color": "#0777ad",
+            "announcement_text_color": "#ffffff"
+          }
+        },
+        "announcement_bQYF8t": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "announcement_text": "Take 10% Off Your First Purchase Today",
+            "announcement_bg_color": "#0777ad",
+            "announcement_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_eRawhy",
+        "announcement",
+        "announcement_U6QiRH",
+        "aebe68ef-8489-4ee8-86e6-12dc826943f1",
+        "announcement_bQYF8t"
+      ],
+      "settings": {
+        "desktop_social_icons": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "content_B39Mbh": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "Brand",
+            "mega_image_1": "shopify://shop_images/BB-Q4W1-PromoH1-MimroOriginals-1000x1000.jpg",
+            "image_1_aspect_ratio": "square",
+            "mega_image_link_1": "shopify://collections/mimro-originals",
+            "mega_image_subheader_1": "",
+            "mega_image_header_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "mega_image_2": "shopify://shop_images/BB-Q4W1-PromoH2-Dalcini-1000x1000.jpg",
+            "image_2_aspect_ratio": "square",
+            "mega_image_link_2": "shopify://collections/dalcini",
+            "mega_image_subheader_2": "",
+            "mega_image_header_2": "",
+            "show_promo_2_in_mobile_drawer": true,
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff"
+          }
+        },
+        "content_4r6nEU": {
+          "type": "content",
+          "settings": {
+            "mega-menu": "",
+            "image_1_aspect_ratio": "square",
+            "mega_image_link_1": "",
+            "mega_image_subheader_1": "",
+            "mega_image_header_1": "",
+            "show_promo_1_in_mobile_drawer": true,
+            "overlay_text_on_image_promo_1": true,
+            "overlay_text_color_promo_1": "#ffffff",
+            "image_2_aspect_ratio": "square",
+            "mega_image_link_2": "",
+            "mega_image_subheader_2": "",
+            "mega_image_header_2": "",
+            "show_promo_2_in_mobile_drawer": true,
+            "overlay_text_on_image_promo_2": true,
+            "overlay_text_color_promo_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "content_B39Mbh",
+        "content_4r6nEU"
+      ],
+      "custom_css": [
+        "h1.site-header__logo.site-title {padding: 5px 0;}"
+      ],
+      "settings": {
+        "sticky_header": true,
+        "overlay_header_homepage": false,
+        "overlay_header_collection": false,
+        "overlay_header_list_collection": false,
+        "overlay_header_contact": false,
+        "logo": "shopify://shop_images/mimro_PNG-02_1.png",
+        "logo-placement": "above",
+        "logo_max_width": 245,
+        "logo_max_width_mobile": 150,
+        "logo_padding": 0,
+        "main_linklist": "main-menu",
+        "dropdown_alignment": "left",
+        "mobile_social_icons": true,
+        "show_currency_selector": true,
+        "show_locale_selector": true,
+        "show_icons": true,
+        "enable_search": true,
+        "cart-style": "shopping-cart",
+        "cart_count": true,
+        "show_offers_drawer": true,
+        "offers_drawer_icon": "fire",
+        "offers_drawer_icon_color": "#f2bd35",
+        "offers_drawer_show_tooltip": true,
+        "offers_drawer_tooltip_test_mode": false,
+        "offers_drawer_tooltip_text": "Don't miss today's offers!",
+        "offers_drawer_tooltip_text_color": "#ffffff",
+        "offers_drawer_tooltip_background_color": "#f2bd35",
+        "overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
