@@ -46,16 +46,75 @@
 .mc-ok{display:none;text-align:center;padding:20px}
 .mc-ok b{display:block;font-size:1.6rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .mc-tag{margin-top:34px;text-align:center;font-weight:800;font-size:1.15rem}
+.mc-progs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.mc-prog{position:relative;display:block;background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:24px;text-decoration:none!important;color:var(--ink)!important;box-shadow:0 24px 50px -40px rgba(2,6,36,.5);transition:transform .15s,border-color .15s}
+.mc-prog:hover{transform:translateY(-2px);border-color:#9cc7f2}
+.mc-prog small{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#2b7a4b;background:#e6f6dc;border:1px solid #cdebbb;border-radius:999px;padding:4px 12px}
+.mc-prog h4{font-size:1.3rem;font-weight:900;margin:12px 0 2px;color:var(--ink)}
+.mc-prog .big{font-size:2.2rem;font-weight:900;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mc-prog p{margin:8px 0 14px;color:var(--mut);font-size:.95rem}
+.mc-prog ul{margin:0 0 16px;padding:0;list-style:none}
+.mc-prog li{padding:4px 0 4px 22px;position:relative;font-size:.92rem}
+.mc-prog li:before{content:"✓";position:absolute;left:0;color:#1fae52;font-weight:900}
+.mc-prog .go{font-weight:800;color:#007ae7}
+.mc-part{margin-top:44px;padding-top:30px;border-top:2px solid var(--line)}
+.mc-part>.mc-eyebrow{margin-bottom:6px}
+.mc-part>h2{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:900;letter-spacing:-.02em;margin:10px 0 6px}
+.mc-part>p{color:var(--mut);margin:0 0 6px;max-width:640px}
+@media (max-width:600px){.mc-progs{grid-template-columns:1fr}}
 @media (max-width:600px){.mc-hero{padding:28px 20px}.mc-two,.mc-fg{grid-template-columns:1fr}.mc-form{padding:20px}}
 </style>
 <div class="mc">
 <div class="mc-hero">
 <span class="mc-eyebrow">Join Mimro Creators</span>
-<h2>Mimro Eco Partner Program <span>for Creators</span></h2>
-<div class="mc-sub">Create. Share. Inspire. Earn.</div>
-<p>Create authentic content around Mimro, sustainable living and the products available on Mimro. Introduce your audience to better everyday choices, and earn 15% on the eligible sales you generate. Enrollment is free.</p>
-<div class="mc-row"><a class="mc-btn" href="#mc-apply">Apply to join →</a><a class="mc-btn alt" href="/pages/mimro-eco-partner-program-terms-requirements">Read the terms</a></div>
+<h2>Mimro Creator <span>Programs</span></h2>
+<div class="mc-sub">Create. Share. Inspire. Get rewarded.</div>
+<p>Two ways to create with Mimro. Pick the one that fits you, or apply for both.</p>
+<div class="mc-row"><a class="mc-btn" href="#mc-apply">Apply now →</a></div>
 </div>
+
+<div class="mc-progs">
+<a class="mc-prog" href="#mc-showcase"><small>Paid collaboration</small><h4>Creator Showcase</h4><div class="big">$100 Gift Card</div><p>Shop Mimro with a $100 CAD gift card, create 3 pieces of content, and get a $100 CAD creator fee when the campaign is complete.</p><ul><li>$100 CAD Mimro Gift Card</li><li>+ $100 CAD Creator Fee on completion</li><li>1 Reel · 1 Feed Post · 1 Story</li></ul><span class="go">See Creator Showcase →</span></a>
+<a class="mc-prog" href="#mc-partner"><small>Affiliate · Free to join</small><h4>Eco Partner Program</h4><div class="big">15% Commission</div><p>Share your link or code, give your audience 10% off, and earn 15% on every eligible sale you bring in.</p><ul><li>15% commission on eligible sales</li><li>10% off for your audience</li><li>Free enrollment, post on your schedule</li></ul><span class="go">See Eco Partner Program →</span></a>
+</div>
+
+<div class="mc-part" id="mc-showcase">
+<span class="mc-eyebrow">Program 1</span>
+<h2>Creator Showcase: $100 Gift Card</h2>
+<p>A paid content collaboration for creators who want to experience products on Mimro and share authentic, useful content with their audience.</p>
+<div class="mc-sec">
+<h3>What you get</h3>
+<div class="mc-grid">
+<div class="mc-card"><div class="n">$100</div><strong>Mimro Gift Card</strong><p>Choose the Mimro products you want to feature.</p></div>
+<div class="mc-card"><div class="n">$100</div><strong>Creator Fee</strong><p>Paid within 14 days once all deliverables are approved, published and invoiced.</p></div>
+<div class="mc-card"><div class="n">12 mo</div><strong>You own your content</strong><p>Mimro gets a 12-month licence to share approved content on its channels.</p></div>
+</div>
+</div>
+<div class="mc-sec">
+<h3>What you create</h3>
+<div class="mc-grid">
+<div class="mc-card"><div class="n">1</div><strong>Reel</strong><p>Vertical 9:16 video, 1080×1920, clear audio, product clearly shown.</p></div>
+<div class="mc-card"><div class="n">1</div><strong>Feed Post</strong><p>Your real experience with the products you picked.</p></div>
+<div class="mc-card"><div class="n">1</div><strong>Story</strong><p>A natural, in-the-moment look at the product in use.</p></div>
+</div>
+</div>
+<div class="mc-sec">
+<h3>How it works</h3>
+<div class="mc-steps">
+<div class="mc-step"><div><b>Apply &amp; get selected</b><span>Choose "Creator Showcase" in the form below. Selected creators receive a $100 CAD Mimro Gift Card.</span></div></div>
+<div class="mc-step"><div><b>Shop your products</b><span>Order within 7 days of getting your gift card (shipping may apply at checkout), and let us know when it arrives.</span></div></div>
+<div class="mc-step"><div><b>Create &amp; submit for approval</b><span>Send your first drafts within 10 days of delivery. We reply within 5 business days, with up to 2 rounds of reasonable edits.</span></div></div>
+<div class="mc-step"><div><b>Publish &amp; get paid</b><span>Post within 3 days of approval with clear disclosure (#ad, #gifted or Paid Partnership), send your invoice, and receive your $100 CAD Creator Fee within 14 days.</span></div></div>
+</div>
+<p class="mc-note">The gift card can only be used on Mimro, isn't refundable or transferable, and can't be redeemed for cash. The Creator Fee isn't paid for incomplete campaigns. Selection isn't guaranteed.</p>
+</div>
+</div>
+
+<div class="mc-part" id="mc-partner">
+<span class="mc-eyebrow">Program 2</span>
+<h2>Eco Partner Program: 15% Commission</h2>
+<p>Create authentic content around Mimro, sustainable living and the products available on Mimro. Introduce your audience to better everyday choices, and earn 15% on the eligible sales you generate. Enrollment is free.</p>
+<div class="mc-row" style="margin-top:12px"><a class="mc-btn alt" href="/pages/mimro-eco-partner-program-terms-requirements">Read the Eco Partner terms</a></div>
 
 <div class="mc-sec">
 <h3>Partner with Mimro</h3>
@@ -99,7 +158,7 @@
 </div>
 
 <div class="mc-sec">
-<h3>Program details</h3>
+<h3>Eco Partner program details</h3>
 <table class="mc-tbl">
 <tr><td>Enrollment</td><td>Free</td></tr>
 <tr><td>Creator commission</td><td>15% on eligible referral sales</td></tr>
@@ -112,13 +171,16 @@
 <p class="mc-note">Commission isn't earned on cancelled, refunded, returned, fraudulent, duplicated, charged-back or otherwise ineligible orders. Mimro may update the program, rates, discount, sample-shipping charge, eligibility and terms; material changes will be communicated to existing creators.</p>
 </div>
 
-<div class="mc-sec" id="mc-apply">
-<h3>Apply to join Mimro Creators</h3>
+</div>
+
+<div class="mc-part" id="mc-apply">
+<h2>Apply to join Mimro Creators</h2>
 <div class="mc-form">
 <form method="post" action="/contact#mc-apply" accept-charset="UTF-8" id="mc-form">
 <input type="hidden" name="form_type" value="contact">
 <input type="hidden" name="utf8" value="✓">
-<input type="hidden" name="contact[Form]" value="Mimro Creators (Eco Partner) application">
+<input type="hidden" name="contact[Form]" value="Mimro Creators application">
+<label class="mc-f"><span>Which program?</span><select name="contact[Program]" required><option value="">Choose one</option><option>Creator Showcase ($100 Gift Card)</option><option>Eco Partner Program (15% Commission)</option><option>Both</option></select></label>
 <div class="mc-fg">
 <label class="mc-f"><span>Full name</span><input type="text" name="contact[name]" autocomplete="name" required></label>
 <label class="mc-f"><span>Email</span><input type="email" name="contact[email]" autocomplete="email" required></label>
@@ -128,14 +190,14 @@
 <label class="mc-f"><span>City / Province</span><input type="text" name="contact[Location]" placeholder="Toronto, ON"></label>
 </div>
 <label class="mc-f"><span>What do you create, and how would you feature Mimro?</span><textarea name="contact[body]" rows="4" required></textarea></label>
-<label class="mc-chk"><input type="checkbox" required><span>I have read and agree to the <a href="/pages/mimro-eco-partner-program-terms-requirements" target="_blank">Mimro Eco Partner Terms &amp; Requirements</a>, including disclosing affiliate and gifted-product relationships.</span></label>
+<label class="mc-chk"><input type="checkbox" required><span>I agree to follow the terms of the program I'm applying for (including the <a href="/pages/mimro-eco-partner-program-terms-requirements" target="_blank">Eco Partner Terms &amp; Requirements</a>), and to clearly disclose paid, affiliate and gifted-product relationships.</span></label>
 <button type="submit" class="mc-btn">Submit application →</button>
 </form>
-<div class="mc-ok" id="mc-ok"><b>Application received ✓</b><p style="color:#5a5f73">Thanks for applying to Mimro Creators. We review every application and will email you with your affiliate link or code if you're approved.</p></div>
+<div class="mc-ok" id="mc-ok"><b>Application received ✓</b><p style="color:#5a5f73">Thanks for applying to Mimro Creators. We review every application and will email you if you're selected.</p></div>
 </div>
 </div>
 
-<div class="mc-tag">🌱 Create with Mimro. Inspire better choices. Earn 15%.</div>
+<div class="mc-tag">🌱 Create with Mimro. Inspire better choices. Get rewarded.</div>
 </div>
 <script>
 (function(){if(/contact_posted=true/.test(location.search)||/contact_posted=true/.test(location.hash)){var f=document.getElementById('mc-form'),o=document.getElementById('mc-ok');if(f&&o){f.style.display='none';o.style.display='block';document.getElementById('mc-apply').scrollIntoView()}}})();
