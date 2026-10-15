@@ -1,0 +1,133 @@
+/* Place any CSS overrides in this file. */
+
+/* ============================================================
+   Mimro brand buttons & menu (Oct 2026)
+   Blue→green gradient pill, matching Eco Rewards / Creators pages
+   ============================================================ */
+:root{
+  --mimro-blue:#007ae7;
+  --mimro-green:#2ad265;
+  --mimro-navy:#020624;
+  --mimro-grad:linear-gradient(100deg,#007ae7 0%,#2ad265 100%);
+}
+
+/* ---------- Filled buttons: Add to cart, Buy, Checkout, section buttons ---------- */
+.btn:not(.btn--secondary):not(.btn--underlined):not(.sr-only),
+.product--add-to-cart-button,
+.shopify-payment-button__button--unbranded,
+button[name="checkout"],
+input[name="checkout"],
+.cart__checkout,
+.drawer .btn:not(.btn--secondary):not(.btn--underlined){
+  background-image:var(--mimro-grad) !important;
+  background-color:var(--mimro-blue) !important;
+  background-size:100% 100% !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff;
+  border:0 !important;
+  border-radius:999px !important;
+  font-weight:700 !important;
+  letter-spacing:.2px;
+  text-transform:none;
+  box-shadow:0 12px 24px -14px rgba(0,122,231,.75);
+  transition:transform .15s ease, box-shadow .15s ease, filter .15s ease !important;
+}
+.btn:not(.btn--secondary):not(.btn--underlined):not(.sr-only):hover,
+.product--add-to-cart-button:hover,
+.shopify-payment-button__button--unbranded:hover,
+button[name="checkout"]:hover,
+input[name="checkout"]:hover,
+.cart__checkout:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.04) saturate(1.05);
+  box-shadow:0 16px 30px -14px rgba(42,180,120,.8);
+  color:#fff !important;
+}
+.btn:not(.btn--secondary):not(.btn--underlined):focus-visible,
+.product--add-to-cart-button:focus-visible{
+  outline:3px solid rgba(0,122,231,.35);
+  outline-offset:2px;
+}
+
+/* Add to cart: full-width, a little taller */
+.product--add-to-cart-button{
+  min-height:54px;
+  font-size:16px !important;
+}
+.product--add-to-cart-button svg,
+.btn:not(.btn--secondary) svg{ fill:#fff; }
+
+/* Sold out / disabled */
+.btn[disabled],
+.product--add-to-cart-button[disabled]{
+  background-image:none !important;
+  background-color:#e6e9ef !important;
+  color:#8a90a2 !important;
+  -webkit-text-fill-color:#8a90a2;
+  box-shadow:none !important;
+  transform:none !important;
+  cursor:not-allowed;
+}
+
+/* ---------- Outlined buttons ---------- */
+.btn.btn--secondary{
+  background:#fff !important;
+  background-image:none !important;
+  color:var(--mimro-blue) !important;
+  -webkit-text-fill-color:var(--mimro-blue);
+  border:2px solid var(--mimro-blue) !important;
+  border-radius:999px !important;
+  font-weight:700 !important;
+  box-shadow:none;
+  transition:transform .15s ease, background-color .15s ease !important;
+}
+.btn.btn--secondary:hover{
+  background:#eef6ff !important;
+  transform:translateY(-1px);
+}
+
+/* ---------- Underlined text buttons ---------- */
+.btn--underlined{
+  font-weight:700 !important;
+  color:var(--mimro-blue) !important;
+}
+
+/* ---------- Main menu: bold ---------- */
+#AccessibleNav > li > a,
+.site-nav > li > a,
+.site-header__nav .site-nav__link{
+  font-weight:700 !important;
+  color:var(--mimro-navy);
+  letter-spacing:.1px;
+}
+#AccessibleNav > li > a:hover,
+.site-nav > li > a:hover{
+  color:var(--mimro-blue) !important;
+}
+/* "Sale" stands out */
+#AccessibleNav > li > a[href$="/collections/sale"]{
+  background:var(--mimro-grad);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent !important;
+  -webkit-text-fill-color:transparent;
+  font-weight:800 !important;
+}
+/* Mobile menu: bold top-level items */
+.mobile-nav__item.top-level > a,
+.mobile-nav__item.top-level > .mobile-nav__has-sublist a,
+.mobile-nav__link{
+  font-weight:700 !important;
+}
+
+/* ---------- Product cards: quick add / choose options ---------- */
+.grid-view-item .btn,
+.product-card .btn{
+  border-radius:999px !important;
+}
+
+/* ---------- Forms: rounded inputs to match ---------- */
+.newsletter input[type="email"],
+.footer-wrapper input[type="email"]{
+  border-radius:999px !important;
+}
