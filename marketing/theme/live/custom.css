@@ -308,6 +308,6 @@ body{overflow-x:hidden}
 .template-article__header-image img{width:100%!important;height:100%!important;object-fit:cover}
 @media (max-width:749px){.template-article__header-image{height:min(var(--mobile-height,250px),40vh)!important;max-height:250px}}
 
-/* "Less waste / Less plastic / Everyday essentials" banner: brand-blue text on light band */
-[id$="__scrolling_banner_gUcYKw"],[id$="__scrolling_banner_gUcYKw"] .color-scheme--dark{background:#eaf4fd!important}
-[id$="__scrolling_banner_gUcYKw"] *{color:#0777ad!important;-webkit-text-fill-color:#0777ad!important;font-weight:800}
+/* All scrolling banners: brand-blue text on light band (consistent sitewide) */
+[id*="__scrolling_banner_"],[id*="__scrolling_banner_"] .color-scheme--dark,[id*="__scrolling_banner_"] [class*="color-scheme--"]{background:#eaf4fd!important}
+[id*="__scrolling_banner_"] *{color:#0777ad!important;-webkit-text-fill-color:#0777ad!important;-webkit-text-stroke:0!important;font-weight:800!important}
