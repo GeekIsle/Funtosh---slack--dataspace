@@ -308,6 +308,7 @@ body{overflow-x:hidden}
 .template-article__header-image img{width:100%!important;height:100%!important;object-fit:cover}
 @media (max-width:749px){.template-article__header-image{height:min(var(--mobile-height,250px),40vh)!important;max-height:250px}}
 
-/* All scrolling banners: brand-blue text on light band (consistent sitewide) */
+/* All scrolling banners: add-to-cart gradient text on light band (consistent sitewide) */
 [id*="__scrolling_banner_"],[id*="__scrolling_banner_"] .color-scheme--dark,[id*="__scrolling_banner_"] [class*="color-scheme--"]{background:#eaf4fd!important}
-[id*="__scrolling_banner_"] *{color:#0777ad!important;-webkit-text-fill-color:#0777ad!important;-webkit-text-stroke:0!important;font-weight:800!important}
+[id*="__scrolling_banner_"] .text-content{background:var(--mimro-grad)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:0!important;font-weight:800!important}
+[id*="__scrolling_banner_"] .text-content *{color:transparent!important;-webkit-text-fill-color:transparent!important;font-weight:800!important}
