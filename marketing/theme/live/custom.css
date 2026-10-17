@@ -278,7 +278,13 @@ product-card.grid-view-item .product-grid--footer .btn,product-card.grid-view-it
 product-card.grid-view-item .badge,product-card.grid-view-item [class*="badge"]{transform:scale(.85);transform-origin:top left}
 
 /* Stable page width across zoom levels and screen sizes: content scales with the viewport like the full-width banners */
-.width--content{max-width:min(94vw,1680px)!important;width:100%;margin-left:auto!important;margin-right:auto!important}
+.width--content,.wrapper-padded,.mega-menu-wrapper .container{max-width:94vw!important;width:100%;margin-left:auto!important;margin-right:auto!important}
+.mh,.mq,.sbb{max-width:94vw!important;margin-left:auto!important;margin-right:auto!important}
+.sbb .sbc-grid{max-width:none!important}
 @media(max-width:749px){.width--content{max-width:100%!important}}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{overflow-x:hidden}
+
+/* Wider screens / zoomed out: keep cards proportional instead of a narrow column */
+@media(min-width:1800px){.grid-uniform:has(> .grid__item > product-card){grid-template-columns:repeat(10,minmax(0,1fr))}}
+@media(min-width:2600px){.grid-uniform:has(> .grid__item > product-card){grid-template-columns:repeat(12,minmax(0,1fr))}}
