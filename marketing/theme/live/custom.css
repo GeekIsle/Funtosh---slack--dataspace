@@ -302,3 +302,8 @@ body{overflow-x:hidden}
 .blog-post-card__excerpt p+p{display:none}
 .blog-post-card .btn--underlined,.blog-post-card .text-link-animated a{font-size:.75rem!important;margin-top:auto}
 .blog-posts-section .content-grid{align-items:stretch}
+
+/* Article banner: capped height, image cropped to fill */
+.template-article__header-image{height:min(var(--desktop-height,450px),48vh)!important;max-height:450px;overflow:hidden}
+.template-article__header-image img{width:100%!important;height:100%!important;object-fit:cover}
+@media (max-width:749px){.template-article__header-image{height:min(var(--mobile-height,250px),40vh)!important;max-height:250px}}
