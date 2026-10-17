@@ -276,3 +276,9 @@ product-card.grid-view-item .product-grid--rating{transform:scale(.85);transform
 product-card.grid-view-item .product-grid--footer{padding-top:6px}
 product-card.grid-view-item .product-grid--footer .btn,product-card.grid-view-item .product-grid--footer .btn--underlined,product-card.grid-view-item .product-grid--footer button{font-size:11px!important;padding:8px 10px!important;letter-spacing:.5px!important;min-height:0!important;width:100%}
 product-card.grid-view-item .badge,product-card.grid-view-item [class*="badge"]{transform:scale(.85);transform-origin:top left}
+
+/* Stable page width across zoom levels and screen sizes: content scales with the viewport like the full-width banners */
+.width--content{max-width:min(94vw,1680px)!important;width:100%;margin-left:auto!important;margin-right:auto!important}
+@media(max-width:749px){.width--content{max-width:100%!important}}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden}
