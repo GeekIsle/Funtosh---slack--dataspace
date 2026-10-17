@@ -314,5 +314,6 @@ body{overflow-x:hidden}
 [id*="__scrolling_banner_"] .text-content *{color:transparent!important;-webkit-text-fill-color:transparent!important;font-weight:800!important}
 
 /* Text-style buttons (card "Add to cart", "Read more"): same gradient text as banners */
-.btn--underlined,.btn--underlined span{background-image:var(--mimro-grad)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;font-weight:800!important}
-.btn--underlined span{background-image:none!important}
+.btn--underlined:not(:has(svg)){background-image:var(--mimro-grad)!important;background-size:100% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;font-weight:800!important}
+.btn--underlined:not(:has(svg)) *{color:transparent!important;-webkit-text-fill-color:transparent!important}
+.btn--underlined:has(svg){color:var(--mimro-blue)!important}
