@@ -294,7 +294,7 @@ body{overflow-x:hidden}
 .blog-post-card__image-wrap{margin:0 0 10px!important}
 .blog-post-card__image{border-radius:0!important;aspect-ratio:16/10;overflow:hidden}
 .blog-post-card__image img{width:100%!important;height:100%!important;object-fit:cover}
-.blog-post-card__header,.blog-post-card__excerpt,.blog-post-card>.text-link-animated,.blog-post-card>a,.blog-post-card>div:last-child:not(.blog-post-card__excerpt){padding-left:14px;padding-right:14px}
+.blog-post-card>*:not(.blog-post-card__image-wrap){padding-left:14px!important;padding-right:14px!important}
 .blog-post-card__meta{font-size:.72rem!important;margin-bottom:4px!important}
 .blog-post-card__title{font-size:clamp(1rem,.9rem + .35vw,1.2rem)!important;line-height:1.25!important;margin:0 0 6px!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .blog-post-card__excerpt{font-size:.85rem!important;line-height:1.45!important;color:#4a5568;margin:0 0 8px!important;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
