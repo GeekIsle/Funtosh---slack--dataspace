@@ -307,3 +307,7 @@ body{overflow-x:hidden}
 .template-article__header-image{height:min(var(--desktop-height,450px),48vh)!important;max-height:450px;overflow:hidden}
 .template-article__header-image img{width:100%!important;height:100%!important;object-fit:cover}
 @media (max-width:749px){.template-article__header-image{height:min(var(--mobile-height,250px),40vh)!important;max-height:250px}}
+
+/* "Less waste / Less plastic / Everyday essentials" banner: brand-blue text on light band */
+[id$="__scrolling_banner_gUcYKw"],[id$="__scrolling_banner_gUcYKw"] .color-scheme--dark{background:#eaf4fd!important}
+[id$="__scrolling_banner_gUcYKw"] *{color:#0777ad!important;-webkit-text-fill-color:#0777ad!important;font-weight:800}
