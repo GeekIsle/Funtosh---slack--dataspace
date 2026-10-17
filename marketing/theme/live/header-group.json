@@ -75,8 +75,9 @@
       "blocks": {
         "content_B39Mbh": {
           "type": "content",
+          "disabled": true,
           "settings": {
-            "mega-menu": "Shop by Brand",
+            "mega-menu": "",
             "mega_image_1": "shopify://shop_images/BB-Q4W1-PromoH1-MimroOriginals-1000x1000.jpg",
             "image_1_aspect_ratio": "square",
             "mega_image_link_1": "shopify://collections/mimro-originals",
