@@ -237,9 +237,13 @@ input[name="checkout"],
 .xq .xq-past a .xq-tag{flex:0 0 auto}
 .xq .xq-past a:hover{border-color:#29CE70!important}
 
-/* Section titles (New Arrivals, Top Eco Picks, etc.): brand gradient + accent bar */
-.section-title--wrapper h2.section-title{display:inline-block;font-weight:800!important;letter-spacing:-.4px;line-height:1.15;background:linear-gradient(90deg,#1E5BD8 0%,#3C78DD 45%,#29CE70 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;padding-bottom:2px}
-.section-title--wrapper h2.section-title::after{content:"";display:block;width:56px;height:4px;border-radius:999px;margin:10px auto 0;background:linear-gradient(90deg,#3C78DD,#29CE70);-webkit-text-fill-color:initial}
+/* Section titles (New Arrivals, Top Eco Picks, etc.): modern, consistent size, brand gradient + accent bar */
+.section-title--wrapper{margin-bottom:22px}
+.section-title--wrapper h2.section-title{display:inline-block;margin:0!important;font-size:clamp(1.45rem,1.05rem + 1.5vw,2.1rem)!important;font-weight:800!important;letter-spacing:-.02em;line-height:1.15!important;text-transform:none!important;background:linear-gradient(90deg,#1E5BD8 0%,#3C78DD 45%,#29CE70 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;padding-bottom:2px}
+.section-title--wrapper h2.section-title::after{content:"";display:block;width:44px;height:3px;border-radius:999px;margin:10px auto 0;background:linear-gradient(90deg,#3C78DD,#29CE70);-webkit-text-fill-color:initial}
 .section-title--wrapper.text-align--left h2.section-title::after{margin-left:0}
 .section-title--wrapper.text-align--right h2.section-title::after{margin-right:0}
 .section-title--wrapper h2.section-title a{color:inherit!important;-webkit-text-fill-color:transparent}
+.section-title--wrapper .section-description{font-size:clamp(.92rem,.85rem + .25vw,1.02rem);color:#5a5f73;max-width:620px;margin:10px auto 0}
+.section-title--wrapper.text-align--left .section-description{margin-left:0}
+@media(max-width:749px){.section-title--wrapper{margin-bottom:16px}}
