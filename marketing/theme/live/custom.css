@@ -224,3 +224,8 @@ input[name="checkout"],
   text-transform:uppercase !important;
   letter-spacing:.6px !important;
 }
+
+/* Product page: show "Item # 10170-01" on one line (label block hidden, label added to the SKU) */
+[data-block-id="text_YDpKr4"]{display:none!important}
+.current-variant--sku{color:#242424}
+.current-variant--sku::before{content:"Item # "}
