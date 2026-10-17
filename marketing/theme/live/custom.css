@@ -239,8 +239,8 @@ input[name="checkout"],
 
 /* Section titles (New Arrivals, Top Eco Picks, etc.): modern, consistent size, brand gradient + accent bar */
 .section-title--wrapper{margin-bottom:22px}
-.section-title--wrapper h2.section-title{display:inline-block;margin:0!important;font-size:clamp(1.45rem,1.05rem + 1.5vw,2.1rem)!important;font-weight:800!important;letter-spacing:-.02em;line-height:1.15!important;text-transform:none!important;background:linear-gradient(90deg,#1E5BD8 0%,#3C78DD 45%,#29CE70 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;padding-bottom:2px}
-.section-title--wrapper h2.section-title::after{content:"";display:block;width:44px;height:3px;border-radius:999px;margin:10px auto 0;background:linear-gradient(90deg,#3C78DD,#29CE70);-webkit-text-fill-color:initial}
+.section-title--wrapper h2.section-title{display:inline-block;margin:0!important;font-size:clamp(1.45rem,1.05rem + 1.5vw,2.1rem)!important;font-weight:800!important;letter-spacing:-.02em;line-height:1.15!important;text-transform:none!important;background:linear-gradient(100deg,#007ae7 0%,#2ad265 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;padding-bottom:2px}
+.section-title--wrapper h2.section-title::after{content:"";display:block;width:44px;height:3px;border-radius:999px;margin:10px auto 0;background:linear-gradient(100deg,#007ae7 0%,#2ad265 100%);-webkit-text-fill-color:initial}
 .section-title--wrapper.text-align--left h2.section-title::after{margin-left:0}
 .section-title--wrapper.text-align--right h2.section-title::after{margin-right:0}
 .section-title--wrapper h2.section-title a{color:inherit!important;-webkit-text-fill-color:transparent}
