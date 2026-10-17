@@ -312,3 +312,15 @@ body{overflow-x:hidden}
 [id*="__scrolling_banner_"],[id*="__scrolling_banner_"] .color-scheme--dark,[id*="__scrolling_banner_"] [class*="color-scheme--"]{background:#eaf4fd!important}
 [id*="__scrolling_banner_"] .text-content,[id*="__scrolling_banner_"] .text-content *{color:var(--mimro-blue)!important;-webkit-text-fill-color:var(--mimro-blue)!important;-webkit-text-stroke:0!important;font-weight:800!important}
 
+
+/* Homepage product rows: always end on a full row per device (hidden extras reachable via "View all") */
+/* Top Eco Picks (40): desktop 8x5, wide 10x4, laptop 6x6=36, 12-col 12x3=36, tablet 4x6=24, mobile 2x6=12 */
+@media(min-width:2600px){[id$="__3c4d9433-fe83-4e4a-afa6-63c348fea245"] .grid-uniform>.grid__item:nth-child(n+37){display:none!important}}
+@media(min-width:1024px) and (max-width:1399px){[id$="__3c4d9433-fe83-4e4a-afa6-63c348fea245"] .grid-uniform>.grid__item:nth-child(n+37){display:none!important}}
+@media(min-width:750px) and (max-width:1023px){[id$="__3c4d9433-fe83-4e4a-afa6-63c348fea245"] .grid-uniform>.grid__item:nth-child(n+25){display:none!important}}
+@media(max-width:749px){[id$="__3c4d9433-fe83-4e4a-afa6-63c348fea245"] .grid-uniform>.grid__item:nth-child(n+13){display:none!important}}
+/* New Arrivals (24): desktop 8x3, laptop 6x4, 12-col 12x2, wide 10x2=20, tablet 4x3=12, mobile 2x4=8 */
+@media(min-width:1800px) and (max-width:2599px){[id$="__3643d38b-24f2-4040-ab67-4b4b44a63aab"] .grid-uniform>.grid__item:nth-child(n+21){display:none!important}}
+@media(min-width:750px) and (max-width:1023px){[id$="__3643d38b-24f2-4040-ab67-4b4b44a63aab"] .grid-uniform>.grid__item:nth-child(n+13){display:none!important}}
+@media(max-width:749px){[id$="__3643d38b-24f2-4040-ab67-4b4b44a63aab"] .grid-uniform>.grid__item:nth-child(n+9){display:none!important}}
+.show-view-all--button{margin-top:18px}
