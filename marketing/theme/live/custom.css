@@ -247,3 +247,15 @@ input[name="checkout"],
 .section-title--wrapper .section-description{font-size:clamp(.92rem,.85rem + .25vw,1.02rem);color:#5a5f73;max-width:620px;margin:10px auto 0}
 .section-title--wrapper.text-align--left .section-description{margin-left:0}
 @media(max-width:749px){.section-title--wrapper{margin-bottom:16px}}
+
+/* Product cards (home page sliders/grids + all collection listings): same tile design as Shop by Brand/Category */
+product-card.grid-view-item{display:flex!important;flex-direction:column;height:100%;box-sizing:border-box;background:#fff;border:1.5px solid #e4ebf5;border-radius:18px;padding:12px 12px 16px;transition:transform .15s,box-shadow .15s,border-color .15s}
+product-card.grid-view-item:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(2,6,36,.08);border-color:#9cc7f2}
+product-card.grid-view-item>div:first-child{flex:1 1 auto}
+product-card.grid-view-item .grid-view-item-image{background:#f7f9fc;border-radius:12px;overflow:hidden;margin-bottom:10px}
+product-card.grid-view-item .grid-view-item-image img{mix-blend-mode:multiply}
+product-card.grid-view-item .product-grid--title{margin-top:4px;font-weight:600}
+product-card.grid-view-item .product-grid--footer{margin-top:auto;padding-top:10px}
+.swiper-slide>product-card.grid-view-item,.grid__item>product-card.grid-view-item{height:100%}
+.product-grid--slider-enabled .swiper-slide{height:auto}
+@media(max-width:749px){product-card.grid-view-item{padding:8px 8px 12px;border-radius:14px}product-card.grid-view-item .grid-view-item-image{border-radius:10px}}
