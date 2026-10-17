@@ -80,8 +80,11 @@
 .xq-ladder small{color:var(--mut);font-size:.75rem}
 .xq-ladder div:last-child{background:var(--grad);color:#fff;border-color:transparent}
 .xq-ladder div:last-child b,.xq-ladder div:last-child small{color:#fff}
-.xq-past a{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:600}
-.xq-past a:hover{border-color:var(--gr)}
+.xq .xq-past a{display:flex!important;width:100%;box-sizing:border-box;gap:12px;justify-content:space-between;align-items:center;padding:14px 16px!important;border:1px solid var(--line)!important;border-radius:12px;background:#fff!important;background-image:none!important;text-decoration:none!important;color:var(--ink)!important;font-weight:600;line-height:1.35}
+.xq .xq-past a::before,.xq .xq-past a::after{display:none!important;content:none!important}
+.xq .xq-past a span:first-child{flex:1;min-width:0}
+.xq .xq-past a .xq-tag{flex:0 0 auto}
+.xq .xq-past a:hover{border-color:var(--gr)!important}
 .xq-tag{font-size:.75rem;font-weight:700;padding:4px 8px;border-radius:999px;background:#eafaf0;color:#1fae52;text-transform:uppercase;letter-spacing:.5px}
 .xq details{border:1px solid var(--line);border-radius:10px;padding:12px 16px}
 .xq summary{cursor:pointer;font-weight:700}
