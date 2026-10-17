@@ -288,3 +288,17 @@ body{overflow-x:hidden}
 /* Wider screens / zoomed out: keep cards proportional instead of a narrow column */
 @media(min-width:1800px){.grid-uniform:has(> .grid__item > product-card){grid-template-columns:repeat(10,minmax(0,1fr))}}
 @media(min-width:2600px){.grid-uniform:has(> .grid__item > product-card){grid-template-columns:repeat(12,minmax(0,1fr))}}
+
+/* Blog cards: compact, uniform tiles (homepage + blog listing) */
+.blog-post-card{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid #e4ebf5;border-radius:14px;overflow:hidden;padding-bottom:14px}
+.blog-post-card__image-wrap{margin:0 0 10px!important}
+.blog-post-card__image{border-radius:0!important;aspect-ratio:16/10;overflow:hidden}
+.blog-post-card__image img{width:100%!important;height:100%!important;object-fit:cover}
+.blog-post-card__header,.blog-post-card__excerpt,.blog-post-card>.text-link-animated,.blog-post-card>a,.blog-post-card>div:last-child:not(.blog-post-card__excerpt){padding-left:14px;padding-right:14px}
+.blog-post-card__meta{font-size:.72rem!important;margin-bottom:4px!important}
+.blog-post-card__title{font-size:clamp(1rem,.9rem + .35vw,1.2rem)!important;line-height:1.25!important;margin:0 0 6px!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.blog-post-card__excerpt{font-size:.85rem!important;line-height:1.45!important;color:#4a5568;margin:0 0 8px!important;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.blog-post-card__excerpt p{margin:0!important;display:inline}
+.blog-post-card__excerpt p+p{display:none}
+.blog-post-card .btn--underlined,.blog-post-card .text-link-animated a{font-size:.75rem!important;margin-top:auto}
+.blog-posts-section .content-grid{align-items:stretch}

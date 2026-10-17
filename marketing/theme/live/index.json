@@ -585,6 +585,10 @@
         "description": "",
         "post_limit": 4,
         "blog_show_date": true,
+        "image_shape": "wide",
+        "heading_font_size": 18,
+        "layout_style_desktop": "grid",
+        "images_per_row_desktop": 4,
         "section_padding_top": 30,
         "section_padding_bottom": 0,
         "colors": "white"
