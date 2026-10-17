@@ -236,3 +236,10 @@ input[name="checkout"],
 .xq .xq-past a span:first-child{flex:1;min-width:0;background:none!important}
 .xq .xq-past a .xq-tag{flex:0 0 auto}
 .xq .xq-past a:hover{border-color:#29CE70!important}
+
+/* Section titles (New Arrivals, Top Eco Picks, etc.): brand gradient + accent bar */
+.section-title--wrapper h2.section-title{display:inline-block;font-weight:800!important;letter-spacing:-.4px;line-height:1.15;background:linear-gradient(90deg,#1E5BD8 0%,#3C78DD 45%,#29CE70 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;padding-bottom:2px}
+.section-title--wrapper h2.section-title::after{content:"";display:block;width:56px;height:4px;border-radius:999px;margin:10px auto 0;background:linear-gradient(90deg,#3C78DD,#29CE70);-webkit-text-fill-color:initial}
+.section-title--wrapper.text-align--left h2.section-title::after{margin-left:0}
+.section-title--wrapper.text-align--right h2.section-title::after{margin-right:0}
+.section-title--wrapper h2.section-title a{color:inherit!important;-webkit-text-fill-color:transparent}
