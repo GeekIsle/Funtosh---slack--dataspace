@@ -324,3 +324,9 @@ body{overflow-x:hidden}
 @media(min-width:750px) and (max-width:1023px){[id$="__3643d38b-24f2-4040-ab67-4b4b44a63aab"] .grid-uniform>.grid__item:nth-child(n+13){display:none!important}}
 @media(max-width:749px){[id$="__3643d38b-24f2-4040-ab67-4b4b44a63aab"] .grid-uniform>.grid__item:nth-child(n+9){display:none!important}}
 .show-view-all--button{margin-top:18px}
+/* Back-in-stock: buttons instead of "Click here" link + arrow */
+.out-of-stock-form__reveal{width:100%;margin:6px 0 10px}
+.out-of-stock-form__fields{flex-wrap:wrap;gap:10px;align-items:stretch}
+.out-of-stock-form__fields .styled-input{flex:1 1 220px;min-width:0;margin:0}
+.out-of-stock-form__submit{flex:0 0 auto;white-space:nowrap}
+.out-of-stock-form__note{flex-basis:100%;font-size:.8rem}
