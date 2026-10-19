@@ -330,3 +330,6 @@ body{overflow-x:hidden}
 .out-of-stock-form__fields .styled-input{flex:1 1 220px;min-width:0;margin:0}
 .out-of-stock-form__submit{flex:0 0 auto;white-space:nowrap}
 .out-of-stock-form__note{flex-basis:100%;font-size:.8rem}
+/* Article page: "Back to the blog" + "Earn Eco Points" side by side */
+[id$="__9d393ac7-9597-4549-8ebb-968e14caed7a"] .homepage-featured-rich-text{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px}
+[id$="__9d393ac7-9597-4549-8ebb-968e14caed7a"] .homepage-featured-rich-text>.featured-row__subtext{padding-bottom:0!important}
