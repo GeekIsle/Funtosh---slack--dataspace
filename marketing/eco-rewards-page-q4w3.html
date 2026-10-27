@@ -1,0 +1,339 @@
+<style>
+.xq{--g:#020624;--g2:#007ae7;--gr:#2ad265;--hd:#3278b3;--grad:linear-gradient(to right,#007ae7,#2ad265);--rust:#dc3545;--ink:#020624;--mut:#5a5f73;--line:#E6E5E7;--card:#fff;--soft:#f9f9fb;font-family:inherit;color:var(--ink);max-width:760px;margin:0 auto}
+.xq *{box-sizing:border-box}
+.xq-hero{position:relative;overflow:hidden;padding:28px 24px 24px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 34px -24px rgba(2,6,36,.35)}
+.xq-hero:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(42,210,101,.18),rgba(0,122,231,.10) 60%,transparent 70%)}
+.xq-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:#eef6fd;color:var(--hd);padding:6px 12px;border-radius:999px}
+.xq-dot{width:8px;height:8px;border-radius:50%;background:var(--gr);box-shadow:0 0 0 4px rgba(42,210,101,.25);animation:xqp 1.8s infinite}
+@keyframes xqp{50%{box-shadow:0 0 0 8px rgba(42,210,101,0)}}
+.xq-hero h2{color:var(--hd);font-size:clamp(1.6rem,4.5vw,2.3rem);line-height:1.1;margin:14px 0 8px;font-weight:800}
+.xq-hero p{margin:0;max-width:520px;color:var(--mut)}
+.xq-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.xq-chip{font-size:.85rem;font-weight:600;padding:7px 12px;border-radius:12px;background:var(--soft);border:1px solid var(--line);color:var(--ink)}
+.xq-chip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.xq-btn{appearance:none;border:0;cursor:pointer;position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:inherit;font-weight:600;font-size:15px;letter-spacing:0;text-transform:none;padding:15px 40px;border-radius:40px;background:#007ae7;background-image:var(--grad);color:#fff;transition:transform .15s,box-shadow .15s;text-decoration:none;box-shadow:0 8px 20px -10px rgba(0,122,231,.6)}
+.xq-btn:after{content:"";position:absolute;top:0;left:200%;width:100%;height:100%;background-image:linear-gradient(90deg,transparent,hsla(0,0%,100%,.25),transparent);transform:skew(-20deg)}
+.xq-btn:hover:after{animation:xqshine .75s cubic-bezier(.01,.56,1,1)}
+@keyframes xqshine{from{left:-100%}to{left:200%}}
+.xq-btn:hover{transform:translateY(-1px);color:#fff}
+.xq-btn.dark{color:#fff}
+.xq-btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.xq-stage{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:0 10px 30px -22px rgba(2,6,36,.35)}
+.xq-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.xq-steps{display:flex;gap:6px;flex:1}
+.xq-steps i{flex:1;height:6px;border-radius:6px;background:var(--line);transition:background .3s}
+.xq-steps i.on{background:var(--grad)}.xq-steps i.bad{background:var(--rust)}
+.xq-ring{position:relative;width:64px;height:64px;flex:none}
+.xq-ring svg{transform:rotate(-90deg)}
+.xq-ring .bg{stroke:var(--line)}.xq-ring .fg{stroke:url(#xq-g);transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)}
+.xq-ring>span{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:.95rem;line-height:1}
+.xq-ring small{display:block;font-size:.6rem;font-weight:600;color:var(--mut)}
+.xq-q{display:none;animation:xqin .35s ease}
+.xq-q.act{display:block}
+@keyframes xqin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.xq-qn{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--hd)}
+.xq-q h3{font-size:1.25rem;line-height:1.3;margin:6px 0 14px}
+.xq-opt{width:100%;display:flex;align-items:center;gap:12px;text-align:left;font:inherit;font-weight:600;color:var(--ink);background:var(--soft);border:2px solid transparent;border-radius:12px;padding:14px;margin:0 0 10px;cursor:pointer;transition:border-color .15s,transform .15s,background .15s}
+.xq-opt:hover:not([disabled]){border-color:var(--g2);transform:translateX(3px)}
+.xq-opt b{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);font-size:.9rem}
+.xq-opt.ok{background:#eafaf0;border-color:var(--gr)}.xq-opt.ok b{background:var(--grad);color:#fff;border-color:transparent}
+.xq-opt.no{background:#fdecee;border-color:var(--rust)}.xq-opt.no b{background:var(--rust);color:#fff;border-color:var(--rust)}
+.xq-opt[disabled]{cursor:default}
+.xq-opt.ok,.xq-opt.no{animation:xqpop .3s ease}
+@keyframes xqpop{50%{transform:scale(1.02)}}
+.xq-fb{display:none;margin:4px 0 14px;padding:12px 14px;border-radius:10px;font-size:.95rem;background:var(--soft)}
+.xq-fb.show{display:block;animation:xqin .3s ease}
+.xq-fb strong{display:block}
+.xq-plus{display:inline-block;margin-left:6px;color:#1fae52;font-weight:800;animation:xqup 1s ease forwards}
+@keyframes xqup{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.xq-next{display:none}.xq-next.show{display:inline-flex}
+.xq-res{display:none;text-align:center;animation:xqin .4s ease}
+.xq-res.act{display:block}
+.xq-big{font-size:3rem;font-weight:900;line-height:1;margin:6px 0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.xq-res h3{margin:0 0 6px;font-size:1.4rem}
+.xq-form{text-align:left;max-width:440px;margin:18px auto 0}
+.xq-field{display:block;margin-bottom:10px}
+.xq-field span{display:block;font-size:.8rem;font-weight:700;color:var(--mut);margin-bottom:4px}
+.xq-field input{width:100%;font:inherit;padding:13px 14px;border:1px solid #c9c8cc;border-radius:40px;padding-left:20px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.xq-field input:focus{outline:0;border-color:var(--g2);box-shadow:0 0 0 3px rgba(0,122,231,.15)}
+.xq-check{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--mut);margin:6px 0 14px}
+.xq-check input{margin-top:3px;accent-color:var(--g2)}
+.xq-form .xq-btn{width:100%;justify-content:center}
+.xq-done,.xq-already{display:none;text-align:center;padding:10px 0}
+.xq-already .xq-big{font-size:2.2rem}
+.xq-already p{color:var(--mut);max-width:460px;margin:8px auto 16px}
+.xq-cd{display:inline-flex;gap:8px;margin:4px 0 16px}
+.xq-cd span{min-width:58px;padding:8px 6px;border-radius:10px;background:var(--soft);border:1px solid var(--line);font-weight:800;font-size:1.2rem}
+.xq-cd small{display:block;font-size:.65rem;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.xq-done .xq-big{font-size:2.4rem}
+.xq-sec{margin-top:28px}
+.xq-sec>h3{font-size:1.2rem;margin:0 0 12px;color:var(--hd)}
+.xq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.xq-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;transition:transform .2s,border-color .2s}
+.xq-card:hover{transform:translateY(-3px);border-color:var(--gr)}
+.xq-card .n{font-size:1.5rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.xq-card p{margin:4px 0 0;font-size:.9rem;color:var(--mut)}
+.xq-card strong{display:block}
+.xq-ladder{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding-top:6px}
+.xq-ladder div{text-align:center;background:var(--soft);border-radius:10px;padding:12px 4px;border:1px solid var(--line)}
+.xq-ladder b{display:block;font-size:1.1rem;color:var(--g)}
+.xq-ladder small{color:var(--mut);font-size:.75rem}
+.xq-ladder div:last-child{background:var(--grad);color:#fff;border-color:transparent}
+.xq-ladder div:last-child b,.xq-ladder div:last-child small{color:#fff}
+.xq-past a{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:600}
+.xq-past a:hover{border-color:var(--gr)}
+.xq-past a,.xq-past-row{margin-bottom:8px}
+.xq-past-row{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:10px;color:var(--mut);font-weight:600}
+.xq-tag.xq-ended{background:#f1f2f4;color:#5a5f73}
+.xq-tag{font-size:.75rem;font-weight:700;padding:4px 8px;border-radius:999px;background:#eafaf0;color:#1fae52;text-transform:uppercase;letter-spacing:.5px}
+.xq details{border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.xq summary{cursor:pointer;font-weight:700}
+.xq-rules{font-size:.8rem;color:var(--mut);margin:10px 0 0}
+.xq-clock climate-clock{display:block;width:100%;border-radius:10px;overflow:hidden}
+#xq-confetti{position:fixed;inset:0;pointer-events:none;z-index:9999}
+@media (max-width:520px){.xq-hero{padding:22px 18px}.xq-btn{padding:13px 28px}.xq-stage{padding:18px}.xq-ladder{grid-template-columns:repeat(5,1fr)}.xq-ladder b{font-size:.95rem}}
+@media (prefers-reduced-motion:reduce){.xq *{animation:none!important;transition:none!important}}
+/* Mimro Eco Points card (theme section) - modern Mimro Eco Rewards style */
+.eqp-h1{font-weight:900!important;letter-spacing:-.02em;background:linear-gradient(100deg,#3c78dd,#29ce70);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.eqp-lead{color:#5a5f73!important}
+.eqp{position:relative!important;overflow:hidden!important;background:#fff!important;color:#020624!important;border:1.5px solid #e4ebe6!important;border-radius:24px!important;padding:26px 28px 24px!important;box-shadow:0 30px 70px -40px rgba(20,60,50,.45)!important}
+.eqp:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#e3f4d8;right:-90px;top:-110px;z-index:0}
+.eqp:after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:#e4edfb;left:-80px;bottom:-120px;z-index:0}
+.eqp>*{position:relative;z-index:1}
+.eqp .eqp-small{color:#5a5f73!important;opacity:1!important}
+.eqp-row>div:first-child>.eqp-small:first-child{display:inline-block;font-size:.72rem!important;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#2b7a4b!important;background:#e6f6dc;border:1px solid #cdebbb;border-radius:999px;padding:4px 12px;margin-bottom:8px}
+.eqp .eqp-big{font-size:3rem!important;font-weight:900!important;letter-spacing:-.03em;background:linear-gradient(100deg,#3c78dd,#29ce70);-webkit-background-clip:text;background-clip:text;color:transparent!important;margin:2px 0}
+.eqp .eqp-stats{gap:12px!important}
+.eqp .eqp-stat{background:rgba(255,255,255,.85);border:1.5px solid #e4ebe6;border-radius:16px;padding:10px 18px;text-align:center;min-width:110px;box-shadow:0 12px 24px -20px rgba(20,60,50,.5)}
+.eqp .eqp-stat b{color:#020624!important;font-size:1.5rem!important;font-weight:900}
+.eqp .eqp-stat .eqp-small{font-size:.78rem!important}
+.eqp .eqp-bar{height:12px!important;background:#eef3f0!important;margin:18px 0 8px!important}
+.eqp .eqp-bar span{background:linear-gradient(100deg,#3c78dd,#29ce70)!important;box-shadow:0 0 12px rgba(41,206,112,.45)}
+.eqp .eqp-btns{justify-content:flex-start!important;margin-top:16px!important}
+.eqp-guest .eqp-btns{justify-content:center!important}
+.eqp-guest>div:first-child{color:#020624}
+.eqp a.eqp-btn,.eqp a.eqp-btn:visited{display:inline-flex!important;align-items:center;gap:8px;background:linear-gradient(100deg,#3c78dd,#29ce70)!important;background-size:100% 100%!important;color:#fff!important;-webkit-text-fill-color:#fff;text-decoration:none!important;border:0!important;border-radius:999px!important;padding:14px 34px!important;font-weight:700!important;font-size:15px!important;box-shadow:0 14px 28px -14px rgba(41,150,140,.8)!important;transition:transform .15s,box-shadow .15s}
+.eqp a.eqp-btn:hover{transform:translateY(-1px);color:#fff!important}
+.eqp a.eqp-btn.alt,.eqp a.eqp-btn.alt:visited{background:#fff!important;color:#3c78dd!important;-webkit-text-fill-color:#3c78dd;border:2px solid #3c78dd!important;box-shadow:none!important}
+.eqp a.eqp-btn:before,.eqp a.eqp-btn:after{display:none!important}
+.xq a.xq-btn{text-decoration:none!important;background-size:100% 100%!important}
+.xq a.xq-btn:before,.xq a.xq-btn:after{display:none!important}
+</style>
+<div class="xq" id="eco-quest">
+<div class="xq-hero">
+<span class="xq-eyebrow"><span class="xq-dot"></span>Weekly Eco-Quest · Live now</span>
+<h2>When “Eco” Gets Complicated: How to Make Sustainable Choices Without Overthinking Them</h2>
+<p>Less waste. Less plastic. Everyday essentials. Learn the “3-Filter Method”, answer 3 quick questions and earn Mimro Eco Points you can spend on your next order.</p>
+<div class="xq-chips">
+<span class="xq-chip">⏱ 3 questions · 1 min</span>
+<span class="xq-chip" id="xq-left">Closes Sun, Nov 1</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<button type="button" class="xq-btn" id="xq-start">Play Eco-Quest</button><a class="xq-btn" href="#eco-points" style="background:#fff;background-image:none;color:#007ae7;border:2px solid #007ae7;box-shadow:none">View My Points</a>
+</div>
+</div>
+
+<div class="xq-stage" id="xq-stage">
+<div class="xq-head">
+<div class="xq-steps" id="xq-steps">
+<i></i><i></i><i></i>
+</div>
+<div class="xq-ring">
+<svg width="64" height="64"><defs><lineargradient id="xq-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#007ae7"></stop><stop offset="1" stop-color="#2ad265"></stop></lineargradient></defs><circle class="bg" cx="32" cy="32" r="27" fill="none" stroke-width="6"></circle><circle class="fg" id="xq-arc" cx="32" cy="32" r="27" fill="none" stroke-width="6" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6"></circle></svg><span><span id="xq-score">0</span><small>pts</small></span>
+</div>
+</div>
+
+<div class="xq-q act" data-a="b" data-ok="Start by asking “Will I use this again and again?” Repeat-use items cut waste without constant willpower." data-no="It's B: repeat-use first. Ask “Will I use this again and again?”">
+<div class="xq-qn">Question 1 of 3</div>
+<h3>In the 3-Filter Method, what's the first filter?</h3>
+<button type="button" class="xq-opt" data-v="a"><b>A</b>Pick the cheapest option</button>
+<button type="button" class="xq-opt" data-v="b"><b>B</b>Repeat-use first</button>
+<button type="button" class="xq-opt" data-v="c"><b>C</b>Read every review before you buy</button>
+<div class="xq-fb"></div>
+<button type="button" class="xq-btn dark xq-next">Next question →</button>
+</div>
+
+<div class="xq-q" data-a="a" data-ok="When you're tired, your brain picks the fastest path. Fewer decisions make better habits stick." data-no="It's A: decision fatigue. Overthinking every label makes the fastest option win.">
+<div class="xq-qn">Question 2 of 3</div>
+<h3>What's one of the biggest reasons sustainable habits don't stick?</h3>
+<button type="button" class="xq-opt" data-v="a"><b>A</b>Decision fatigue from overthinking every choice</button>
+<button type="button" class="xq-opt" data-v="b"><b>B</b>People just don't care</button>
+<button type="button" class="xq-opt" data-v="c"><b>C</b>Reusables never last</button>
+<div class="xq-fb"></div>
+<button type="button" class="xq-btn dark xq-next">Next question →</button>
+</div>
+
+<div class="xq-q" data-a="c" data-ok="A repeat-use default for quick messes means no more choosing between paper towels and wipes every week." data-no="It's C: the Mimro Coconut Cellulose Kitchen Sponge, a repeat-use default for quick messes.">
+<div class="xq-qn">Question 3 of 3</div>
+<h3>Which is a repeat-use “default swap” for quick kitchen messes?</h3>
+<button type="button" class="xq-opt" data-v="a"><b>A</b>A new pack of disposable wipes each week</button>
+<button type="button" class="xq-opt" data-v="b"><b>B</b>A roll of paper towels</button>
+<button type="button" class="xq-opt" data-v="c"><b>C</b>The Mimro Coconut Cellulose Kitchen Sponge</button>
+<div class="xq-fb"></div>
+<button type="button" class="xq-btn dark xq-next">See my score →</button>
+</div>
+
+<div class="xq-res" id="xq-res">
+<div class="xq-qn" id="xq-res-tag">Quest complete</div>
+<div class="xq-big">
+<span id="xq-final">0</span> pts</div>
+<h3 id="xq-res-title"></h3>
+<p id="xq-res-sub" style="color:var(--mut);margin:0"></p>
+<form method="post" action="/contact#eco-quest" accept-charset="UTF-8" id="eq-form" class="xq-form">
+<input type="hidden" name="form_type" value="customer">
+<input type="hidden" name="utf8" value="✓">
+<input type="hidden" name="return_to" value="/pages/eco-quest?eq=entered#eco-quest">
+<input type="hidden" name="contact[tags]" id="eq-tags" value="newsletter,eco-quest,eq-q4w3">
+<label class="xq-field"><span>First name</span><input type="text" name="contact[first_name]" autocomplete="given-name" required></label>
+<label class="xq-field"><span>Email (the one you use at checkout)</span><input type="email" name="contact[email]" autocomplete="email" required></label>
+<label class="xq-check"><input type="checkbox" required><span>I agree to the Mimro Eco Points terms and to receive emails from Mimro (unsubscribe anytime). First quest? You get <b>+100 welcome points</b>.</span></label>
+<button type="submit" class="xq-btn dark">Claim my Mimro Eco Points</button>
+</form>
+</div>
+
+<div class="xq-done" id="xq-done">
+<div class="xq-qn">Points claimed</div>
+<div class="xq-big">You're in! ✓</div>
+<p style="color:var(--mut)">Come back next week to keep your streak going.</p>
+</div>
+
+<div class="xq-already" id="xq-already">
+<div class="xq-qn">Already played this week</div>
+<div class="xq-big">See you next week!</div>
+<p>You've already taken this week's Eco-Quest. Each quest can be played once a week. A new Eco-Quest drops <b>Monday, Nov 2</b>. Keep your streak going!</p>
+<div class="xq-cd" id="xq-cd">
+<span id="xq-cd-d">0<small>days</small></span><span id="xq-cd-h">0<small>hrs</small></span><span id="xq-cd-m">0<small>min</small></span>
+</div>
+<div><a class="xq-btn" href="/collections/eco-pick-of-the-week">Shop this week's Eco Picks →</a></div>
+</div>
+</div>
+
+<div class="xq-sec xq-clock">
+<h3>Why every swap counts</h3>
+<p style="color:var(--mut);margin:0 0 12px">The Climate Clock counts down the time left to limit global warming to 1.5°C, and tracks the lifelines that can turn it around. Small swaps, like this week's, add up.</p>
+<script src="https://climateclock.world/widget-v2.js" async></script>
+<climate-clock></climate-clock>
+</div>
+
+<div class="xq-sec">
+<h3>Earn Mimro Eco Points. Unlock Eco Rewards.</h3>
+<p style="color:var(--mut);margin:0 0 14px">Shop and play Eco-Quest to earn Mimro Eco Points, then redeem them for savings on your next order.</p>
+<div class="xq-grid">
+<div class="xq-card">
+<div class="n">+100</div>
+<strong>Each correct answer</strong><p>3 questions every week</p>
+</div>
+<div class="xq-card">
+<div class="n">+100</div>
+<strong>Perfect score bonus</strong><p>Get all 3 right</p>
+</div>
+<div class="xq-card">
+<div class="n">+50</div>
+<strong>Weekly streak</strong><p>Per week in a row, up to +250</p>
+</div>
+<div class="xq-card">
+<div class="n">+100</div>
+<strong>Welcome bonus</strong><p>Your first quest or order</p>
+</div>
+<div class="xq-card">
+<div class="n">+2</div>
+<strong>Points for every $1 spent</strong><p>On eligible Mimro purchases</p>
+</div>
+</div>
+</div>
+
+<div class="xq-sec">
+<h3>Turn points into savings</h3>
+<div class="xq-ladder">
+<div>
+<b>$5</b><small>500 pts</small>
+</div>
+<div>
+<b>$10</b><small>1,000</small>
+</div>
+<div>
+<b>$15</b><small>1,500</small>
+</div>
+<div>
+<b>$20</b><small>2,000</small>
+</div>
+<div>
+<b>$25</b><small>2,500</small>
+</div>
+</div>
+<p style="color:var(--mut);font-size:.9rem;margin:10px 0 0">Spend $250 and earn 500 points, worth $5 toward a future order. Your points are yours to keep: save them up, or redeem them in $5 steps (every 500 points) from your points card above. A perfect 5-week Eco-Quest streak gets you to $25.</p>
+</div>
+
+<div class="xq-sec xq-past">
+<h3>Past quests</h3>
+<a href="/blogs/news/when-eco-gets-complicated-how-to-make-sustainable-choices-without-overthinking-them"><span>Eco-Quest Oct 26, 2026: When “Eco” Gets Complicated: How to Make Sustainable Choices Without Overthinking Them</span><span class="xq-tag">Live</span></a>
+<a href="/blogs/news/the-hidden-cost-of-convenience-what-our-everyday-shortcuts-leave-behind"><span>Eco-Quest Oct 19, 2026: The Hidden Cost of Convenience: What Our Everyday Shortcuts Leave Behind</span><span class="xq-tag xq-ended">Ended</span></a>
+<div class="xq-past-row"><span>Eco-Quest Oct 12, 2026: The Paper Towel Swap</span><span class="xq-tag xq-ended">Ended</span></div>
+</div>
+
+<div class="xq-sec">
+<details><summary>Mimro Eco Points terms</summary>
+<p class="xq-rules">Free to play, no purchase necessary. One claim per person (email) per weekly Eco-Quest. Each Eco-Quest closes Sunday at 11:59 p.m. ET and a new one starts Monday. Points stay in your balance until you choose to redeem them. You can redeem from your points card in multiples of 500 points, with every 500 points worth $5 CAD off. When you redeem, your discount code appears on your points card (usually within the hour) and the redeemed points are deducted from your balance; each code is single-use and valid on mimro.com for 12 months. Points and codes have no cash value, can't be transferred and can't be combined with other discount codes (free shipping on orders over $75 still applies). Earn 2 points for every $1 spent on eligible purchases, excluding taxes and shipping. Purchase points are added to your balance after the order is paid, and points from refunded or cancelled orders are removed. Eligible purchases from October 12, 2025 to October 11, 2026 were credited once on October 12, 2026, including a one-time +100 welcome bonus. Mimro may remove points from claims that look automated or duplicated.</p>
+</details>
+</div>
+</div>
+<script>
+(function(){
+var root=document.getElementById('eco-quest');if(!root)return;
+var end=new Date('2026-11-02T04:59:00Z'),left=document.getElementById('xq-left'),d=Math.ceil((end-new Date())/864e5);
+left.textContent=d>1?'⏳ '+d+' days left':(d===1?'⏳ Last day!':'Closed · new quest Monday');
+var WK='q4w3',KEY='mimro-eq-'+WK,NEXT=new Date('2026-11-02T05:00:00Z');
+function ld(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function sv(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+var st=ld(),tags=window.mimroEqTags||[];
+if(tags.indexOf('eq-'+WK)>-1)st.claimed=true;
+var stage=document.getElementById('xq-stage'),qs=[].slice.call(root.querySelectorAll('.xq-q')),steps=root.querySelectorAll('#xq-steps i');
+var arc=document.getElementById('xq-arc'),sEl=document.getElementById('xq-score'),C=169.6,score=0,right=0,cur=0;
+document.getElementById('xq-start').addEventListener('click',function(){stage.scrollIntoView({behavior:'smooth',block:'start'})});
+function hideQuiz(){qs.forEach(function(q){q.classList.remove('act')});root.querySelector('.xq-head').style.display='none';document.getElementById('xq-start').textContent='See you next week'}
+if(/eq=entered|customer_posted=true/.test(location.search)){st.claimed=true;sv(st);hideQuiz();document.getElementById('xq-done').style.display='block';return;}
+if(st.claimed){hideQuiz();var al=document.getElementById('xq-already');al.style.display='block';
+ (function tick(){var ms=Math.max(0,NEXT-new Date()),d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
+  document.getElementById('xq-cd-d').firstChild.nodeValue=d;document.getElementById('xq-cd-h').firstChild.nodeValue=h;document.getElementById('xq-cd-m').firstChild.nodeValue=m;setTimeout(tick,30000)})();
+ return;}
+function setScore(v){var from=score;score=v;var t0=null;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/500);sEl.textContent=Math.round(from+(v-from)*p);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);arc.style.strokeDashoffset=C*(1-Math.min(v,400)/400)}
+qs.forEach(function(q,i){
+ var btns=q.querySelectorAll('.xq-opt'),fb=q.querySelector('.xq-fb'),nx=q.querySelector('.xq-next');
+ btns.forEach(function(b){b.addEventListener('click',function(){
+  if(q.dataset.done)return;q.dataset.done=1;
+  var ok=b.dataset.v===q.dataset.a;
+  btns.forEach(function(x){x.disabled=true;if(x.dataset.v===q.dataset.a)x.classList.add('ok')});
+  if(ok){right++;setScore(score+100);steps[i].classList.add('on')}else{b.classList.add('no');steps[i].classList.add('bad')}
+  fb.innerHTML='<strong>'+(ok?'Correct! <span class="xq-plus">+100 pts</span>':'Not quite')+'</strong>'+(ok?q.dataset.ok:q.dataset.no);
+  fb.classList.add('show');nx.classList.add('show');
+ })});
+ nx.addEventListener('click',function(){
+  q.classList.remove('act');
+  if(i<qs.length-1){qs[i+1].classList.add('act')}else{finish()}
+  stage.scrollIntoView({behavior:'smooth',block:'start'});
+ });
+});
+if(typeof st.score==='number'){right=st.score;qs.forEach(function(q){q.classList.remove('act')});steps.forEach(function(s,k){if(k<right)s.classList.add('on')});setScore(right*100+(right===3?100:0));showRes(true);return;}
+function finish(){
+ var perfect=right===3;if(perfect)setScore(score+100);st.score=right;sv(st);showRes(false);
+}
+function showRes(restored){
+ var perfect=right===3;
+ document.getElementById('eq-tags').value='newsletter,eco-quest,eq-q4w3,eq-q4w3-s'+right;
+ document.getElementById('xq-final').textContent=perfect?400:right*100;
+ document.getElementById('xq-res-title').textContent=perfect?'Perfect score! 🎉':(right>0?'Nice work: '+right+' of 3 correct':'Thanks for playing!');
+ document.getElementById('xq-res-sub').textContent=perfect?'Includes your +100 perfect-score bonus. That\'s $4 toward your next order.':(right>0?'Claim your points now, and go for 3/3 next week to unlock the bonus.':'Claim anyway to get your +100 welcome points and start your streak.');
+ if(restored)document.getElementById('xq-res-tag').textContent='Your score this week · claim your points';
+ document.getElementById('xq-res').classList.add('act');
+ if(perfect&&!restored)confetti();
+}
+function confetti(){
+ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.createElement('canvas');c.id='xq-confetti';document.body.appendChild(c);var x=c.getContext('2d');
+ c.width=innerWidth;c.height=innerHeight;var cols=['#007ae7','#2ad265','#3278b3','#8fe3ae','#0284dc'],P=[];
+ for(var k=0;k<140;k++)P.push({x:c.width/2,y:c.height/3,vx:(Math.random()-.5)*14,vy:Math.random()*-12-4,s:Math.random()*6+4,r:Math.random()*6,c:cols[k%5]});
+ var t=0;(function f(){x.clearRect(0,0,c.width,c.height);P.forEach(function(p){p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);x.restore()});if(++t<150)requestAnimationFrame(f);else c.remove()})();
+}
+})();
+</script>
+
