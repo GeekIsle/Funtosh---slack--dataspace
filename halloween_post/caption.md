@@ -1,6 +1,7 @@
 # Mimro – Halloween Greetings post (Oct 31, 2026)
 
 Final image (Mimro brand system): mimro_halloween_brand.jpg — palette from mimro.com theme + Eco-Quest/Creators designs: ink #020624, signature gradient #007AE7→#2AD265, soft bg #F6F9FC, line #E6E5E7, muted #5A5F73; headline Instrument Sans Bold (site heading font), subline Figtree (site body font); official logo mimro_PNG-02
+Story (9:16, 1080×1920): mimro_halloween_story_9x16.jpg — same scene, key content kept inside the Story safe zone (≈250px top/bottom), square navy 'SHOP AT MIMRO.COM' button (Eco-Quest button style), @officialmimro handle
 Previous modern (navy/orange) version: mimro_halloween_modern.jpg — navy studio, harvest-moon circle, colour podiums, real store products, bold headline
 Previous version (real products, rustic): mimro_halloween_real_products.jpg (alt: mimro_halloween_real_products_alt.jpg)
 Featured (brand version): MIMRO Loofah Cellulose Sponge 3 Pack (Mimro Originals, hero), ELSEWARE UNPLUG Extra Large Beeswax Crayons, THE FUTURE IS BAMBOO Cozy Bloom Coconut Shell Candle, NATURE BEE Beeswax Wraps
