@@ -1,6 +1,7 @@
 # Mimro – Halloween Greetings post (Oct 31, 2026)
 
-Final image (real products): mimro_halloween_real_products.jpg (alt: mimro_halloween_real_products_alt.jpg)
+Final image (modern style): mimro_halloween_modern.jpg — navy studio, harvest-moon circle, colour podiums, real store products, bold headline
+Previous version (real products, rustic): mimro_halloween_real_products.jpg (alt: mimro_halloween_real_products_alt.jpg)
 Featured: THE FUTURE IS BAMBOO Cozy Bloom Coconut Shell Candle, TANIT 124 Tablets Fresh Mint Toothpaste, NATURE BEE 3PCS Beeswax Wrap Set (Green)
 Earlier concept image: mimro_halloween_post.jpg (1080×1080, Runway Gen-4, Mimro logo top-right + search-bar overlay, styled after the Notion Social Post visual sample)
 Alternate: mimro_halloween_post_alt.jpg
