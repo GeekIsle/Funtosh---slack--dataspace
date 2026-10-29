@@ -15,5 +15,10 @@ Products (8, real product photos, backgrounds removed):
 Back row: MIMRO Swedish Dishcloth · TANIT Fresh Mint Toothpaste Tablets · VEARTHY Bamboo Electric Toothbrush · EVERIST Compostable Konjac Body Sponge · NATURE BEE Beeswax Wraps
 Front row: MIMRO Coconut Cellulose Sponge 12-pack · MIMRO Loofah Cellulose Sponge 3-pack · MIMRO Natural Loofah Bath Set
 
+## Animated ad (from v3)
+Video: mimro_black_friday_ad_1x1.mp4 — 1080×1080, 10 s, 30 fps, H.264, silent (add music in-app).
+Motion graphics built from the real design layers (no AI video, so product labels and prices stay exact):
+0–1 s logo + "BLACK FRIDAY STARTS NOW" slide in · 1–2 s "75%" pops (overshoot), "OFF" slides in · 2–3 s subline, LIMITED TIME pill, gradient box rises · 3–5 s 8 products pop in one by one · 5–6 s SHOP NOW pops + light sweep across 75% · 6–10 s gentle product float, glow pulse, slow push-in, end card.
+
 ## v2 — Black Friday is coming (teaser)
 Image: mimro_black_friday_teaser_1x1.jpg — editorial split layout, gradient arch, 4 products.
