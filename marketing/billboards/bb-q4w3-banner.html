@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IS;src:url(src/fonts/InstrumentSans.ttf)}
+@font-face{font-family:FG;src:url(src/fonts/Figtree.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:FG,sans-serif;background:radial-gradient(circle at 72% 60%,#08126c 0%,#020624 62%);color:#fff;position:relative;overflow:hidden}
+.kick{display:inline-block;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:#2ad265;border:2px solid #2ad265;border-radius:999px}
+.grad{background:linear-gradient(90deg,#007ae7,#2ad265);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-block;background:#fff;color:#020624;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.tile{position:relative;border-radius:30px;background:#f6f9fc;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tile img{object-fit:contain;filter:drop-shadow(0 22px 20px rgba(2,6,36,.22))}
+.tile.hero{background:linear-gradient(135deg,#007ae7,#2ad265)}
+.chip{position:absolute;top:20px;left:20px;font-family:IS;font-weight:700;color:#fff;background:#020624;border-radius:14px}
+.hero .chip{background:#fff;color:#020624}
+.lbl{position:absolute;left:22px;right:18px;bottom:18px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#5a5f73;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero .lbl{color:#fff}
+html,body{width:1920px;height:1080px}
+.left{position:absolute;left:100px;top:0;bottom:0;width:700px;display:flex;flex-direction:column;justify-content:center}
+.logo{height:62px;margin-bottom:64px;align-self:flex-start}
+.kick{font-size:24px;padding:12px 26px;margin-bottom:34px;align-self:flex-start}
+.upto{font-size:44px;font-weight:800;letter-spacing:6px;color:#c9ccd6}
+.big{font-family:IS;font-weight:700;font-size:172px;line-height:.95;letter-spacing:-6px;white-space:nowrap}
+.sub{font-size:40px;font-weight:600;margin-top:26px;color:#fff}
+.btn{margin-top:46px;align-self:flex-start;font-size:28px;padding:26px 44px}
+.note{margin-top:24px;font-size:24px;color:#c9ccd6;letter-spacing:.5px}
+.grid{position:absolute;right:80px;top:90px;width:960px;height:900px;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:22px}
+.hero{grid-row:span 2}
+.chip{font-size:30px;padding:10px 18px}
+.lbl{font-size:16px}
+.hero .lbl{font-size:18px}
+.t img{max-width:74%;max-height:62%}
+</style></head><body>
+<div class="left">
+ <img class="logo" src="src/logo_white.png">
+ <div class="kick">Black Friday starts now</div>
+ <div class="upto">UP TO</div>
+ <div class="big"><span class="grad">75%</span> OFF</div>
+ <div class="sub">Your everyday eco-essentials. <span style="color:#2ad265">For less.</span></div>
+ <div class="btn">Shop the sale →</div>
+ <div class="note">Limited time only · while stock lasts</div>
+</div>
+<div class="grid">
+ <div class="tile hero"><span class="chip">−75%</span>
+  <img src="src/ec_garbage.png" style="position:absolute;width:290px;left:30px;top:120px;transform:rotate(-8deg)">
+  <img src="src/ec_large.png" style="position:absolute;width:190px;left:22px;bottom:80px">
+  <img src="src/ec_small.png" style="position:absolute;width:140px;right:22px;bottom:96px">
+  <span class="lbl">Earthly Change · Bags</span></div>
+ <div class="tile t"><span class="chip">−25%</span><img src="src/loui.png"><span class="lbl">LOUI · Toilet Drops</span></div>
+ <div class="tile t"><span class="chip">−25%</span><img src="src/lotionbar.png"><span class="lbl">Essence of Life · Lotion</span></div>
+ <div class="tile t"><span class="chip">−20%</span><img src="src/beeswax.png"><span class="lbl">Nature Bee · Wraps</span></div>
+ <div class="tile t"><span class="chip">−20%</span><img src="src/dishtabs.png"><span class="lbl">Nature Bee · Dish Tabs</span></div>
+</div>
+</body></html>
