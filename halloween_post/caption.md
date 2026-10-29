@@ -3,7 +3,7 @@
 Final image (Mimro brand system): mimro_halloween_brand.jpg — palette from mimro.com theme + Eco-Quest/Creators designs: ink #020624, signature gradient #007AE7→#2AD265, soft bg #F6F9FC, line #E6E5E7, muted #5A5F73; headline Instrument Sans Bold (site heading font), subline Figtree (site body font); official logo mimro_PNG-02
 Previous modern (navy/orange) version: mimro_halloween_modern.jpg — navy studio, harvest-moon circle, colour podiums, real store products, bold headline
 Previous version (real products, rustic): mimro_halloween_real_products.jpg (alt: mimro_halloween_real_products_alt.jpg)
-Featured (brand version): MIMRO Swedish Dishcloth (Mimro Originals, hero), THE FUTURE IS BAMBOO Cozy Bloom Coconut Shell Candle, TANIT Fresh Mint Toothpaste Tablets, NATURE BEE Beeswax Wraps
+Featured (brand version): MIMRO Loofah Cellulose Sponge 3 Pack (Mimro Originals, hero), ELSEWARE UNPLUG Extra Large Beeswax Crayons, THE FUTURE IS BAMBOO Cozy Bloom Coconut Shell Candle, NATURE BEE Beeswax Wraps
 Featured (earlier versions): THE FUTURE IS BAMBOO Cozy Bloom Coconut Shell Candle, TANIT 124 Tablets Fresh Mint Toothpaste, NATURE BEE 3PCS Beeswax Wrap Set (Green)
 Earlier concept image: mimro_halloween_post.jpg (1080×1080, Runway Gen-4, Mimro logo top-right + search-bar overlay, styled after the Notion Social Post visual sample)
 Alternate: mimro_halloween_post_alt.jpg
@@ -17,9 +17,9 @@ Tonight is for glowing pumpkins, cozy candles and treats that don't leave a trai
 
 A few easy ways to have a spooky-but-sustainable night:
 🕯️ Light a natural coconut shell candle instead of a paraffin one
-🧽 Wipe up the sticky candy mess with a compostable Mimro Swedish dishcloth
+🧽 Scrub away the sticky candy mess with Mimro's plant-based loofah sponges
 🎁 Wrap homemade treats in beeswax wraps, not plastic
-🦷 Brush away the candy with plastic-free toothpaste tablets
+🖍️ Keep little monsters busy colouring with non-toxic beeswax crayons
 👜 Trick-or-treat with a reusable tote, not a plastic bucket
 🎃 Compost your jack-o'-lantern once the night is over
 
