@@ -1,6 +1,8 @@
 # Mimro – Halloween Greetings post (Oct 31, 2026)
 
-Image: v1.png (alternates: v2–v4.png), 1280×720 landscape
+Final image: mimro_halloween_post.jpg (1080×1080, Runway Gen-4, Mimro logo top-right + search-bar overlay, styled after the Notion Social Post visual sample)
+Alternate: mimro_halloween_post_alt.jpg
+Earlier landscape drafts: v1–v4.png
 
 ## Instagram / Facebook caption
 
