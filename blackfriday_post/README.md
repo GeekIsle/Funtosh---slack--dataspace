@@ -1,18 +1,19 @@
-# Mimro – Black Friday teaser post
+# Mimro – Black Friday posts
 
-Image: mimro_black_friday_teaser_1x1.jpg (1080×1080)
+## v3 — Black Friday starts now (billboard) — CURRENT
+Image: mimro_black_friday_now_billboard_1x1.jpg (1080×1080)
 
 Copy on image:
-- BLACK FRIDAY / IS COMING
+- BLACK FRIDAY STARTS NOW
 - UP TO 75% OFF
-- Big savings for a limited time.
-- CTA: SHOP AT MIMRO.COM · pill: LIMITED TIME
+- Your everyday eco-essentials. For less.
+- LIMITED TIME ONLY (pill) · SHOP NOW (button) · mimro.com
 
-Concept (v2): editorial split layout — left: typographic stack with giant gradient "75%"; right: tall brand-gradient arch with a product group; navy #020624 → #08126C background with subtle dot grid.
-Brand system: signature gradient #007AE7 → #2AD265, Instrument Sans Bold (headings) + Figtree (body) as on mimro.com, official white mimro logo, square white CTA (Eco-Quest button style).
+Concept: billboard layout — bold headline band (giant gradient "75%" + white "OFF") over a full-width rounded brand-gradient product box; navy #020624 → #08126C background with dot grid. Brand: gradient #007AE7 → #2AD265, Instrument Sans Bold + Figtree (mimro.com fonts), official white logo, square white CTA.
 
-Products (real product photos, backgrounds removed):
-- VEARTHY Bamboo Electric Toothbrush
-- EVERIST Compostable Konjac Body Sponge
-- MIMRO Coconut Cellulose Kitchen Sponge (12 pack)
-- MIMRO Natural Loofah Bath Set
+Products (8, real product photos, backgrounds removed):
+Back row: MIMRO Swedish Dishcloth · TANIT Fresh Mint Toothpaste Tablets · VEARTHY Bamboo Electric Toothbrush · EVERIST Compostable Konjac Body Sponge · NATURE BEE Beeswax Wraps
+Front row: MIMRO Coconut Cellulose Sponge 12-pack · MIMRO Loofah Cellulose Sponge 3-pack · MIMRO Natural Loofah Bath Set
+
+## v2 — Black Friday is coming (teaser)
+Image: mimro_black_friday_teaser_1x1.jpg — editorial split layout, gradient arch, 4 products.
