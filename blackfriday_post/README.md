@@ -15,6 +15,13 @@ Products (8, real product photos, backgrounds removed):
 Back row: MIMRO Swedish Dishcloth · TANIT Fresh Mint Toothpaste Tablets · VEARTHY Bamboo Electric Toothbrush · EVERIST Compostable Konjac Body Sponge · NATURE BEE Beeswax Wraps
 Front row: MIMRO Coconut Cellulose Sponge 12-pack · MIMRO Loofah Cellulose Sponge 3-pack · MIMRO Natural Loofah Bath Set
 
+## Animated ad 9:16 with music + Mimro character (Reels / TikTok / Stories)
+Video: mimro_black_friday_ad_9x16.mp4 — 1080×1920, 18 s, 30 fps, H.264 + AAC music.
+- 0–5.3 s: the Mimro character (official mascot from Notion) kneels in a garden, plants a seedling, a coral flower blooms, she smiles and waves. White mimro logo + "Small switch, big impact." overlay. Clip: Kling 3.0 Pro image-to-video from a Nano Banana Pro still that used the official character image as reference (mimro_character_planting_clip.mp4).
+- 5.3 s: gradient-edged wipe on the music's beat drop into the vertical billboard.
+- 5.3–18 s: BLACK FRIDAY / STARTS NOW → UP TO 75% OFF pop → "Your everyday eco-essentials. For less." → gradient box rises → 8 real products pop in → LIMITED TIME ONLY + SHOP NOW · MIMRO.COM → light sweeps, gentle float, slow push-in.
+- Music: ElevenLabs Music v2 instrumental (mimro_black_friday_music.mp3), soft organic intro, drop at ~5 s, clean end at 18 s.
+
 ## Animated ad (from v3)
 Video: mimro_black_friday_ad_1x1.mp4 — 1080×1080, 10 s, 30 fps, H.264, silent (add music in-app).
 Motion graphics built from the real design layers (no AI video, so product labels and prices stay exact):
