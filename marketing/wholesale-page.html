@@ -253,7 +253,7 @@
     root.querySelectorAll('[data-curname]').forEach(function(x){ x.textContent = cur==='USD' ? 'US dollars (USD)' : 'Canadian dollars (CAD)'; });
     render();
   }
-  // Pick CAD or USD from the buyer's location: Shopify's detected country first, then time zone, then browser language
+  // First guess from Shopify's selected country, time zone, then browser language (IP lookup below refines it)
   function detectCur(){
     try{ var c=(window.Shopify&&window.Shopify.country)||''; if(c==='US') return 'USD'; if(c==='CA') return 'CAD'; }catch(x){}
     try{
@@ -266,6 +266,13 @@
     return 'CAD';
   }
   setCur(detectCur());
+  // Then use the buyer's IP location (Shopify geolocation), which wins over the stored store country
+  try{
+    fetch('/browsing_context_suggestions.json',{credentials:'same-origin'}).then(function(r){return r.json();}).then(function(d){
+      var c=d&&d.detected_values&&d.detected_values.country&&d.detected_values.country.handle;
+      if(c==='US') setCur('USD'); else if(c==='CA') setCur('CAD');
+    }).catch(function(){});
+  }catch(x){}
   rows.forEach(function(r){ r.querySelector('input').addEventListener('input',render); });
   render();
 
