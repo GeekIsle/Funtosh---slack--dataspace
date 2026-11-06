@@ -50,6 +50,7 @@
 .mw .tot{display:flex;justify-content:flex-end;gap:18px;align-items:baseline;padding:14px 8px 0;font-size:15px}
 .mw .tot strong{font-size:22px}
 .mw .note{font-size:13px;color:var(--mut)}
+.mw #mw-min{color:#b02a37;font-weight:600}
 .mw .pay{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .mw .pay label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:14px;font-weight:400;cursor:pointer}
 .mw .pay input{margin-top:4px}
@@ -71,7 +72,7 @@
   <div class="hero">
     <span class="eyebrow">Wholesale · Mimro Originals</span>
     <h1>Stock Mimro Originals in your store</h1>
-    <p>Plant-based kitchen and bath essentials with shelf-ready, bilingual (EN/FR) packaging. About 50% retailer margin at MSRP, and no minimum: order 1 unit of any SKU.</p>
+    <p>Plant-based kitchen and bath essentials with shelf-ready, bilingual (EN/FR) packaging. About 50% retailer margin at MSRP. Mix and match any SKU, 1 unit per case, from a $100 CAD minimum order.</p>
     <div class="btns">
       <a class="btn pri" href="#send-po">Send a purchase order</a>
       <a class="btn" href="#faire-shop">Order on Faire (Net 60)</a>
@@ -79,8 +80,9 @@
     <div class="facts">
       <span>🌱 5 SKUs · kitchen &amp; bath</span>
       <span>💲 From $7.50 wholesale</span>
-      <span>📦 Ships from Brampton, ON</span>
-      <span>🇨🇦 🇺🇸 CAD or USD pricing</span>
+      <span>📦 Ships from Brampton, ON or Niagara Falls, NY</span>
+      <span>🧾 $100 CAD minimum order</span>
+      <span>🇨🇦 🇺🇸 Prices in CAD or USD, based on your location</span>
     </div>
   </div>
 
@@ -180,7 +182,7 @@
           </tbody>
         </table>
         <div class="tot"><span><span id="mw-units">0</span> units</span><span>Wholesale subtotal <strong id="mw-sub">$0.00</strong></span></div>
-        <p class="note" style="text-align:right">Before shipping and taxes. 1 unit per case, no minimum.</p>
+        <p class="note" style="text-align:right">Before shipping and taxes. Minimum order $100 CAD. <span id="mw-min"></span></p>
         <label for="mw-notes" style="margin-top:10px">Notes <span class="opt">(other products, delivery dates, questions)</span></label>
         <textarea id="mw-notes" name="contact[Notes]"></textarea>
       </fieldset>
@@ -212,18 +214,18 @@
     <h2>Price list &amp; catalogue</h2>
     <p>Full product details, materials and the Mimro Originals price list.</p>
     <div class="dl">
-      <a class="btn" href="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-brand-catalogue-2026-CAD.pdf" target="_blank" rel="noopener">Download catalogue (CAD)</a>
-      <a class="btn" href="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-brand-catalogue-2026-USD.pdf" target="_blank" rel="noopener">Download catalogue (USD)</a>
+      <a class="btn" data-cat="CAD" href="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-brand-catalogue-2026-CAD.pdf" target="_blank" rel="noopener">Download catalogue (CAD)</a>
+      <a class="btn" data-cat="USD" href="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-brand-catalogue-2026-USD.pdf" target="_blank" rel="noopener">Download catalogue (USD)</a>
     </div>
   </section>
 
   <section class="faq">
     <h2>Wholesale FAQ</h2>
-    <details><summary>Is there a minimum order?</summary><p>No. Every SKU ships 1 unit per case, so you can try the whole range in small quantities.</p></details>
+    <details><summary>Is there a minimum order?</summary><p>Yes, $100 CAD. Mix and match any SKUs to reach it; every SKU ships 1 unit per case.</p></details>
     <details><summary>When will I get my invoice?</summary><p>Usually within 1 business day of your PO. It comes from Mimro by email with a secure link to review and pay.</p></details>
     <details><summary>How do I pay a direct order?</summary><p>Open the invoice email, check the items, shipping and taxes, then pay online from the link. We ship once payment is received.</p></details>
     <details><summary>Can I get payment terms?</summary><p>Yes, order through Faire for Net 60 terms. Faire handles the payment terms; we fulfil your order.</p></details>
-    <details><summary>Where do you ship from?</summary><p>Our warehouse in Brampton, Ontario. Shipping cost is shown on your invoice before you pay.</p></details>
+    <details><summary>Where do you ship from?</summary><p>From our warehouses in Brampton, Ontario and Niagara Falls, New York. Shipping cost is shown on your invoice before you pay.</p></details>
     <details><summary>Can I change my order after sending the PO?</summary><p>Yes. Reply to your invoice email or contact support@mimro.com before paying and we'll update it.</p></details>
   </section>
 </div>
@@ -247,15 +249,31 @@
     });
     document.getElementById('mw-units').textContent = units;
     document.getElementById('mw-sub').textContent = money(sub);
+    var mm=document.getElementById('mw-min'); mm.textContent = (cur==='CAD' && sub>0 && sub<100) ? ('Add '+money(100-sub)+' more to reach the minimum.') : '';
     return {units:units, sub:sub};
   }
+  function setCur(c){
+    cur=c; document.getElementById('mw-cur').value=cur;
+    root.querySelectorAll('.curr button').forEach(function(x){x.classList.toggle('on',x.dataset.cur===cur);});
+    root.querySelectorAll('[data-cat]').forEach(function(a){a.classList.toggle('pri',a.dataset.cat===cur);});
+    render();
+  }
   root.querySelectorAll('.curr button').forEach(function(b){
-    b.addEventListener('click',function(){
-      cur=b.dataset.cur; document.getElementById('mw-cur').value=cur;
-      root.querySelectorAll('.curr button').forEach(function(x){x.classList.toggle('on',x===b);});
-      render();
-    });
+    b.addEventListener('click',function(){ setCur(b.dataset.cur); });
   });
+  // Pick CAD or USD from the buyer's location: Shopify's detected country first, then time zone, then browser language
+  function detectCur(){
+    try{ var c=(window.Shopify&&window.Shopify.country)||''; if(c==='US') return 'USD'; if(c==='CA') return 'CAD'; }catch(x){}
+    try{
+      var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';
+      if(/^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Moncton|Glace_Bay|Goose_Bay|Whitehorse|Yellowknife|Iqaluit|Rankin_Inlet|Cambridge_Bay|Inuvik|Dawson|Dawson_Creek|Creston|Fort_Nelson|Swift_Current|Atikokan|Blanc-Sablon|Montreal|Nipigon|Thunder_Bay|Rainy_River|Resolute|Pangnirtung)$/.test(tz)) return 'CAD';
+      if(/^(America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Juneau|Sitka|Nome|Yakutat|Metlakatla|Adak|Boise|Detroit|Menominee|Indiana\/.*|Kentucky\/.*|North_Dakota\/.*)|Pacific\/Honolulu|US\/.*)$/.test(tz)) return 'USD';
+    }catch(x){}
+    var l=(navigator.language||'').toLowerCase();
+    if(/-us$/.test(l)) return 'USD';
+    return 'CAD';
+  }
+  setCur(detectCur());
   rows.forEach(function(r){ r.querySelector('input').addEventListener('input',render); });
   render();
 
@@ -273,6 +291,7 @@
     if(missing.length){ e.preventDefault(); err.textContent='Please fill in your business name, contact name, email and shipping address.'; err.style.display='inline'; document.getElementById(missing[0]).focus(); return; }
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('mw-email').value.trim())){ e.preventDefault(); err.textContent='Please enter a valid email so we can send your invoice.'; err.style.display='inline'; return; }
     if(t.units===0 && !document.getElementById('mw-notes').value.trim()){ e.preventDefault(); err.textContent='Add a quantity for at least one product (or describe your order in Notes).'; err.style.display='inline'; return; }
+    if(cur==='CAD' && t.units>0 && t.sub<100){ e.preventDefault(); err.textContent='The minimum order is $100 CAD. Add '+money(100-t.sub)+' more.'; err.style.display='inline'; return; }
     var lines = ['WHOLESALE PURCHASE ORDER – Mimro Originals','Currency: '+cur,''];
     rows.forEach(function(r){
       var q=parseInt(r.querySelector('input').value,10)||0;
