@@ -50,6 +50,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#fff;font-family
 #top div span{display:block;height:100%;background:var(--grad);width:0}
 #hdr{position:absolute;top:96px;left:60px;right:60px;display:flex;align-items:center;justify-content:space-between;z-index:9}
 #tag{font:700 28px Inter;letter-spacing:.2em;padding:12px 22px;border-radius:999px;background:var(--grad);color:#fff}
+.pcard img,.grid4 img{object-position:100% 0}
+.pcard img{transform-origin:100% 0}
 </style></head>
 <body><div id="stage">
 <div class="mesh" id="m1"></div><div class="mesh" id="m2"></div><div class="mesh" id="m3"></div>
@@ -168,7 +170,7 @@ window.render=function(t){
  // S3
  a=S.s3[0];kb($('rimg'),t,a,S.s3[1]+.4,1.15,1.0,0);pop($('e3'),t,a+.1,30);rise($('r1'),t,a+.2);rise($('r2'),t,a+.4);
  // products
- ['4','5','6','7'].forEach(n=>{const [a,b]=S['s'+n];pop($('pc'+n),t,a+.05,120,.7);kb($("pi"+n),t,a,b+.4,1.0,1.06,-15);
+ ['4','5','6','7'].forEach(n=>{const [a,b]=S['s'+n];pop($('pc'+n),t,a+.05,120,.7);kb($("pi"+n),t,a,b+.4,1.0,1.06,0);
   pop($('pk'+n),t,a+.45,90,.6);kb($('pk'+n).firstChild,t,a,b+.4,1.0,1.05,0);pop($('pt'+n),t,a+.35,60,.6);
   const tg=$('pt'+n).querySelectorAll('.tg');tg.forEach((e,i)=>pop(e,t,a+1.0+i*.2,30,.5));});
  // S8

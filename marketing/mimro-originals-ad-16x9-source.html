@@ -53,6 +53,8 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#fff;font-family
 #top div span{display:block;height:100%;background:var(--grad);width:0}
 #hdr{position:absolute;top:62px;left:60px;right:60px;display:flex;align-items:center;justify-content:space-between;z-index:9}
 #tag{font:700 22px Inter;letter-spacing:.2em;padding:10px 18px;border-radius:999px;background:var(--grad);color:#fff}
+.pcard img,.grid4 img{object-position:100% 0}
+.pcard img{transform-origin:100% 0}
 </style></head>
 <body><div id="stage">
 <div class="mesh" id="m1"></div><div class="mesh" id="m2"></div><div class="mesh" id="m3"></div>
@@ -107,7 +109,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#fff;font-family
   <div class="left" id="pt4"><div class="pname">Coconut <span class="g">Cellulose</span> Sponge</div><div class="psub">Made from plants — coconut fibre &amp; cellulose.</div>
    <div class="tagrow"><span class="tg">Plant-based</span><span class="tg">Plastic-free scrub</span></div>
    <div class="pack" id="pk4"><img src="p_coco.jpg"></div></div>
-  <div class="pcard" id="pc4"><div class="num">01 · KITCHEN</div><img id="pi4" src="u_coco.jpg" style="object-position:100% 50%"></div>
+  <div class="pcard" id="pc4"><div class="num">01 · KITCHEN</div><img id="pi4" src="u_coco.jpg"></div>
 </div></div>
 <div class="scene" id="s5"><div class="prow">
   <div class="left" id="pt5"><div class="pname">Natural <span class="g">Loofah</span> Sponge</div><div class="psub">Scrubs tough on dishes, naturally.</div>
@@ -183,7 +185,7 @@ window.render=function(t){
  pop($('bin'),t,3.9,60);
  let a=S.s2[0];pop($('e2'),t,a+.15,40);rise($('h2a'),t,a+.3);rise($('h2b'),t,a+.5);pop($('made'),t,a+3.9,80,.7);
  a=S.s3[0];kb($('rimg'),t,a,S.s3[1]+.4,1.12,1.0,0);pop($('e3'),t,a+.1,30);rise($('r1'),t,a+.2);rise($('r2'),t,a+.4);
- ['4','5','6','7'].forEach(n=>{const [a,b]=S['s'+n];slide($('pc'+n),t,a+.05,160,.7);kb($('pi'+n),t,a,b+.4,1.0,1.06,-15);
+ ['4','5','6','7'].forEach(n=>{const [a,b]=S['s'+n];slide($('pc'+n),t,a+.05,160,.7);kb($('pi'+n),t,a,b+.4,1.0,1.06,0);
   pop($('pt'+n),t,a+.3,60,.6);pop($('pk'+n),t,a+.5,70,.6);kb($('pk'+n).firstChild,t,a,b+.4,1.0,1.05,0);
   $('pt'+n).querySelectorAll('.tg').forEach((e,i)=>pop(e,t,a+1.0+i*.2,30,.5));});
  a=S.s8[0];rise($('w1'),t,a+.05);rise($('w2'),t,a+1.0);rise($('w3'),t,a+2.3);
