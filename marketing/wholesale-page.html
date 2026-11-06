@@ -72,7 +72,7 @@
   <div class="hero">
     <span class="eyebrow">Wholesale · Mimro Originals</span>
     <h1>Stock Mimro Originals in your store</h1>
-    <p>Plant-based kitchen and bath essentials with shelf-ready, bilingual (EN/FR) packaging. About 50% retailer margin at MSRP. Mix and match any SKU, 1 unit per case, from a $100 CAD minimum order.</p>
+    <p>Plant-based kitchen and bath essentials with shelf-ready, bilingual (EN/FR) packaging. About 50% retailer margin at MSRP. Mix and match any SKU, 1 unit per case, from a $100 minimum order (CA$100 or US$100).</p>
     <div class="btns">
       <a class="btn pri" href="#send-po">Send a purchase order</a>
       <a class="btn" href="#faire-shop">Order on Faire (Net 60)</a>
@@ -81,7 +81,7 @@
       <span>🌱 5 SKUs · kitchen &amp; bath</span>
       <span>💲 From $7.50 wholesale</span>
       <span>📦 Ships from Brampton, ON or Niagara Falls, NY</span>
-      <span>🧾 $100 CAD minimum order</span>
+      <span>🧾 $100 minimum order</span>
       <span>🇨🇦 🇺🇸 Prices in CAD or USD, based on your location</span>
     </div>
   </div>
@@ -182,7 +182,7 @@
           </tbody>
         </table>
         <div class="tot"><span><span id="mw-units">0</span> units</span><span>Wholesale subtotal <strong id="mw-sub">$0.00</strong></span></div>
-        <p class="note" style="text-align:right">Before shipping and taxes. Minimum order $100 CAD. <span id="mw-min"></span></p>
+        <p class="note" style="text-align:right">Before shipping and taxes. Minimum order CA$100 / US$100. <span id="mw-min"></span></p>
         <label for="mw-notes" style="margin-top:10px">Notes <span class="opt">(other products, delivery dates, questions)</span></label>
         <textarea id="mw-notes" name="contact[Notes]"></textarea>
       </fieldset>
@@ -221,7 +221,7 @@
 
   <section class="faq">
     <h2>Wholesale FAQ</h2>
-    <details><summary>Is there a minimum order?</summary><p>Yes, $100 CAD. Mix and match any SKUs to reach it; every SKU ships 1 unit per case.</p></details>
+    <details><summary>Is there a minimum order?</summary><p>Yes: CA$100 for orders in CAD, or US$100 for orders in USD. Mix and match any SKUs to reach it; every SKU ships 1 unit per case.</p></details>
     <details><summary>When will I get my invoice?</summary><p>Usually within 1 business day of your PO. It comes from Mimro by email with a secure link to review and pay.</p></details>
     <details><summary>How do I pay a direct order?</summary><p>Open the invoice email, check the items, shipping and taxes, then pay online from the link. We ship once payment is received.</p></details>
     <details><summary>Can I get payment terms?</summary><p>Yes, order through Faire for Net 60 terms. Faire handles the payment terms; we fulfil your order.</p></details>
@@ -249,7 +249,7 @@
     });
     document.getElementById('mw-units').textContent = units;
     document.getElementById('mw-sub').textContent = money(sub);
-    var mm=document.getElementById('mw-min'); mm.textContent = (cur==='CAD' && sub>0 && sub<100) ? ('Add '+money(100-sub)+' more to reach the minimum.') : '';
+    var mm=document.getElementById('mw-min'); mm.textContent = (sub>0 && sub<100) ? ('Add '+money(100-sub)+' more to reach the minimum.') : '';
     return {units:units, sub:sub};
   }
   function setCur(c){
@@ -291,7 +291,7 @@
     if(missing.length){ e.preventDefault(); err.textContent='Please fill in your business name, contact name, email and shipping address.'; err.style.display='inline'; document.getElementById(missing[0]).focus(); return; }
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('mw-email').value.trim())){ e.preventDefault(); err.textContent='Please enter a valid email so we can send your invoice.'; err.style.display='inline'; return; }
     if(t.units===0 && !document.getElementById('mw-notes').value.trim()){ e.preventDefault(); err.textContent='Add a quantity for at least one product (or describe your order in Notes).'; err.style.display='inline'; return; }
-    if(cur==='CAD' && t.units>0 && t.sub<100){ e.preventDefault(); err.textContent='The minimum order is $100 CAD. Add '+money(100-t.sub)+' more.'; err.style.display='inline'; return; }
+    if(t.units>0 && t.sub<100){ e.preventDefault(); err.textContent='The minimum order is '+money(100)+'. Add '+money(100-t.sub)+' more.'; err.style.display='inline'; return; }
     var lines = ['WHOLESALE PURCHASE ORDER – Mimro Originals','Currency: '+cur,''];
     rows.forEach(function(r){
       var q=parseInt(r.querySelector('input').value,10)||0;
