@@ -1,0 +1,296 @@
+<style>
+.mw{--ink:#020624;--mut:#5a5f73;--line:#E6E5E7;--soft:#f6f8f7;--g:#1f7a4d;--gl:#e8f5ee;--b:#3278b3;--grad:linear-gradient(90deg,#007ae7,#2ad265);color:var(--ink);font-family:inherit;max-width:1100px;margin:0 auto;padding:0 16px 48px;line-height:1.55}
+.mw *{box-sizing:border-box}
+.mw h1,.mw h2,.mw h3{color:var(--ink);margin:0 0 .4em;line-height:1.2}
+.mw h2{font-size:clamp(22px,3vw,30px);margin-top:8px}
+.mw p{margin:0 0 1em}
+.mw .eyebrow{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--g);background:var(--gl);padding:5px 10px;border-radius:999px;margin-bottom:14px}
+.mw .hero{text-align:center;padding:40px 0 28px}
+.mw .hero h1{font-size:clamp(28px,5vw,46px)}
+.mw .hero p{max-width:680px;margin:0 auto 22px;color:var(--mut);font-size:17px}
+.mw .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.mw .btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid var(--ink);color:var(--ink);background:#fff;cursor:pointer;font-size:16px}
+.mw .btn.pri{background:var(--ink);color:#fff}
+.mw .btn:hover{opacity:.88}
+.mw .facts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.mw .facts span{font-size:14px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.mw section{margin:44px 0}
+.mw .opts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mw .card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff}
+.mw .card.feat{border:2px solid var(--g)}
+.mw .card .tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.mw .card h3{font-size:22px;margin-top:6px}
+.mw .card ul{padding-left:20px;margin:0 0 18px}
+.mw .card li{margin:4px 0}
+.mw .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.mw .step{background:var(--soft);border-radius:14px;padding:18px;position:relative}
+.mw .step b{display:block;margin-bottom:4px}
+.mw .step:before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--grad);color:#fff;font-weight:800;margin-bottom:10px}
+.mw .step small{color:var(--mut);font-size:14px}
+.mw .formwrap{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff;box-shadow:0 6px 24px rgba(2,6,36,.05)}
+.mw .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mw label{display:block;font-size:14px;font-weight:600;margin-bottom:5px}
+.mw label .opt{font-weight:400;color:var(--mut)}
+.mw input[type=text],.mw input[type=email],.mw input[type=tel],.mw input[type=number],.mw textarea,.mw select{width:100%;padding:11px 12px;border:1px solid #cfd2d8;border-radius:9px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+.mw textarea{min-height:84px;resize:vertical}
+.mw fieldset{border:0;padding:0;margin:0 0 22px}
+.mw legend{font-weight:800;font-size:18px;margin-bottom:12px}
+.mw .curr{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:12px}
+.mw .curr button{border:0;background:#fff;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer;color:var(--mut)}
+.mw .curr button.on{background:var(--ink);color:#fff}
+.mw .items{width:100%;border-collapse:collapse}
+.mw .items th{text-align:left;font-size:13px;color:var(--mut);font-weight:600;padding:8px;border-bottom:1px solid var(--line)}
+.mw .items td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.mw .items .prod{display:flex;align-items:center;gap:12px}
+.mw .items img{width:56px;height:56px;object-fit:cover;border-radius:10px;background:var(--soft)}
+.mw .items .nm{font-weight:700;font-size:15px}
+.mw .items .sku{font-size:12px;color:var(--mut)}
+.mw .items input{width:84px;text-align:center}
+.mw .items .num{white-space:nowrap}
+.mw .tot{display:flex;justify-content:flex-end;gap:18px;align-items:baseline;padding:14px 8px 0;font-size:15px}
+.mw .tot strong{font-size:22px}
+.mw .note{font-size:13px;color:var(--mut)}
+.mw .pay{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mw .pay label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:14px;font-weight:400;cursor:pointer}
+.mw .pay input{margin-top:4px}
+.mw .pay b{display:block}
+.mw .submit{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.mw .err{color:#b02a37;font-weight:600;font-size:14px;display:none}
+.mw .ok{display:none;background:var(--gl);border:1px solid #b9e2cb;border-radius:14px;padding:22px;text-align:center}
+.mw .ok h3{color:var(--g)}
+.mw .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.mw .faq summary{font-weight:700;cursor:pointer}
+.mw .faq p{margin:8px 0 0;color:var(--mut)}
+.mw .dl{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:820px){.mw .opts,.mw .grid2,.mw .pay{grid-template-columns:1fr}.mw .steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.mw .steps{grid-template-columns:1fr}.mw .items th.hide,.mw .items td.hide{display:none}.mw .items img{width:44px;height:44px}.mw .items input{width:64px}.mw .formwrap{padding:18px}}
+</style>
+
+<div class="mw" id="mimro-wholesale">
+
+  <div class="hero">
+    <span class="eyebrow">Wholesale · Mimro Originals</span>
+    <h1>Stock Mimro Originals in your store</h1>
+    <p>Plant-based kitchen and bath essentials with shelf-ready, bilingual (EN/FR) packaging. About 50% retailer margin at MSRP, and no minimum: order 1 unit of any SKU.</p>
+    <div class="btns">
+      <a class="btn pri" href="#send-po">Send a purchase order</a>
+      <a class="btn" href="#faire-shop">Order on Faire (Net 60)</a>
+    </div>
+    <div class="facts">
+      <span>🌱 5 SKUs · kitchen &amp; bath</span>
+      <span>💲 From $7.50 wholesale</span>
+      <span>📦 Ships from Brampton, ON</span>
+      <span>🇨🇦 🇺🇸 CAD or USD pricing</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>Two ways to order</h2>
+    <div class="opts">
+      <div class="card feat">
+        <div class="tag">Option 1 · Direct with Mimro</div>
+        <h3>Send us your PO, pay by invoice</h3>
+        <ul>
+          <li>Fill in the order form below, or email your own PO.</li>
+          <li>We create your order and email you an invoice.</li>
+          <li>Review it, confirm, and pay securely online from the invoice.</li>
+          <li>We ship once payment is received.</li>
+        </ul>
+        <a class="btn pri" href="#send-po">Start a PO</a>
+      </div>
+      <div class="card" id="faire">
+        <div class="tag">Option 2 · Through Faire</div>
+        <h3>Order now, pay in 60 days</h3>
+        <ul>
+          <li>Place your order on our Faire shop.</li>
+          <li>Pay on Net 60 terms through Faire.</li>
+          <li>Faire handles payment and terms; we ship your order.</li>
+          <li>Best if you already buy from brands on Faire.</li>
+        </ul>
+        <a class="btn" href="https://mimro.faire.com?utm_source=embed" data-faire target="_blank" rel="noopener">Shop Mimro on Faire</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How a direct PO works</h2>
+    <div class="steps">
+      <div class="step"><b>Send your PO</b><small>Use the form below or email your PO document to support@mimro.com.</small></div>
+      <div class="step"><b>We build your order</b><small>The Mimro team checks stock and creates your order, usually within 1 business day.</small></div>
+      <div class="step"><b>You get an invoice</b><small>A Shopify invoice arrives by email with items, shipping and taxes.</small></div>
+      <div class="step"><b>Confirm &amp; pay</b><small>Pay from the invoice link. We ship and send tracking.</small></div>
+    </div>
+  </section>
+
+  <section id="send-po">
+    <h2>Send a purchase order</h2>
+    <p class="note">Wholesale prices below. Shipping and taxes are added to your invoice; you only pay when you've reviewed it.</p>
+
+    <div class="ok" id="mw-ok">
+      <h3>Thanks, your PO is on its way to us ✅</h3>
+      <p>The Mimro team will review it and email your invoice, usually within 1 business day. Questions? Email <a href="mailto:support@mimro.com">support@mimro.com</a>.</p>
+    </div>
+
+    <div class="formwrap" id="mw-formwrap">
+    <form method="post" action="/contact#mimro-wholesale" accept-charset="UTF-8" id="mw-form" novalidate>
+      <input type="hidden" name="form_type" value="contact">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="contact[tags]" value="wholesale, wholesale-po">
+      <input type="hidden" name="contact[Request]" value="WHOLESALE PO – Mimro Originals">
+      <input type="hidden" name="contact[body]" id="mw-body">
+
+      <fieldset>
+        <legend>1. Your business</legend>
+        <div class="grid2">
+          <div><label for="mw-biz">Business name</label><input type="text" id="mw-biz" name="contact[Business name]" required></div>
+          <div><label for="mw-name">Contact name</label><input type="text" id="mw-name" name="contact[name]" required></div>
+          <div><label for="mw-email">Email (invoice goes here)</label><input type="email" id="mw-email" name="contact[email]" required></div>
+          <div><label for="mw-phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="mw-phone" name="contact[phone]"></div>
+          <div style="grid-column:1/-1"><label for="mw-ship">Shipping address</label><textarea id="mw-ship" name="contact[Shipping address]" required placeholder="Street, city, province/state, postal/ZIP code, country"></textarea></div>
+          <div><label for="mw-po">Your PO number <span class="opt">(optional)</span></label><input type="text" id="mw-po" name="contact[PO number]"></div>
+          <div><label for="mw-tax">Business / tax number <span class="opt">(optional)</span></label><input type="text" id="mw-tax" name="contact[Tax or business number]"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. What you'd like to order</legend>
+        <div class="curr" role="group" aria-label="Currency">
+          <button type="button" class="on" data-cur="CAD">CAD</button>
+          <button type="button" data-cur="USD">USD</button>
+        </div>
+        <input type="hidden" name="contact[Currency]" id="mw-cur" value="CAD">
+        <table class="items">
+          <thead><tr><th>Product</th><th class="hide">MSRP</th><th>Wholesale</th><th>Qty (units)</th></tr></thead>
+          <tbody>
+            <tr data-sku="10400-06" data-name="Coconut Cellulose Kitchen Sponge – 6 pack" data-w="7.50" data-m="14.99">
+              <td><div class="prod"><img src="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/PP1-CelluloseSponge12.png?v=1792523148&width=160" alt="Coconut Cellulose Kitchen Sponge" loading="lazy"><div><div class="nm">Coconut Cellulose Kitchen Sponge</div><div class="sku">6 pack · SKU 10400-06</div></div></div></td>
+              <td class="hide num" data-msrp></td><td class="num" data-whl></td><td><input type="number" min="0" step="1" inputmode="numeric" placeholder="0" aria-label="Quantity, Coconut sponge 6 pack"></td></tr>
+            <tr data-sku="10401-12" data-name="Coconut Cellulose Kitchen Sponge – 12 pack" data-w="12.50" data-m="24.99">
+              <td><div class="prod"><img src="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/PP1-CelluloseSponge12.png?v=1792523148&width=160" alt="Coconut Cellulose Kitchen Sponge 12 pack" loading="lazy"><div><div class="nm">Coconut Cellulose Kitchen Sponge</div><div class="sku">12 pack · SKU 10401-12</div></div></div></td>
+              <td class="hide num" data-msrp></td><td class="num" data-whl></td><td><input type="number" min="0" step="1" inputmode="numeric" placeholder="0" aria-label="Quantity, Coconut sponge 12 pack"></td></tr>
+            <tr data-sku="10403-03" data-name="Natural Loofah Cellulose Sponge – 3 pack" data-w="7.50" data-m="14.99">
+              <td><div class="prod"><img src="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/PP1-Loofahkitchen_1.png?v=1792523147&width=160" alt="Natural Loofah Cellulose Sponge" loading="lazy"><div><div class="nm">Natural Loofah Cellulose Sponge</div><div class="sku">3 pack · SKU 10403-03</div></div></div></td>
+              <td class="hide num" data-msrp></td><td class="num" data-whl></td><td><input type="number" min="0" step="1" inputmode="numeric" placeholder="0" aria-label="Quantity, Loofah cellulose sponge"></td></tr>
+            <tr data-sku="10402-03" data-name="Swedish Dishcloth" data-w="7.50" data-m="14.99">
+              <td><div class="prod"><img src="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/New_PP1.png?v=1792523148&width=160" alt="Swedish Dishcloth" loading="lazy"><div><div class="nm">Swedish Dishcloth</div><div class="sku">SKU 10402-03</div></div></div></td>
+              <td class="hide num" data-msrp></td><td class="num" data-whl></td><td><input type="number" min="0" step="1" inputmode="numeric" placeholder="0" aria-label="Quantity, Swedish Dishcloth"></td></tr>
+            <tr data-sku="10404-03" data-name="Natural Loofah Bath Set" data-w="12.50" data-m="24.99">
+              <td><div class="prod"><img src="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/PP1-loofahsponge_1.png?v=1792523148&width=160" alt="Natural Loofah Bath Set" loading="lazy"><div><div class="nm">Natural Loofah Bath Set</div><div class="sku">3-piece set · SKU 10404-03</div></div></div></td>
+              <td class="hide num" data-msrp></td><td class="num" data-whl></td><td><input type="number" min="0" step="1" inputmode="numeric" placeholder="0" aria-label="Quantity, Loofah Bath Set"></td></tr>
+          </tbody>
+        </table>
+        <div class="tot"><span><span id="mw-units">0</span> units</span><span>Wholesale subtotal <strong id="mw-sub">$0.00</strong></span></div>
+        <p class="note" style="text-align:right">Before shipping and taxes. 1 unit per case, no minimum.</p>
+        <label for="mw-notes" style="margin-top:10px">Notes <span class="opt">(other products, delivery dates, questions)</span></label>
+        <textarea id="mw-notes" name="contact[Notes]"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. How you'd like to pay</legend>
+        <div class="pay">
+          <label><input type="radio" name="contact[Payment]" value="Pay now – send me an invoice" checked><span><b>Pay now by invoice</b>We email an invoice; you confirm and pay online before we ship.</span></label>
+          <label><input type="radio" name="contact[Payment]" value="Net 60 – via Faire" id="mw-net60"><span><b>Net 60 through Faire</b>Pay in 60 days. You'll place this order on our Faire shop.</span></label>
+        </div>
+      </fieldset>
+
+      <div class="submit">
+        <button type="submit" class="btn pri" id="mw-submit">Send purchase order</button>
+        <span class="err" id="mw-err"></span>
+      </div>
+      <p class="note" style="margin-top:12px">Prefer to send your own PO document? Email it to <a href="mailto:support@mimro.com?subject=Wholesale%20PO%20%E2%80%93%20Mimro%20Originals">support@mimro.com</a> with "Wholesale PO" in the subject.</p>
+    </form>
+    </div>
+  </section>
+
+  <section id="faire-shop" style="text-align:center">
+    <h2>Prefer Net 60? Order on Faire</h2>
+    <p class="note">Open our Faire shop to see wholesale prices and order with Net 60 payment terms.</p>
+    <iframe src="https://www.faire.com/embed/bw_thfa2w5eqe" width="500" height="600" scrolling="no" title="Mimro on Faire" loading="lazy" style="margin:0 auto;border:none;display:block;max-width:100%;width:500px;height:600px;"></iframe>
+  </section>
+
+  <section>
+    <h2>Price list &amp; catalogue</h2>
+    <p>Full product details, materials and the Mimro Originals price list.</p>
+    <div class="dl">
+      <a class="btn" href="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-brand-catalogue-2026-CAD.pdf" target="_blank" rel="noopener">Download catalogue (CAD)</a>
+      <a class="btn" href="https://cdn.shopify.com/s/files/1/0734/9187/4030/files/mimro-brand-catalogue-2026-USD.pdf" target="_blank" rel="noopener">Download catalogue (USD)</a>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Wholesale FAQ</h2>
+    <details><summary>Is there a minimum order?</summary><p>No. Every SKU ships 1 unit per case, so you can try the whole range in small quantities.</p></details>
+    <details><summary>When will I get my invoice?</summary><p>Usually within 1 business day of your PO. It comes from Mimro by email with a secure link to review and pay.</p></details>
+    <details><summary>How do I pay a direct order?</summary><p>Open the invoice email, check the items, shipping and taxes, then pay online from the link. We ship once payment is received.</p></details>
+    <details><summary>Can I get payment terms?</summary><p>Yes, order through Faire for Net 60 terms. Faire handles the payment terms; we fulfil your order.</p></details>
+    <details><summary>Where do you ship from?</summary><p>Our warehouse in Brampton, Ontario. Shipping cost is shown on your invoice before you pay.</p></details>
+    <details><summary>Can I change my order after sending the PO?</summary><p>Yes. Reply to your invoice email or contact support@mimro.com before paying and we'll update it.</p></details>
+  </section>
+</div>
+
+<script>
+(function(){
+  var FAIRE_URL = "https://mimro.faire.com?utm_source=embed";
+  var root = document.getElementById('mimro-wholesale'); if(!root) return;
+  root.querySelectorAll('[data-faire]').forEach(function(a){ if(a.getAttribute('href')!=='#faire'){ a.href = FAIRE_URL; } });
+
+  var cur = 'CAD', sym = {CAD:'CA$',USD:'US$'};
+  var rows = root.querySelectorAll('.items tbody tr');
+  function money(n){ return sym[cur] + n.toFixed(2); }
+  function render(){
+    var units=0, sub=0;
+    rows.forEach(function(r){
+      r.querySelector('[data-whl]').textContent = money(parseFloat(r.dataset.w));
+      r.querySelector('[data-msrp]').textContent = money(parseFloat(r.dataset.m));
+      var q = parseInt(r.querySelector('input').value,10)||0; if(q<0) q=0;
+      units+=q; sub+=q*parseFloat(r.dataset.w);
+    });
+    document.getElementById('mw-units').textContent = units;
+    document.getElementById('mw-sub').textContent = money(sub);
+    return {units:units, sub:sub};
+  }
+  root.querySelectorAll('.curr button').forEach(function(b){
+    b.addEventListener('click',function(){
+      cur=b.dataset.cur; document.getElementById('mw-cur').value=cur;
+      root.querySelectorAll('.curr button').forEach(function(x){x.classList.toggle('on',x===b);});
+      render();
+    });
+  });
+  rows.forEach(function(r){ r.querySelector('input').addEventListener('input',render); });
+  render();
+
+  // Net 60 choice sends the buyer to Faire instead
+  var net = document.getElementById('mw-net60');
+  net.addEventListener('change',function(){ if(net.checked){ document.getElementById('mw-submit').textContent='Continue to Faire (Net 60)'; } });
+  root.querySelector('input[value^="Pay now"]').addEventListener('change',function(){ document.getElementById('mw-submit').textContent='Send purchase order'; });
+
+  var form = document.getElementById('mw-form'), err = document.getElementById('mw-err');
+  form.addEventListener('submit',function(e){
+    err.style.display='none';
+    if(net.checked){ e.preventDefault(); window.open(FAIRE_URL,'_blank','noopener'); return; }
+    var t = render();
+    var missing = ['mw-biz','mw-name','mw-email','mw-ship'].filter(function(id){ return !document.getElementById(id).value.trim(); });
+    if(missing.length){ e.preventDefault(); err.textContent='Please fill in your business name, contact name, email and shipping address.'; err.style.display='inline'; document.getElementById(missing[0]).focus(); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('mw-email').value.trim())){ e.preventDefault(); err.textContent='Please enter a valid email so we can send your invoice.'; err.style.display='inline'; return; }
+    if(t.units===0 && !document.getElementById('mw-notes').value.trim()){ e.preventDefault(); err.textContent='Add a quantity for at least one product (or describe your order in Notes).'; err.style.display='inline'; return; }
+    var lines = ['WHOLESALE PURCHASE ORDER – Mimro Originals','Currency: '+cur,''];
+    rows.forEach(function(r){
+      var q=parseInt(r.querySelector('input').value,10)||0;
+      if(q>0) lines.push(q+' x '+r.dataset.name+' ('+r.dataset.sku+') @ '+money(parseFloat(r.dataset.w))+' = '+money(q*parseFloat(r.dataset.w)));
+    });
+    lines.push('','Total units: '+t.units,'Wholesale subtotal: '+money(t.sub)+' (before shipping & taxes)','Payment: Pay now – send invoice');
+    document.getElementById('mw-body').value = lines.join('\n');
+    try{ sessionStorage.setItem('mw-po-sent','1'); }catch(x){}
+  });
+
+  // Show confirmation after Shopify redirects back
+  var posted = /contact_posted=true/.test(location.search);
+  var flag = false; try{ flag = sessionStorage.getItem('mw-po-sent')==='1'; }catch(x){}
+  if(posted && flag){
+    document.getElementById('mw-ok').style.display='block';
+    document.getElementById('mw-formwrap').style.display='none';
+    try{ sessionStorage.removeItem('mw-po-sent'); }catch(x){}
+    document.getElementById('send-po').scrollIntoView();
+  }
+})();
+</script>
