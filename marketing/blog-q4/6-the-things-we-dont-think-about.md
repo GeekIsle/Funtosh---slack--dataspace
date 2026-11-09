@@ -24,8 +24,8 @@ Then attach that change to a habit you already have. Check the fridge before wri
 These small adjustments work because they address why waste happens in the first place: repetition without reflection.
 ## Choose products that support better habits
 Once you know where waste happens, the right products make better choices easier to keep.
-- **In the kitchen:** the Mimro Swedish Dishcloth is a reusable option for wiping surfaces, handling spills, and cleaning dishes. It’s washable and dries fast, so it’s practical for repeated use.
-- **For cleaning:** the Mimro Natural Loofah Cellulose Sponge is a plant-based alternative for everyday dishwashing and surface cleaning. Pair good tools with careful product measuring to avoid unnecessary consumption.
+- **In the kitchen:** the [Mimro Swedish Dishcloth](https://www.mimro.com/products/mimro-swedish-dishcloth) is a reusable option for wiping surfaces, handling spills, and cleaning dishes. It’s washable and dries fast, so it’s practical for repeated use.
+- **For cleaning:** the [Mimro Natural Loofah Cellulose Sponge](https://www.mimro.com/products/mimro-natural-loofah-cellulose-sponge) is a plant-based alternative for everyday dishwashing and surface cleaning. Pair good tools with careful product measuring to avoid unnecessary consumption.
 - **In personal care:** shampoo bars, conditioner bars, and toothpaste tablets offer alternatives to some conventional bottled formats, and Mimro’s refill options help you reduce packaging where it suits you.
 The goal isn’t to replace everything you own. Use what you have first, then choose a better alternative when something genuinely needs replacing.
 **[Shop Kitchen Solutions →](https://www.mimro.com/collections/kitchen-solutions)**

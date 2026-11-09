@@ -246,6 +246,8 @@ POSTS = [
 
 
 def strip_tags(s):
+    s = re.sub(r'<a href="([^"]+)">([^<]+)</a>', r"[\2](\1)", s)
+    s = re.sub(r"</?em>", "*", s)
     return html.unescape(re.sub(r"<[^>]+>", "", s))
 
 

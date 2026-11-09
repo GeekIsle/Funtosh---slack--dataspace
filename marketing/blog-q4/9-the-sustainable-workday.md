@@ -17,7 +17,7 @@ None of this requires perfection. It simply makes thoughtful choices easier to r
 ## Choose essentials that work beyond home
 Start with what you already use regularly rather than buying a new collection of products.
 - **Lunch and hydration:** reusable food containers, snack bags, and water bottles reduce dependence on disposable packaging. Explore Mimro’s Kitchen Solutions collection for food-storage and on-the-go options.
-- **Reusable cleaning tools:** a cloth in your work bag or home office handles everyday spills and surfaces. The Mimro Swedish Dishcloth is made from 70% cellulose wood pulp and 30% cotton, is machine washable, dries fast, and is designed for 100+ washes.
+- **Reusable cleaning tools:** a cloth in your work bag or home office handles everyday spills and surfaces. The [Mimro Swedish Dishcloth](https://www.mimro.com/products/mimro-swedish-dishcloth) is made from 70% cellulose wood pulp and 30% cotton, is machine washable, dries fast, and is designed for 100+ washes.
 - **Personal care on the go:** long workdays and commutes make portable formats useful. Shampoo and conditioner bars and toothpaste and mouthwash tablets offer alternatives to some bottled formats. Choose what suits your routine, storage, and travel needs.
 The goal isn’t to carry every sustainable product to work. It’s to keep a few useful essentials within reach so better choices are practical, not inconvenient.
 **[Shop Kitchen Solutions →](https://www.mimro.com/collections/kitchen-solutions)**

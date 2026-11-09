@@ -18,9 +18,9 @@ Keep it simple: choose one seasonal routine to upgrade for the next 30 days. Not
 ## Match your swaps to the season you’re in
 Once you know the routine you’re upgrading, shopping gets easier. You’re not buying random eco stuff. You’re building a seasonal kit that supports your real habits.
 - **Food and drink basics:** for summer hydration, school lunches, road trips, and busy days when packaging adds up fast.
-- **Sustainable cleaning essentials:** quick, reusable tools for seasonal messes, from summer spills to winter indoor cleanup, like the Mimro Swedish Dishcloth and Mimro Coconut Cellulose Kitchen Sponge, without burning through paper towels.
+- **Sustainable cleaning essentials:** quick, reusable tools for seasonal messes, from summer spills to winter indoor cleanup, like the [Mimro Swedish Dishcloth](https://www.mimro.com/products/mimro-swedish-dishcloth) and [Mimro Coconut Cellulose Kitchen Sponge](https://www.mimro.com/products/mimro-coconut-cellulose-kitchen-sponge), without burning through paper towels.
 - **Low-waste home essentials:** practical items that reduce restocking and keep routines smooth when schedules get hectic.
-- **Natural personal care:** for seasonal self-care, travel, and basics that run out faster than you expect, like the Mimro Natural Loofah Bath Set.
+- **Natural personal care:** for seasonal self-care, travel, and basics that run out faster than you expect, like the [Mimro Natural Loofah Bath Set](https://www.mimro.com/products/mimro-natural-loofah-bath-set).
 - **Eco-friendly daily swaps:** small upgrades that cut single-use habits across the year, one routine at a time.
 **[Shop Kitchen Solutions →](https://www.mimro.com/collections/kitchen-solutions)**
 **[Shop Cleaning Essentials →](https://www.mimro.com/collections/home-cleaners)**

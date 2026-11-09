@@ -17,7 +17,7 @@ If you want a simple way to handle disposal without overthinking it, use an End-
 Try it for one week: every time you finish a product, run it through the ladder. You’ll start noticing which materials and formats cause the most confusion, and that’s your clue for what to upgrade next.
 ## Choose products that make “after” easier
 One of the easiest ways to reduce disposal stress is to buy fewer things that need complicated end-of-life decisions.
-- **Sustainable cleaning essentials:** reusable tools that replace paper towels and disposable wipes, like the Mimro Swedish Dishcloth or the plant-based Mimro Natural Loofah Cellulose Sponge. Less trash, and fewer “can I recycle this?” moments.
+- **Sustainable cleaning essentials:** reusable tools that replace paper towels and disposable wipes, like the [Mimro Swedish Dishcloth](https://www.mimro.com/products/mimro-swedish-dishcloth) or the plant-based [Mimro Natural Loofah Cellulose Sponge](https://www.mimro.com/products/mimro-natural-loofah-cellulose-sponge). Less trash, and fewer “can I recycle this?” moments.
 - **Low-waste home essentials:** practical items that support refill-first routines and cut constant packaging waste.
 - **Natural personal care:** simpler routines and lower-packaging options that reduce bathroom-bin overflow.
 - **Eco-friendly daily swaps:** repeat-use upgrades that shrink the volume of single-use items you have to deal with in the first place.
