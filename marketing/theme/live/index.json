@@ -192,9 +192,9 @@
     },
     "fall_sale_banner": {
       "type": "image-with-text-overlay",
-      "name": "Fall Sale Banner (BB-Q4W1)",
+      "name": "Black Friday Banner (BB-Q4W3)",
       "settings": {
-        "image_desktop": "shopify://shop_images/BB-Q4W1-Banner-FallSale-v3-1920x1080.jpg",
+        "image_desktop": "shopify://shop_images/BB-Q4W3-Banner-BlackFriday-1920x1080.jpg",
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
@@ -430,7 +430,7 @@
       "settings": {
         "image": "shopify://shop_images/3_4_b73e8d74-ac35-464f-acd7-535e6b9155db.png",
         "layout": "left",
-        "title": "Mimro Earth Community",
+        "title": "Eco Living Blog",
         "text": "",
         "text_alignment": "left",
         "text_overlapping_image": false,
