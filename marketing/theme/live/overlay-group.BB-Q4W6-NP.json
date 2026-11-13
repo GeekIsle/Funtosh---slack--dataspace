@@ -1,0 +1,282 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "Overlay",
+  "sections": {
+    "offers-drawer": {
+      "type": "offers-drawer",
+      "blocks": {
+        "offer_Q4W6a": {
+          "type": "offer",
+          "name": "NP-Q4W6-Eco Pick",
+          "settings": {
+            "image": "shopify://shop_images/NP1-EcoPick-BambooBandages.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Eco Pick of the Week: </strong>ESSENCE OF LIFE ORGANICS Bamboo Bandages: 20 breathable strips, a lower-plastic swap for your first-aid kit.</p>",
+            "link": "shopify://collections/eco-pick-of-the-week",
+            "button_label": "Shop now"
+          }
+        },
+        "offer_Q4W6b": {
+          "type": "offer",
+          "name": "NP-Q4W6-New Arrivals",
+          "settings": {
+            "image": "shopify://shop_images/NP2-NewArrivals-Q4W6.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>New Arrivals: </strong>Mimro Originals Swedish Dishcloths, Midnight Paloma bath and body care, and DALCINI stainless steel lunch containers.</p>",
+            "link": "shopify://collections/new-arrivals-1",
+            "button_label": "Shop now"
+          }
+        },
+        "offer_Q4W6c": {
+          "type": "offer",
+          "name": "NP-Q4W6-Eco Quest",
+          "settings": {
+            "image": "shopify://shop_images/NP3-EcoQuest-Q4W6.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Eco-Quest: </strong>Starting fresh? Answer 3 quick questions about setting up a new chapter without buying more and earn Eco Points. 100 points = $1 off!</p>",
+            "link": "shopify://pages/mimro-eco-rewards",
+            "button_label": "Play Eco-Quest"
+          }
+        },
+        "offer_Q4W6d": {
+          "type": "offer",
+          "name": "NP-Q4W6-Blog Post",
+          "settings": {
+            "image": "shopify://shop_images/NP4-Blog-NewChapter.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Blog Post: </strong>New Chapter, Lighter Footprint: Making More Thoughtful Choices During Life Changes</p>",
+            "link": "shopify://blogs/news/new-chapter-lighter-footprint",
+            "button_label": "READ"
+          }
+        },
+        "offer_Q4W6e": {
+          "type": "offer",
+          "name": "NP-Q4W6-Gift Card",
+          "settings": {
+            "image": "shopify://shop_images/NP5-GiftCard.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Gift Card: </strong>Not sure what to give? A Mimro Gift Card ($25, $50 or $100) lets them pick their own everyday eco swaps.</p>",
+            "link": "shopify://products/mimro-gift-card",
+            "button_label": "Shop now"
+          }
+        },
+        "offer_QLKYen": {
+          "type": "offer",
+          "name": "NP-Q4W1-Eco Pick",
+          "settings": {
+            "image": "shopify://shop_images/NP1-EcoPick-LoofahSponge.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Eco Pick of the Week: </strong>MIMRO Natural Loofah Cellulose Sponge: plant-based loofah bonded to soft cellulose, tough on pots and gentle on counters.</p>",
+            "link": "shopify://collections/eco-pick-of-the-week",
+            "button_label": "Shop now"
+          }
+        },
+        "offer_NFbn3t": {
+          "type": "offer",
+          "name": "NP-Q4W1-Blog Post",
+          "settings": {
+            "image": "shopify://shop_images/NP7-Blog-TravelKit.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Blog Post: </strong>The Always-Packed Travel Kit: A Simple System for Buying Less on the Go</p>",
+            "link": "shopify://blogs/news/the-always-packed-travel-kit-a-simple-system-for-buying-less-on-the-go",
+            "button_label": "READ"
+          }
+        },
+        "offer_3tJ97X": {
+          "type": "offer",
+          "name": "NP-Q4W1-Blog Post",
+          "settings": {
+            "image": "shopify://shop_images/NP6-Blog-CleaningFrictionAudit.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Blog Post: </strong>The Cleaning Friction Audit: 5 Things Making Your Routine Harder Than It Needs to Be</p>",
+            "link": "shopify://blogs/news/the-cleaning-friction-audit-5-things-making-your-routine-harder-than-it-needs-to-be",
+            "button_label": "READ"
+          }
+        },
+        "offer_JyGPKd": {
+          "type": "offer",
+          "name": "NP-Q4W1-Blog Post",
+          "settings": {
+            "image": "shopify://shop_images/NP5-Blog-KitchenSinkDetox.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Blog Post: </strong>The Kitchen Sink Detox: What to Remove, Replace, and Reorganize</p>",
+            "link": "shopify://blogs/news/the-kitchen-sink-detox-what-to-remove-replace-and-reorganize",
+            "button_label": "READ"
+          }
+        },
+        "offer_mTJWNf": {
+          "type": "offer",
+          "name": "NP-Q4W1-Blog Post",
+          "settings": {
+            "image": "shopify://shop_images/NP4-Blog-UnbuyingList.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Blog Post: </strong>The Unbuying List: 10 Things You Might Not Need to Keep Buying</p>",
+            "link": "shopify://blogs/news/the-unbuying-list-10-things-you-might-not-need-to-keep-buying",
+            "button_label": "READ"
+          }
+        },
+        "offer_4pYKwm": {
+          "type": "offer",
+          "name": "NP-Q4W1-Eco Quest",
+          "settings": {
+            "image": "shopify://shop_images/NP3-EcoQuest.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>Eco-Quest: </strong>What can replace up to 17 rolls of paper towels? Answer 3 quick questions and earn Eco Points. 100 points = $1 off!</p>",
+            "link": "shopify://pages/mimro-eco-rewards",
+            "button_label": "Play Eco-Quest"
+          }
+        },
+        "offer_zBGyVx": {
+          "type": "offer",
+          "name": "NP-Q4W1-New Arrivals",
+          "settings": {
+            "image": "shopify://shop_images/NP2-NewArrivals.png",
+            "image_position": "above",
+            "title": "",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "description": "<p><strong>New Arrivals: </strong>Mimro Originals sponges and dishcloths, plus DALCINI stainless steel lunch boxes built to last.</p>",
+            "link": "shopify://collections/new-arrivals-1",
+            "button_label": "Shop now"
+          }
+        },
+        "offer_amFdG6": {
+          "type": "offer",
+          "disabled": true,
+          "settings": {
+            "image_position": "above",
+            "title": "Offer",
+            "description": "<p>Provide additional details about the offer you're running.</p>",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "link": "",
+            "button_label": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "offer_Q4W6a",
+        "offer_Q4W6b",
+        "offer_Q4W6c",
+        "offer_Q4W6d",
+        "offer_Q4W6e",
+        "offer_QLKYen",
+        "offer_NFbn3t",
+        "offer_3tJ97X",
+        "offer_JyGPKd",
+        "offer_mTJWNf",
+        "offer_4pYKwm",
+        "offer_zBGyVx",
+        "offer_amFdG6"
+      ],
+      "name": "Notification Post",
+      "settings": {
+        "show_icon": true,
+        "title": "Latest from Mimro....",
+        "description": "",
+        "override_heading_font_size": false,
+        "heading_font_size": 24,
+        "empty_message": "There are currently no active offers, but check back soon for new deals!",
+        "suggested_collections": [],
+        "buttons_style": "filled"
+      }
+    }
+  },
+  "order": [
+    "offers-drawer"
+  ]
+}
