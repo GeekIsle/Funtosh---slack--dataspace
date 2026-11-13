@@ -17,10 +17,10 @@
         "image_nRABew": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/BB-Q4W6-Promo-BlackFriday-Runway-1100x540.jpg",
+            "desktop_image": "shopify://shop_images/BB-Q4W6-Promo-BlackFriday-Runway-v2-1100x540.jpg",
             "desktop_position": "md-min-align-top md-min-justify-left",
             "heading_size": 30,
-            "mobile_image": "shopify://shop_images/BB-Q4W6-Promo-BlackFriday-Runway-1100x540.jpg",
+            "mobile_image": "shopify://shop_images/BB-Q4W6-Promo-BlackFriday-Runway-v2-1100x540.jpg",
             "mobile_position": "md-max-align-bottom md-max-justify-right",
             "heading": "",
             "url": "shopify://collections/sale",
