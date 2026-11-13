@@ -203,7 +203,7 @@
             "second_button_label": "",
             "image": "shopify://shop_images/BB-Q4W6-Banner-BlackFriday-1920x640.jpg",
             "text_position": "center_left",
-            "mobile_image": "shopify://shop_images/BB-Q4W6-Promo-BlackFriday-1100x400.jpg",
+            "mobile_image": "shopify://shop_images/BB-Q4W6-Promo-BlackFriday-1100x540.jpg",
             "mobile_text_position": "center_left",
             "image_overlay_opacity": 0
           }
@@ -218,7 +218,7 @@
             "second_button_label": "",
             "image": "shopify://shop_images/BB-Q4W6-Banner-Christmas-1920x640.jpg",
             "text_position": "center_left",
-            "mobile_image": "shopify://shop_images/BB-Q4W6-Promo-Christmas-1100x400.jpg",
+            "mobile_image": "shopify://shop_images/BB-Q4W6-Promo-Christmas-1100x540.jpg",
             "mobile_text_position": "center_left",
             "image_overlay_opacity": 0
           }
