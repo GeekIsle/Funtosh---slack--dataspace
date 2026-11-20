@@ -1,0 +1,105 @@
+/*
+ * NP-Q4W7: replaces the five NP-Q4W6 blocks in the Offers drawer.
+ * Where: Online Store > Themes > live theme > ... > Edit code > sections/overlay-group.json
+ * Step 1: in "blocks", delete the five blocks offer_Q4W6a to offer_Q4W6e and paste the five blocks below in their place.
+ * Step 2: in "block_order", replace the first five entries (offer_Q4W6a to offer_Q4W6e) with offer_Q4W7a to offer_Q4W7e.
+ * Leave every other block and setting as it is. Click Save, then check the drawer on mimro.com.
+ */
+
+"offer_Q4W7a": {
+  "type": "offer",
+  "name": "NP-Q4W7-Eco Pick",
+  "settings": {
+    "image": "shopify://shop_images/NP1-EcoPick-SwedishDishcloth.png",
+    "image_position": "above",
+    "title": "",
+    "discount_code": "",
+    "show_countdown": false,
+    "end_date": "",
+    "end_time": "",
+    "show_timer_labels": true,
+    "timer_expiry_action": "leave_at_zero",
+    "description": "<p><strong>Eco Pick of the Week: </strong>MIMRO Swedish Dishcloth, a reusable cloth for everyday spills and counters.</p>",
+    "link": "shopify://collections/eco-pick-of-the-week",
+    "button_label": "Shop now"
+  }
+},
+"offer_Q4W7b": {
+  "type": "offer",
+  "name": "NP-Q4W7-New Arrivals",
+  "settings": {
+    "image": "shopify://shop_images/NP2-NewArrivals-Q4W6.png",
+    "image_position": "above",
+    "title": "",
+    "discount_code": "",
+    "show_countdown": false,
+    "end_date": "",
+    "end_time": "",
+    "show_timer_labels": true,
+    "timer_expiry_action": "leave_at_zero",
+    "description": "<p><strong>New Arrivals: </strong>Midnight Paloma bath and body care, DALCINI stainless steel lunch boxes and LOUI toilet fresh drops.</p>",
+    "link": "shopify://collections/new-arrivals-1",
+    "button_label": "Shop now"
+  }
+},
+"offer_Q4W7c": {
+  "type": "offer",
+  "name": "NP-Q4W7-Eco Quest",
+  "settings": {
+    "image": "shopify://shop_images/NP3-EcoQuest-Q4W7.png",
+    "image_position": "above",
+    "title": "",
+    "discount_code": "",
+    "show_countdown": false,
+    "end_date": "",
+    "end_time": "",
+    "show_timer_labels": true,
+    "timer_expiry_action": "leave_at_zero",
+    "description": "<p><strong>Eco-Quest: </strong>Recycling, compost or trash? Answer 3 quick questions about what to do after the last use and earn Eco Points. 100 points = $1 off!</p>",
+    "link": "shopify://pages/mimro-eco-rewards",
+    "button_label": "Play Eco-Quest"
+  }
+},
+"offer_Q4W7d": {
+  "type": "offer",
+  "name": "NP-Q4W7-Blog Post",
+  "settings": {
+    "image": "shopify://shop_images/NP4-Blog-AfterTheLastUse.png",
+    "image_position": "above",
+    "title": "",
+    "discount_code": "",
+    "show_countdown": false,
+    "end_date": "",
+    "end_time": "",
+    "show_timer_labels": true,
+    "timer_expiry_action": "leave_at_zero",
+    "description": "<p><strong>Blog Post: </strong>After the Last Use: Knowing What to Do with Everyday Products</p>",
+    "link": "shopify://blogs/news/after-the-last-use",
+    "button_label": "READ"
+  }
+},
+"offer_Q4W7e": {
+  "type": "offer",
+  "name": "NP-Q4W7-Gift Card",
+  "settings": {
+    "image": "shopify://shop_images/NP5-GiftCard.png",
+    "image_position": "above",
+    "title": "",
+    "discount_code": "",
+    "show_countdown": false,
+    "end_date": "",
+    "end_time": "",
+    "show_timer_labels": true,
+    "timer_expiry_action": "leave_at_zero",
+    "description": "<p><strong>Gift Card: </strong>Not sure what to give? A Mimro Gift Card ($25, $50 or $100) lets them pick their own everyday eco swaps.</p>",
+    "link": "shopify://products/mimro-gift-card",
+    "button_label": "Shop now"
+  }
+},
+
+/* block_order: replace the first five entries with these */
+"offer_Q4W7a",
+"offer_Q4W7b",
+"offer_Q4W7c",
+"offer_Q4W7d",
+"offer_Q4W7e",
