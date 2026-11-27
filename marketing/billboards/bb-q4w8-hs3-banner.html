@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:IS;src:url(src/fonts/InstrumentSans.ttf)}
+@font-face{font-family:FG;src:url(src/fonts/Figtree.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:FG,sans-serif;background:linear-gradient(120deg,#ffffff 0%,#f2f8fd 55%,#e8f7ee 100%);color:#020624;position:relative;overflow:hidden}
+.kick{display:inline-block;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:#1a9b4d;border:2px solid #2ad265;border-radius:999px}
+.grad{background:linear-gradient(90deg,#007ae7,#2ad265);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-block;background:linear-gradient(90deg,#007ae7,#2ad265);color:#fff;border-radius:999px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.tile{position:relative;border-radius:30px;background:#fff;border:1.5px solid #e4ebe6;box-shadow:0 14px 30px -20px rgba(2,6,36,.35);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tile img{object-fit:contain;filter:drop-shadow(0 22px 20px rgba(2,6,36,.22))}
+.tile.hero{background:linear-gradient(135deg,#007ae7,#2ad265)}
+.chip{position:absolute;top:20px;left:20px;font-family:IS;font-weight:700;color:#fff;background:#020624;border-radius:14px}
+.hero .chip{background:#fff;color:#020624}
+.lbl{position:absolute;left:22px;right:18px;bottom:18px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#5a5f73;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero .lbl{color:#fff}
+
+html,body{width:1920px;height:640px}
+
+.left{position:absolute;left:90px;top:0;bottom:0;width:760px;display:flex;flex-direction:column;justify-content:center}
+.logo{height:44px;margin-bottom:26px;align-self:flex-start}
+.kick{font-size:18px;padding:8px 20px;margin-bottom:20px;align-self:flex-start}
+.upto{font-size:28px;font-weight:800;letter-spacing:5px;color:#5a5f73}
+.big{font-family:IS;font-weight:700;font-size:118px;line-height:.95;letter-spacing:-4px;white-space:nowrap}
+.sub{font-size:28px;font-weight:600;margin-top:14px;color:#020624}
+.btn{margin-top:26px;align-self:flex-start;font-size:20px;padding:16px 30px}
+.grid{position:absolute;right:70px;top:50px;width:900px;height:540px;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px}
+.hero{grid-row:span 2}
+.tile{border-radius:24px}.chip{font-size:24px;padding:7px 14px;top:14px;left:14px}.lbl{font-size:13px;left:16px;bottom:12px}.hero .lbl{font-size:15px}
+.t img{max-width:68%;max-height:58%}
+</style></head><body><div class="left"><img class="logo" src="src/logo.png"><div class="kick">Holiday Sale · Self-care</div><div class="upto">UP TO</div><div class="big"><span class="grad">25%</span> OFF</div><div class="sub">Treats for a calmer routine. <span style="color:#1a9b4d">For less.</span></div><div class="btn">Shop self-care →</div></div><div class="grid"><div class="tile hero"><span class="chip">−20%</span><img src="src/steamers.png" style="position:absolute;max-height:70%;left:50%;top:46%;transform:translate(-50%,-50%) rotate(-4deg);filter:drop-shadow(0 22px 20px rgba(2,6,36,.3))"><span class="lbl">Shower Steamers</span></div><div class="tile t" ><span class="chip">−25%</span><img src="src/lotionbar.png"><span class="lbl">Solid Body Lotion Bar</span></div><div class="tile t" ><span class="chip">−25%</span><img src="src/incense.png"><span class="lbl">Calm Cedar Incense</span></div><div class="tile t" style="grid-column:2 / span 2"><span class="chip">−25%</span><img src="src/bandage.png" style="max-width:none;max-height:none;height:300px"><span class="lbl">Bamboo Bandages</span></div></div></body></html>
